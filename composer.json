@@ -1,0 +1,35 @@
+{
+    "name": "xaviranik/woo-availability",
+    "description": "WooCommerce Product and stock availability scheduler WordPress plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Zabir Anik",
+            "email": "zabiranik.me@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WooAvailabilty\\": "includes/"
+        }
+    },
+    "require-dev": {
+        "tareq1988/wp-php-cs-fixer": "dev-master",
+        "wp-coding-standards/wpcs": "dev-master",
+        "phpcompatibility/php-compatibility": "*",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7"
+    },
+    "scripts": {
+        "phpcs": [
+            "phpcs -p -s"
+        ],
+        "phpcbf": [
+            "phpcbf -p"
+        ]
+    }
+}
