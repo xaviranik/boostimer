@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "WooAvailabilty\\": "includes/"
+            "WooAvailability\\": "includes/"
         }
     },
     "require-dev": {

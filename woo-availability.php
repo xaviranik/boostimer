@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WooAvailability Product Scheduler
- * Description:
+ * Description: WooCommerce Product and stock availability scheduler plugin
  * URI: https://zabiranik.com
  * Author: Zabir Anik
  * Author URI: https://zabiranik.com
@@ -23,7 +23,9 @@ final class WooAvailability {
      * Initialize
      */
     public function __construct() {
-        // code...
+        $this->define_constants();
+
+        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
     }
 
     /**
@@ -40,6 +42,27 @@ final class WooAvailability {
         }
 
         return $instance;
+    }
+
+    /**
+     * Initialize the plugin
+     *
+     * @return void
+     */
+    public function init_plugin() {
+        if ( is_admin() ) {
+            new WooAvailability\Admin();
+        }
+    }
+
+    /**
+     * Define constants
+     *
+     * @return void
+     */
+    private function define_constants() {
+        define( 'WOO_AVAILABILITY_DIR', __DIR__ );
+        define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
     }
 
 }
