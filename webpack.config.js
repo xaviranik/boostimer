@@ -41,7 +41,7 @@ module.exports = {
   ],
   optimization: {
     ...defaultConfig.optimization,
-    minimize: true,
+    minimize: false,
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
     splitChunks: {
       cacheGroups: {

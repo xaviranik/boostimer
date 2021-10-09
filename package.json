@@ -9,7 +9,7 @@
   "scripts": {
     "hot": "webpack serve --inline --hot --disable-host-check",
     "start": "wp-scripts start",
-    "build": "wp-scripts build",
+    "build": "wp-scripts build --mode=production --progress",
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
     "makepot": "wp i18n make-pot --exclude='dist,node_modules,vendors' . --headers='{\"Last-Translator\":\"zabiranik.me@gmail.com\",\"Report-Msgid-Bugs-To\":\"https://github.com/xaviranik/woo-availability/issues\"}' --file-comment=\"Copyright (c) $(date +'%Y') Zabir Anik. All Rights Reserved.\" languages/woo-availability.pot",
