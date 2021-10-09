@@ -1,13 +1,12 @@
 import React from 'react';
+import { __ } from "@wordpress/i18n";
 import { hot } from 'react-hot-loader/root';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
-import { __ } from "@wordpress/i18n";
 
 import Home from './pages/Home';
 import Settings from './pages/Settings';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="woo-availability-app">
