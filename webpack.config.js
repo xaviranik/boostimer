@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
 
 module.exports = {
   ...defaultConfig,
@@ -39,6 +41,8 @@ module.exports = {
   ],
   optimization: {
     ...defaultConfig.optimization,
+    minimize: true,
+    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
     splitChunks: {
       cacheGroups: {
         ...defaultConfig.optimization.splitChunks.cacheGroups,
