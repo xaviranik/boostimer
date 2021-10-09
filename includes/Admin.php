@@ -3,19 +3,19 @@
 namespace WooAvailability;
 
 /**
- * Admin Manager Class
+ * Admin Manager Class.
  */
 class Admin {
 
     /**
-     * Initialize
+     * Initialize admin class.
      */
     public function __construct() {
         add_action( 'admin_menu', [ $this, 'register_menu' ] );
     }
 
     /**
-     * Register admin menu
+     * Register admin menu.
      *
      * @return void
      */
@@ -25,7 +25,7 @@ class Admin {
             __( 'WooAvailability', 'woo-availability' ),
             'manage_options',
             'woo-availability',
-            [ $this, 'render_page' ],
+            [ $this, 'render_menu_page'],
             'dashicons-yes-alt',
             57
         );
@@ -34,34 +34,50 @@ class Admin {
     }
 
     /**
-     * Render the page
+     * Renders the admin page.
      *
      * @return void
      */
-    public function render_page() {
+    public function render_menu_page() {
         echo '<div id="woo-availability-app"></div>';
     }
 
     /**
-     * Enqueue JS and CSS
+     * Enqueue JS and CSS.
      *
      * @return void
      */
     public function enqueue_scripts() {
-        $assets = require WOO_AVAILABILITY_DIR . '/dist/admin.asset.php';
-
-        $url = WOO_AVAILABILITY_URL;
-
-        // register scripts
-        wp_register_script( 'woo-availability-vendors', $url . '/dist/vendors.js', $assets['dependencies'], $assets['version'], true );
-        wp_register_script( 'woo-availability-admin', $url . '/dist/admin.js', [ 'woo-availability-vendors' ], $assets['version'], true );
-
-        // register styles
-        wp_register_style( 'woo-availability-vendors-css', $url . '/dist/vendors.css', [ 'wp-components' ], $assets['version'] );
-        wp_register_style( 'woo-availability-admin-css', $url . '/dist/style-admin.css', [  'woo-availability-vendors-css' ], $assets['version'] );
+        $this->register_scripts();
 
         // enqueue scripts and styles
         wp_enqueue_script( 'woo-availability-admin' );
         wp_enqueue_style( 'woo-availability-admin-css' );
+    }
+
+    /**
+     * Register admin scripts.
+     *
+     * @return void
+     */
+    private function register_scripts() {
+        $assets = $this->get_admin_dist_asset();
+
+        // register scripts
+        wp_register_script( 'woo-availability-vendors', WOO_AVAILABILITY_DIST . '/vendors.js', $assets['dependencies'], $assets['version'], true );
+        wp_register_script( 'woo-availability-admin', WOO_AVAILABILITY_DIST . '/admin.js', [ 'woo-availability-vendors' ], $assets['version'], true );
+
+        // register styles
+        wp_register_style( 'woo-availability-vendors-css', WOO_AVAILABILITY_DIST . '/vendors.css', [ 'wp-components' ], $assets['version'] );
+        wp_register_style( 'woo-availability-admin-css', WOO_AVAILABILITY_DIST . '/style-admin.css', [  'woo-availability-vendors-css' ], $assets['version'] );
+    }
+
+    /**
+     * Gets dist admin.asset.php.
+     *
+     * @return mixed
+     */
+    private function get_admin_dist_asset() {
+        return require WOO_AVAILABILITY_DIST . '/admin.asset.php';
     }
 }

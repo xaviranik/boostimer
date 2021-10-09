@@ -63,6 +63,7 @@ final class WooAvailability {
     private function define_constants() {
         define( 'WOO_AVAILABILITY_DIR', __DIR__ );
         define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
+        define( 'WOO_AVAILABILITY_DIST', WOO_AVAILABILITY_DIR . '/dist' );
     }
 
 }
