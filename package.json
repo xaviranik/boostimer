@@ -5,7 +5,7 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "hot": "webpack serve --inline --hot --disable-host-check",
     "start": "wp-scripts start",
