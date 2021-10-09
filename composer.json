@@ -18,7 +18,6 @@
         }
     },
     "require-dev": {
-        "tareq1988/wp-php-cs-fixer": "dev-master",
         "wp-coding-standards/wpcs": "dev-master",
         "phpcompatibility/php-compatibility": "*",
         "phpcompatibility/phpcompatibility-wp": "*",
