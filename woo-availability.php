@@ -5,7 +5,7 @@
  * URI: https://zabiranik.com
  * Author: Zabir Anik
  * Author URI: https://zabiranik.com
- * Version: 1.0
+ * Version: 1.0.0
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: woo-availability
@@ -63,7 +63,7 @@ final class WooAvailability {
     private function define_constants() {
         define( 'WOO_AVAILABILITY_DIR', __DIR__ );
         define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
-        define( 'WOO_AVAILABILITY_DIST', WOO_AVAILABILITY_DIR . '/dist' );
+        define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
     }
 
 }

@@ -4,7 +4,7 @@
  *
  * Requires jQuery
  *
- * @credit: Tareq Hasan (Founder & CTO - weDEvs)
+ * @credit: Tareq Hasan (https://github.com/tareq1988) (Founder & CTO - weDevs)
  */
 function menuFix(slug) {
   var $ = jQuery;

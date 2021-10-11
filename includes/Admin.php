@@ -51,8 +51,7 @@ class Admin {
         $this->register_scripts();
 
         // enqueue scripts and styles
-        wp_enqueue_script( 'woo-availability-admin' );
-        wp_enqueue_style( 'woo-availability-admin-css' );
+
     }
 
     /**
@@ -70,6 +69,9 @@ class Admin {
         // register styles
         wp_register_style( 'woo-availability-vendors-css', WOO_AVAILABILITY_DIST . '/vendors.css', [ 'wp-components' ], $assets['version'] );
         wp_register_style( 'woo-availability-admin-css', WOO_AVAILABILITY_DIST . '/style-admin.css', [  'woo-availability-vendors-css' ], $assets['version'] );
+
+        wp_enqueue_script( 'woo-availability-admin' );
+        wp_enqueue_style( 'woo-availability-admin-css' );
     }
 
     /**
@@ -78,6 +80,6 @@ class Admin {
      * @return mixed
      */
     private function get_admin_dist_asset() {
-        return require WOO_AVAILABILITY_DIST . '/admin.asset.php';
+        return require WOO_AVAILABILITY_DIR . '/dist/admin.asset.php';
     }
 }
