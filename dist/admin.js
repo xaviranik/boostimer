@@ -394,7 +394,7 @@ var WooSwitch = function WooSwitch(_ref) {
     id: "time-toggle",
     type: "checkbox",
     className: "sr-only",
-    checked: checked
+    defaultChecked: checked
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "w-10 h-4 bg-gray-400 rounded-full shadow-inner"
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -596,34 +596,49 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "bg-white p-6 shadow rounded-md"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "text-md uppercase tracking-wider text-gray-400 font-light"
+    className: "text-md uppercase tracking-widest text-gray-400 font-light"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-4 flex items-center justify-between w-full"
+    className: "mt-4"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "flex items-center justify-between w-full"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex flex-col"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "text-md font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
-    className: "mt-2 text-gray-500 text-xs"
+    className: "mt-2 text-gray-400 text-xs"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer on single product', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "enable_countdown_timer",
     checked: true
-  }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+  })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-8"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "text-md uppercase tracking-wider text-gray-400 font-light"
+    className: "text-md uppercase tracking-widest text-gray-400 font-light"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-4 flex items-center justify-between w-full"
+    className: "mt-4"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "flex items-center justify-between w-full"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex flex-col"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "text-md font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
-    className: "mt-2 text-gray-500 text-xs"
+    className: "mt-2 text-gray-400 text-xs"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show "notify me" button on single product page', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "enable_notify_user",
     checked: false
-  }))))))));
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "mt-4 flex flex-col justify-center"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "text-md font-semibold"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Success Enrollment Message', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "mt-2 text-gray-400 text-xs"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('This message will be displayed when a user successfully enrolls for the availability notification', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+    className: "mt-2 outline-none border-2 border-solid border-gray-400 px-4 py-2",
+    type: "text",
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('You are enrolled successfully to get notified for stock availability!', 'woo-availability'),
+    defaultValue: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('You are enrolled successfully to get notified for stock availability!', 'woo-availability')
+  })))))))));
 };
 
 var _default = Settings;
