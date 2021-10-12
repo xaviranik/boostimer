@@ -9,6 +9,13 @@
         color: #111827;
         outline: none;
     }
+
+    /* Toggle */
+    input:checked ~ .dot {
+        transform: translateX(100%);
+        background-color: #10B981;
+    }
+
 }
 
 /* Tailwind CSS */

@@ -4,11 +4,17 @@
 .woo-availability-app {
   margin: 0 0 0 -20px;
   font-family: 'Poppins', sans-serif;
+  /* Toggle */
 }
 
 .woo-availability-app a:focus, .woo-availability-app a:hover {
   color: #111827;
   outline: none;
+}
+
+.woo-availability-app input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #10B981;
 }
 
 /* Tailwind CSS */

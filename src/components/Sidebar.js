@@ -38,12 +38,12 @@ const Sidebar = () => {
         </svg>
       </div>
       <div className="mt-20 w-full grid grid-rows-4 gap-4">
-        <NavLink className="outline-none hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md" exact to={"/"} activeClassName={"bg-gray-100 rounded-md shadow-md font-semibold"}>
+        <NavLink className="outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md" exact to={"/"} activeClassName={"text-gray-900 bg-gray-100 rounded-md shadow font-semibold"}>
           <AiFillHome />
           <span className="ml-6">{__('Home', 'woo-availability')}</span>
         </NavLink>
 
-        <NavLink className="outline-none hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md" exact to={"/settings"} activeClassName={"bg-gray-100 rounded-md shadow-md font-semibold"}>
+        <NavLink className="outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md" exact to={"/settings"} activeClassName={"text-gray-900 bg-gray-100 rounded-md shadow font-semibold"}>
           <IoMdSettings />
           <span className="ml-6">{__('Settings', 'woo-availability')}</span>
         </NavLink>
