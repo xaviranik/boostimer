@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <div className="woo-availability-app">
-        <div className="grid grid-cols-12 gap-0 min-h-screen bg-white">
+        <div className="grid grid-cols-12 gap-0 min-h-screen bg-white shadow">
           <div className="col-span-2 bg-white">
             <Sidebar />
           </div>

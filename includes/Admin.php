@@ -30,7 +30,7 @@ class Admin {
             57
         );
 
-        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 99 );
+        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 99, 1 );
     }
 
     /**

@@ -212,7 +212,7 @@ var App = function App() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["HashRouter"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "woo-availability-app"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "grid grid-cols-12 gap-0 min-h-screen bg-white"
+    className: "grid grid-cols-12 gap-0 min-h-screen bg-white shadow"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "col-span-2 bg-white"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Sidebar__WEBPACK_IMPORTED_MODULE_7__["default"], null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -391,7 +391,7 @@ var WooSwitch = function WooSwitch(_ref) {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "relative"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-    id: "time-toggle",
+    id: id,
     type: "checkbox",
     className: "sr-only",
     defaultChecked: checked
@@ -564,7 +564,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "./node_modules/@wordpress/i18n/build-module/index.js");
-/* harmony import */ var _components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Utils/WooSwitch */ "./src/components/Utils/WooSwitch.js");
+/* harmony import */ var react_tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-tooltip */ "./node_modules/react-tooltip/dist/index.es.js");
+/* harmony import */ var _components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Utils/WooSwitch */ "./src/components/Utils/WooSwitch.js");
+/* harmony import */ var react_icons_Bs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons/Bs */ "./node_modules/react-icons/Bs/index.esm.js");
 
 
 (function () {
@@ -575,6 +577,8 @@ __webpack_require__.r(__webpack_exports__);
 var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
   return a;
 };
+
+
 
 
 
@@ -592,9 +596,9 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "grid grid-cols-12 gap-4"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "col-span-6"
+    className: "col-span-8"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "bg-white p-6 shadow rounded-md"
+    className: "bg-white p-8 shadow rounded-md"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "text-md uppercase tracking-widest text-gray-400 font-light"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -604,14 +608,24 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex flex-col"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
-    className: "text-md font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "text-md font-semibold flex items-center"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Countdown Timer', 'woo-availability'), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    "data-tip": true,
+    "data-for": "enable_counter_timer_tooltip",
+    className: "ml-2 cursor-pointer text-gray-400 hover:text-gray-700 transition delay-100 ease-out"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_icons_Bs__WEBPACK_IMPORTED_MODULE_5__["BsInfoCircle"], null))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_tooltip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "enable_counter_timer_tooltip",
+    className: "rounded-md",
+    type: "dark",
+    effect: "solid",
+    delayHide: 200
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "mt-2 text-gray-400 text-xs"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer on single product', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer on single product', 'woo-availability')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "enable_countdown_timer",
     checked: true
   })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-8"
+    className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "text-md uppercase tracking-widest text-gray-400 font-light"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -621,24 +635,69 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex flex-col"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
-    className: "text-md font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "text-md font-semibold flex items-center"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable Notify User', 'woo-availability'), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    "data-tip": true,
+    "data-for": "enable_notify_user_tooltip",
+    className: "ml-2 cursor-pointer text-gray-400 hover:text-gray-700 transition delay-100 ease-out"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_icons_Bs__WEBPACK_IMPORTED_MODULE_5__["BsInfoCircle"], null))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_tooltip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "enable_notify_user_tooltip",
+    className: "rounded-md",
+    type: "dark",
+    effect: "solid",
+    delayHide: 100
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "mt-2 text-gray-400 text-xs"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show "notify me" button on single product page', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show "notify me" button on single product page', 'woo-availability')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_WooSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "enable_notify_user",
     checked: false
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-4 flex flex-col justify-center"
+    className: "mt-6 flex flex-col justify-center"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "flex flex-col"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
-    className: "text-md font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Success Enrollment Message', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "text-md font-semibold flex items-center"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Success Enrollment Message', 'woo-availability'), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    "data-tip": true,
+    "data-for": "success_enroll_tooltip",
+    className: "ml-2 cursor-pointer text-gray-400 hover:text-gray-700 transition delay-100 ease-out"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_icons_Bs__WEBPACK_IMPORTED_MODULE_5__["BsInfoCircle"], null))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_tooltip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "success_enroll_tooltip",
+    className: "rounded-md",
+    type: "dark",
+    effect: "solid",
+    delayHide: 100
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "mt-2 text-gray-400 text-xs"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('This message will be displayed when a user successfully enrolls for the availability notification', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-    className: "mt-2 outline-none border-2 border-solid border-gray-400 px-4 py-2",
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('This message will be displayed when a user successfully enrolls for the availability notification', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+    className: "woo-availability-input",
     type: "text",
     placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('You are enrolled successfully to get notified for stock availability!', 'woo-availability'),
     defaultValue: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('You are enrolled successfully to get notified for stock availability!', 'woo-availability')
-  })))))))));
+  }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "mt-6 flex flex-col justify-center"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "flex flex-col"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "text-md font-semibold flex items-center"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('"Notify Me" Button Text', 'woo-availability'), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    "data-tip": true,
+    "data-for": "notify_me_btn_text_tooltip",
+    className: "ml-2 cursor-pointer text-gray-400 hover:text-gray-700 transition delay-100 ease-out"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_icons_Bs__WEBPACK_IMPORTED_MODULE_5__["BsInfoCircle"], null))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_tooltip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "notify_me_btn_text_tooltip",
+    className: "rounded-md",
+    type: "dark",
+    effect: "solid",
+    delayHide: 100
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    className: "mt-2 text-gray-400 text-xs"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('This text will be displayed on an enrollment button on a product page', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+    className: "woo-availability-input",
+    type: "text",
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify me!', 'woo-availability'),
+    defaultValue: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify me!', 'woo-availability')
+  }))))))))));
 };
 
 var _default = Settings;
