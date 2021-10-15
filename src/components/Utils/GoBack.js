@@ -1,10 +1,15 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const GoBack = () => {
   const history = useHistory();
+  const location = useLocation();
 
   const goBack = () => {
+    if(location.pathname === '/') {
+      return;
+    }
     history.goBack();
   }
 
