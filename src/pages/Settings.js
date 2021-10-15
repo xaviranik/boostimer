@@ -1,16 +1,15 @@
 import React from 'react';
 import {__} from "@wordpress/i18n";
-import ReactTooltip from 'react-tooltip';
-import WooSwitch from "../components/Utils/WooSwitch";
-import {BsInfoCircle} from 'react-icons/bs';
 import InputField from "../components/Utils/InputField";
 import SwitchField from "../components/Utils/SwitchField";
+import GoBack from "../components/Utils/GoBack";
 
 const Settings = () => {
   return (
     <div className="p-6">
-      <div className="mt-12">
-        <h1 className="text-2xl font-semibold text-gray-600">{__('Settings', 'woo-availability')}</h1>
+      <div className="mt-12 flex items-center">
+        <GoBack />
+        <h1 className="text-2xl font-semibold text-gray-600 ml-4">{__('Settings', 'woo-availability')}</h1>
       </div>
       <div className="mt-6">
         <div className="grid grid-cols-12 gap-4">
@@ -56,7 +55,7 @@ const Settings = () => {
               </div>
 
               <div className={"mt-12"}>
-                <button className={"bg-blue-900 text-white px-6 py-2 uppercase text-md rounded-md hover:shadow-md transition delay-100 ease-out"}>{__('Save', 'woo-availability')}</button>
+                <button className={"bg-blue-900 text-white px-8 py-2 uppercase text-md rounded-md hover:shadow-md transition delay-100 ease-in-out"}>{__('Save', 'woo-availability')}</button>
               </div>
             </div>
           </div>
