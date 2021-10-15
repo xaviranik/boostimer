@@ -9,14 +9,14 @@ const Settings = () => {
     <div className="p-6">
       <div className="mt-12 flex items-center">
         <GoBack />
-        <h1 className="text-2xl font-semibold text-gray-600 ml-4">{__('Settings', 'woo-availability')}</h1>
+        <h1 className="text-2xl font-semibold text-gray-600 ml-4 tracking-wider">{__('Settings', 'woo-availability')}</h1>
       </div>
       <div className="mt-6">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-8">
             <div className="bg-white p-8 shadow rounded-md">
               <div>
-                <div className="text-md uppercase tracking-widest text-gray-500 font-semibold">{__('Countdown Timer', 'woo-availability')}</div>
+                <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{__('Countdown Timer', 'woo-availability')}</div>
                 <div className="mt-4">
                   <SwitchField id={"enable_countdown_timer"}
                                switchId={"enable_countdown_timer_switch"}
@@ -27,7 +27,7 @@ const Settings = () => {
               </div>
 
               <div className="mt-12">
-                <div className="text-md uppercase tracking-widest text-gray-500 font-semibold">{__('Notify User', 'woo-availability')}</div>
+                <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{__('Notify User', 'woo-availability')}</div>
 
                 <div className="mt-4">
                   <SwitchField id={"enable_notify_user"}

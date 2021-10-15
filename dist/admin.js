@@ -292,7 +292,7 @@ var Sidebar = function Sidebar() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_Utils_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-20 w-full grid grid-rows-4 gap-4"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    className: "outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md uppercase",
+    className: "outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md uppercase tracking-wider focus:ring-0",
     exact: true,
     to: "/",
     activeClassName: "text-gray-600 bg-gray-100 rounded-md shadow font-semibold"
@@ -310,7 +310,7 @@ var Sidebar = function Sidebar() {
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "ml-6"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Home', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    className: "outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md uppercase",
+    className: "outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 rounded-md flex items-center text-md uppercase tracking-wider focus:ring-0",
     exact: true,
     to: "/settings",
     activeClassName: "text-gray-600 bg-gray-100 rounded-md shadow font-semibold"
@@ -874,7 +874,7 @@ var Home = function Home() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-12 flex items-center"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_GoBack__WEBPACK_IMPORTED_MODULE_3__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h1", {
-    className: "text-2xl font-semibold text-gray-700 ml-4"
+    className: "text-2xl font-semibold text-gray-700 ml-4 tracking-wider"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Home', 'woo-availability'))));
 };
 
@@ -942,7 +942,7 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-12 flex items-center"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_GoBack__WEBPACK_IMPORTED_MODULE_5__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h1", {
-    className: "text-2xl font-semibold text-gray-600 ml-4"
+    className: "text-2xl font-semibold text-gray-600 ml-4 tracking-wider"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Settings', 'woo-availability'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -952,7 +952,7 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "bg-white p-8 shadow rounded-md"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "text-md uppercase tracking-widest text-gray-500 font-semibold"
+    className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-4"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -964,7 +964,7 @@ var Settings = function Settings() {
   }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "text-md uppercase tracking-widest text-gray-500 font-semibold"
+    className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-4"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_4__["default"], {
