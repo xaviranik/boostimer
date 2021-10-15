@@ -17,11 +17,19 @@ const Settings = () => {
             <div className="bg-white p-8 shadow rounded-md">
               <div>
                 <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{__('Countdown Timer', 'woo-availability')}</div>
-                <div className="mt-4">
-                  <SwitchField id={"enable_countdown_timer"}
-                               switchId={"enable_countdown_timer_switch"}
-                               label={__('Show Countdown Timer', 'woo-availability')}
-                               tooltip={__('Enable this to show countdown timer on single product', 'woo-availability')}
+                <div className="mt-6">
+                  <SwitchField id={"enable_in_stock_countdown_timer"}
+                               switchId={"enable_in_stock_countdown_timer_switch"}
+                               label={__('Show Stock Countdown Timer', 'woo-availability')}
+                               tooltip={__('Enable this to show countdown timer for next available stock on single product', 'woo-availability')}
+                               checked={true}/>
+                </div>
+
+                <div className="mt-6">
+                  <SwitchField id={"enable_sale_countdown_timer"}
+                               switchId={"enable_sale_countdown_timer_switch"}
+                               label={__('Show Sale Countdown Timer', 'woo-availability')}
+                               tooltip={__('Enable this to show countdown timer for sale duration on single product', 'woo-availability')}
                                checked={true}/>
                 </div>
               </div>
@@ -29,7 +37,7 @@ const Settings = () => {
               <div className="mt-12">
                 <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{__('Notify User', 'woo-availability')}</div>
 
-                <div className="mt-4">
+                <div className="mt-6">
                   <SwitchField id={"enable_notify_user"}
                                switchId={"enable_notify_user_switch"}
                                label={__('Enable Notify User', 'woo-availability')}

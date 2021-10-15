@@ -387,10 +387,16 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
+
 var GoBack = function GoBack() {
   var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"])();
+  var location = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useLocation"])();
 
   var goBack = function goBack() {
+    if (location.pathname === '/') {
+      return;
+    }
+
     history.goBack();
   };
 
@@ -412,8 +418,8 @@ var GoBack = function GoBack() {
   }))));
 };
 
-__signature__(GoBack, "useHistory{history}", function () {
-  return [react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"]];
+__signature__(GoBack, "useHistory{history}\nuseLocation{location}", function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"], react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useLocation"]];
 });
 
 var _default = GoBack;
@@ -874,7 +880,7 @@ var Home = function Home() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-12 flex items-center"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_GoBack__WEBPACK_IMPORTED_MODULE_3__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h1", {
-    className: "text-2xl font-semibold text-gray-700 ml-4 tracking-wider"
+    className: "text-2xl font-semibold text-gray-600 ml-4 tracking-wider"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Home', 'woo-availability'))));
 };
 
@@ -954,19 +960,27 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Countdown Timer', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-4"
+    className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: "enable_countdown_timer",
-    switchId: "enable_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Countdown Timer', 'woo-availability'),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer on single product', 'woo-availability'),
+    id: "enable_in_stock_countdown_timer",
+    switchId: "enable_in_stock_countdown_timer_switch",
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Stock Countdown Timer', 'woo-availability'),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer for next available stock on single product', 'woo-availability'),
+    checked: true
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "mt-6"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    id: "enable_sale_countdown_timer",
+    switchId: "enable_sale_countdown_timer_switch",
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Show Sale Countdown Timer', 'woo-availability'),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Enable this to show countdown timer for sale duration on single product', 'woo-availability'),
     checked: true
   }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Notify User', 'woo-availability')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-4"
+    className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "enable_notify_user",
     switchId: "enable_notify_user_switch",
