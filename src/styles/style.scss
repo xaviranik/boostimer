@@ -11,7 +11,7 @@
         font-size: 14px;
 
         a:focus, a:hover {
-            color: #111827;
+            color: #374151;
             outline: none;
         }
 
@@ -22,7 +22,7 @@
         }
 
         .woo-availability-input {
-            @apply border border-gray-200 px-2 py-1 outline-none mt-2 rounded-md;
+            @apply border border-gray-200 px-4 py-2 outline-none mt-2 rounded-md focus:outline-none;
         }
     }
 

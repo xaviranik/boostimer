@@ -14,7 +14,7 @@
 }
 
 #woo-availability-app .woo-availability-app a:focus, #woo-availability-app .woo-availability-app a:hover {
-  color: #111827;
+  color: #374151;
   outline: none;
 }
 
@@ -29,10 +29,15 @@
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+#woo-availability-app .woo-availability-app .woo-availability-input:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
