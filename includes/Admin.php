@@ -8,7 +8,10 @@ namespace WooAvailability;
 class Admin {
 
     /**
-     * Initialize admin class.
+     * Admin manager constructor.
+     * Handles admin initializations.
+     *
+     * @since 1.0.0
      */
     public function __construct() {
         add_action( 'admin_menu', [ $this, 'register_menu' ] );

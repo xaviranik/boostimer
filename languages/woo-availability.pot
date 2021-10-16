@@ -1,7 +1,7 @@
 # Copyright (c) $(date +'%Y') Zabir Anik. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooAvailability Product Scheduler 1.0\n"
+"Project-Id-Version: WooAvailability ProductData Scheduler 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-availability\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "X-Domain: woo-availability\n"
 
 #. Plugin Name of the plugin
-msgid "WooAvailability Product Scheduler"
+msgid "WooAvailability ProductData Scheduler"
 msgstr ""
 
 #. Description of the plugin
-msgid "WooCommerce Product and stock availability scheduler plugin"
+msgid "WooCommerce ProductData and stock availability scheduler plugin"
 msgstr ""
 
 #. Author of the plugin
