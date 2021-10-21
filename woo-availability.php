@@ -26,7 +26,40 @@ final class WooAvailability {
     public function __construct() {
         $this->define_constants();
 
-        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+        register_activation_hook(__FILE__, array( $this, 'activate' ));
+        register_deactivation_hook(__FILE__, array( $this, 'deactivate' ));
+
+        add_action( 'woocommerce_loaded', [ $this, 'init_plugin' ] );
+    }
+
+    /**
+     * Define plugin constants.
+     *
+     * @return void
+     */
+    public function define_constants() {
+        define( 'WOO_AVAILABILITY_DIR', __DIR__ );
+        define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
+        define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
+    }
+
+    /**
+     * Activate plugin.
+     */
+    public function activate() {
+        if ( ! function_exists( 'WC' ) ) {
+            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+            deactivate_plugins( plugin_basename( __FILE__ ) );
+
+            wp_die( '<div class="error"><p>' . sprintf( wp_kses_post( '<b>WooAvailability</b> requires <a href="%s">WooCommerce</a> to be installed & activated! Go back to <a href="%s">Plugin page</a>' ), 'https://wordpress.org/plugins/woocommerce/', esc_url( admin_url( 'plugins.php' ) ) ) . '</p></div>' );
+        }
+    }
+
+    /**
+     * Deactivate plugin.
+     */
+    public function deactivate() {
+        // @todo codes to execute upon deactivation
     }
 
     /**
@@ -55,18 +88,6 @@ final class WooAvailability {
             new WooAvailability\Admin();
         }
     }
-
-    /**
-     * Define plugin constants.
-     *
-     * @return void
-     */
-    private function define_constants() {
-        define( 'WOO_AVAILABILITY_DIR', __DIR__ );
-        define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
-        define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
-    }
-
 }
 
 /**
