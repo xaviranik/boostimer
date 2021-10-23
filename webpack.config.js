@@ -5,6 +5,8 @@ const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extract
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
 
+const PROD = process.env.NODE_ENV === 'production';
+
 module.exports = {
   ...defaultConfig,
   entry: {
@@ -12,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: PROD ? '[name].min.js' : '[name].js',
     publicPath: '/wp-content/plugins/woo-availability/dist/',
     // chunkFilename: 'chunks/[name].js',
   },
@@ -41,7 +43,7 @@ module.exports = {
   ],
   optimization: {
     ...defaultConfig.optimization,
-    minimize: false,
+    minimize: PROD,
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
     splitChunks: {
       cacheGroups: {
