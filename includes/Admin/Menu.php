@@ -75,11 +75,11 @@ class Menu {
 
         // register scripts
         wp_register_script( 'woo-availability-vendors', WOO_AVAILABILITY_DIST . '/vendors.js', $assets['dependencies'], $assets['version'], true );
-        wp_register_script( 'woo-availability-admin', WOO_AVAILABILITY_DIST . '/admin.js', [ 'woo-availability-vendors' ], $assets['version'], true );
+        wp_register_script( 'woo-availability-admin', WOO_AVAILABILITY_DIST . '/core.js', [ 'woo-availability-vendors' ], $assets['version'], true );
 
         // register styles
         wp_register_style( 'woo-availability-vendors-css', WOO_AVAILABILITY_DIST . '/vendors.css', [ 'wp-components' ], $assets['version'] );
-        wp_register_style( 'woo-availability-admin-css', WOO_AVAILABILITY_DIST . '/style-admin.css', [ 'woo-availability-vendors-css' ], $assets['version'] );
+        wp_register_style( 'woo-availability-admin-css', WOO_AVAILABILITY_DIST . '/style-core.css', [ 'woo-availability-vendors-css' ], $assets['version'] );
     }
 
     /**
@@ -90,6 +90,6 @@ class Menu {
      * @return mixed
      */
     private function get_admin_dist_asset() {
-        return require WOO_AVAILABILITY_DIR . '/dist/admin.asset.php';
+        return require WOO_AVAILABILITY_DIR . '/dist/core.asset.php';
     }
 }
