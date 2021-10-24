@@ -15,3 +15,4 @@ dist/*
 # asset folder
 assets/css
 assets/js
+!assets/lib

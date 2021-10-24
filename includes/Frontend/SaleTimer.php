@@ -29,6 +29,14 @@ class SaleTimer {
      * @return void
      */
     public function render_sale_timer_template() {
+        global $post;
+
+        $product = wc_get_product( $post->ID );
+
+        if ( ! $product || $product->is_type( 'grouped' ) ) {
+            return;
+        }
+
         wavly_get_template_part(
             'sale-timer', '', []
         );
