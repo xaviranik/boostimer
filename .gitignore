@@ -6,8 +6,12 @@ yarn-error.log
 
 # dist folder
 dist/*
-!dist/admin.asset.php
-!dist/admin.js
-!dist/style-admin.css
+!dist/core.asset.php
+!dist/core.js
+!dist/style-core.css
 !dist/vendors.css
 !dist/vendors.js
+
+# asset folder
+assets/css
+assets/js
