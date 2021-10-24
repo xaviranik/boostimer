@@ -10,7 +10,7 @@ class Assets {
     /**
      * Assets constructor.
      */
-    function __construct() {
+    public function __construct() {
         add_action( 'admin_enqueue_scripts', [ $this, 'register' ], 5 );
     }
 

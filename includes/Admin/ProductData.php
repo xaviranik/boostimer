@@ -22,7 +22,7 @@ class ProductData {
      * @since 1.0.0
      */
     public function set_hooks() {
-        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 20 );
+        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 30 );
 
         add_action( 'woocommerce_product_options_general_product_data', [ $this, 'add_sale_timer_checkbox' ], 10 );
         add_action( 'woocommerce_process_product_meta', [ $this, 'save_sale_timer_checkbox_meta' ] );
@@ -59,7 +59,7 @@ class ProductData {
     }
 
     /**
-     * Saves sale timer product meta
+     * Saves sale timer product meta.
      *
      * @since 1.0.0
      *
@@ -70,17 +70,35 @@ class ProductData {
     public function save_sale_timer_checkbox_meta( $post_id ) {
         $product = wc_get_product( $post_id );
 
-        if ( ! $product ) {
+        if ( ! $product || $product->is_type( 'grouped' ) ) {
             return;
         }
 
         // phpcs:disable WordPress.Security.NonceVerification.Missing
         // phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+
+        $sale_price     = isset( $_POST['_sale_price'] ) ? wc_clean( wp_unslash( $_POST['_sale_price'] ) ) : '';
+        $sale_date_to   = isset( $_POST['_sale_price_dates_to'] ) ? wc_clean( wp_unslash( $_POST['_sale_price_dates_to'] ) ) : '';
+        $sale_date_from = isset( $_POST['_sale_price_dates_from'] ) ? wc_clean( wp_unslash( $_POST['_sale_price_dates_from'] ) ) : '';
+
+        if ( empty( $sale_price ) ) {
+            return;
+        }
+
+        // If sale date to and from is not a valid date, set show sale timer to 'no' and return
+        if ( empty( $sale_date_to ) || empty( $sale_date_from ) || ! strtotime( $sale_date_to ) || ! strtotime( $sale_date_from ) ) {
+            $product->update_meta_data( '_woo_availability_show_sale_timer', 'no' );
+            $product->save_meta_data();
+            return;
+        }
+
         $show_sale_timer = isset( $_POST['_woo_availability_show_sale_timer'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_show_sale_timer'] ) ) : 'no';
 
         $product->update_meta_data( '_woo_availability_show_sale_timer', $show_sale_timer );
-
         $product->save_meta_data();
+
+        // phpcs:enable WordPress.Security.NonceVerification.Missing
+        // phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
     }
 
     /**
