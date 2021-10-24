@@ -48,6 +48,7 @@ final class WooAvailability {
         define( 'WOO_AVAILABILITY_VERSION', $this->version );
         define( 'WOO_AVAILABILITY_DIR', __DIR__ );
         define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
+        define( 'WOO_AVAILABILITY_TEMPLATES', WOO_AVAILABILITY_DIR . '/templates' );
         define( 'WOO_AVAILABILITY_ASSET', WOO_AVAILABILITY_URL . '/assets' );
         define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
     }
@@ -102,6 +103,9 @@ final class WooAvailability {
         if ( ! is_admin() ) {
             new WooAvailability\Frontend();
         }
+
+        // Load global functions
+        include_once WOO_AVAILABILITY_DIR . '/includes/functions.php';
     }
 }
 
