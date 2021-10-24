@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"hello\")\n\n\n//# sourceURL=webpack:///./assets/src/js/admin.js?");
+eval("(function( $ ) {\n\n  \"use strict\";\n\n  const Dokan_Woo_Availability_Admin = {\n    woocommerce_product_data: $( '#woocommerce-product-data' ),\n    show_sale_timer_field: $( '._woo_availability_show_sale_timer_field' ),\n\n    init: function () {\n      const self = this;\n\n      self.woocommerce_product_data.on( 'click', '.sale_schedule', function() {\n        self.show_sale_timer_field.show();\n      });\n\n      self.woocommerce_product_data.on( 'click', '.cancel_sale_schedule', function() {\n        self.show_sale_timer_field.hide();\n      });\n    },\n  };\n\n  $( document ).ready( function() {\n    Dokan_Woo_Availability_Admin.init();\n  } );\n\n})(jQuery);\n\n\n//# sourceURL=webpack:///./assets/src/js/admin.js?");
 
 /***/ })
 

@@ -22,6 +22,8 @@ class ProductData {
      * @since 1.0.0
      */
     public function set_hooks() {
+        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 20 );
+
         add_action( 'woocommerce_product_options_general_product_data', [ $this, 'add_sale_timer_checkbox' ], 10 );
         add_action( 'woocommerce_process_product_meta', [ $this, 'save_sale_timer_checkbox_meta' ] );
     }
@@ -79,5 +81,16 @@ class ProductData {
         $product->update_meta_data( '_woo_availability_show_sale_timer', $show_sale_timer );
 
         $product->save_meta_data();
+    }
+
+    /**
+     * Enqueues scripts.
+     *
+     * @since 1.0.0
+     *
+     * @return void
+     */
+    public function enqueue_scripts() {
+        wp_enqueue_script( 'woo-availability-admin-script' );
     }
 }

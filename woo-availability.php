@@ -21,6 +21,13 @@ require __DIR__ . '/vendor/autoload.php';
 final class WooAvailability {
 
     /**
+     * Plugin version
+     *
+     * @var string
+     */
+    private $version = '1.0.0';
+
+    /**
      * WooAvailability Constructor.
      */
     public function __construct() {
@@ -38,8 +45,10 @@ final class WooAvailability {
      * @return void
      */
     public function define_constants() {
+        define( 'WOO_AVAILABILITY_VERSION', $this->version );
         define( 'WOO_AVAILABILITY_DIR', __DIR__ );
         define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
+        define( 'WOO_AVAILABILITY_ASSET', WOO_AVAILABILITY_URL . '/assets' );
         define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
     }
 
