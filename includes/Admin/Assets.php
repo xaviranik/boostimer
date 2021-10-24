@@ -21,7 +21,6 @@ class Assets {
      */
     public function register() {
         $this->register_scripts( $this->get_scripts() );
-        $this->register_styles( $this->get_styles() );
     }
 
     /**
@@ -90,19 +89,4 @@ class Assets {
             ],
         ];
     }
-
-    /**
-     * Get registered styles
-     *
-     * @return array
-     */
-    private function get_styles() {
-        return [
-            'woo-availability-frontend-style' => [
-                'src'     => WOO_AVAILABILITY_ASSET . '/css/frontend.css',
-                'version' => $this->get_version(),
-            ],
-        ];
-    }
-
 }

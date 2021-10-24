@@ -93,8 +93,14 @@ final class WooAvailability {
      * @return void
      */
     public function init_plugin() {
+        // Load admin manager
         if ( is_admin() ) {
             new WooAvailability\Admin();
+        }
+
+        // Load frontend manager
+        if ( ! is_admin() ) {
+            new WooAvailability\Frontend();
         }
     }
 }
@@ -102,7 +108,7 @@ final class WooAvailability {
 /**
  * Return the instance.
  *
- * @return \WooAvailability
+ * @return WooAvailability
  */
 function woo_availability() {
     return WooAvailability::instance();

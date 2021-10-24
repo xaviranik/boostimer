@@ -2,6 +2,7 @@
 
 namespace WooAvailability;
 
+use WooAvailability\Frontend\FrontendAssets;
 use WooAvailability\Frontend\SaleTimer;
 
 /**
@@ -16,6 +17,9 @@ class Frontend {
      * @since 1.0.0
      */
     public function __construct() {
+        // Frontend assets
+        new FrontendAssets();
+        // Sale timer
         new SaleTimer();
     }
 }
