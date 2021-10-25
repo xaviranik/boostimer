@@ -12,10 +12,10 @@ const App = () => {
     <Router>
       <div className="woo-availability-app text-gray-700">
         <div className="grid grid-cols-12 gap-0 min-h-screen bg-white shadow">
-          <div className="col-span-4 bg-white xl:col-span-2">
+          <div className="col-span-3 bg-white">
             <Sidebar />
           </div>
-          <div className="col-span-8 xl:col-span-10 bg-base">
+          <div className="col-span-9 bg-base">
             <Switch>
               <Route path="/settings" component={Settings} />
               <Route path="/" exact component={Home} />

@@ -13,7 +13,7 @@ const Settings = () => {
       </div>
       <div className="mt-6">
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 xl:col-span-8">
+          <div className="col-span-12">
             <div className="bg-white p-8 shadow rounded-md">
               <div>
                 <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{__('Countdown Timer', 'woo-availability')}</div>
