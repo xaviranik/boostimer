@@ -1,225 +1,48 @@
 /* Flip timer */
 .wavly-flip-timer {
-    .flipper {
-        color: #333;
-        display: block;
-        font-size: 40px;
-        line-height: 100%;
-        padding: 0;
-        margin: 0;
-        height: 1.7em;
+    margin: 16px 0;
 
-        &.flipper-invisible {
-            font-size: 0px !important;
+    #wavly-timer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+    }
+    .number-list {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+    }
+    .number-list .item {
+        width: 90px;
+        height: 75px;
+        background: #efefef;
+        margin-right: 24px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #383838;
+        font-weight: 700;
+        line-height: 28px;
+
+        .title {
+            font-size: 12px;
+            font-weight: normal;
         }
     }
 
-    .flipper-group {
-        position: relative;
-        white-space: nowrap;
-        display: block;
-        float: left;
-        padding: 0;
-        margin: 0;
-
-        label {
-            position: absolute;
-            color: #444444;
-            font-size: 20%;
-            top: 100%;
-            line-height: 1em;
-            left: 50%;
-            -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-            text-align: center;
-            padding-top: .5em;
-        }
-    }
-
-    .flipper-digit {
-        white-space: nowrap;
-        position: relative;
-        padding: 0;
-        margin: 0;
-        display: inline-block;
-        float: left;
-        height: 1.2em;
-        overflow-y: hidden;
-
-        span {
-            font-size: 25%;
-        }
-    }
-
-    .flipper-delimiter {
-        white-space: nowrap;
-        display: block;
-        float: left;
-        margin: 0;
-        color: #f2f2f2;
-        min-width: .1em;
-        padding-top: 0.1em;
-        padding-bottom: 0.1em;
-        line-height: 1em;
-    }
-
-    .digit-face {
-        display: block;
-        visibility: hidden;
-        position: relative;
-        border-radius: 0.1em;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 8;
-        padding-top: 0.1em;
-        padding-bottom: 0.1em;
-        padding-left: 0.1em;
-        padding-right: 0.1em;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .digit-next {
-        display: block;
-        position: relative;
-        border-radius: 0.1em;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 8;
-        height: 1.2em;
-        background: #fff;
-        padding: 0.1em;
-        box-sizing: border-box;
-        text-align: center;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .digit-top {
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 50%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        pointer-events: none;
-        overflow: hidden;
-        position: absolute;
-        background: #fff;
-        padding: 0.1em 0.1em 0;
-        border-top-left-radius: 0.1em;
-        border-top-right-radius: 0.1em;
-        box-sizing: border-box;
-        text-align: center;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        transition: background 0s linear, -webkit-transform 0s linear;
-        transition: transform 0s linear, background 0s linear;
-        transition: transform 0s linear, background 0s linear, -webkit-transform 0s linear;
-        -webkit-transform-origin: 0 0.6em 0 !important;
-        transform-origin: 0 0.6em 0 !important;
-        -webkit-transform-style: preserve-3d !important;
-        transform-style: preserve-3d !important;
-        z-index: 20;
-
-        &.r {
-            transition: background 0.2s linear, -webkit-transform 0.2s linear;
-            transition: transform 0.2s linear, background 0.2s linear;
-            transition: transform 0.2s linear, background 0.2s linear, -webkit-transform 0.2s linear;
-            -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-            background: #cccccc;
-        }
-    }
-
-    .digit-top2 {
-        visibility: hidden;
-        position: absolute;
-        height: 50%;
-        left: 0;
-        right: 0;
-        background: #cccccc;
-        transition: -webkit-transform 0.2s linear;
-        transition: transform 0.2s linear;
-        transition: transform 0.2s linear, -webkit-transform 0.2s linear;
-        line-height: 0em !important;
-        top: 50% !important;
-        bottom: auto !important;
-        padding: 0 0.1em 0.1em;
-        border-bottom-left-radius: 0.1em;
-        border-bottom-right-radius: 0.1em;
-        overflow: hidden;
-        text-align: center;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        transition: background 0s linear, -webkit-transform 0s linear;
-        transition: transform 0s linear, background 0s linear;
-        transition: transform 0s linear, background 0s linear, -webkit-transform 0s linear;
-        -webkit-transform: rotateX(-90deg);
-        transform: rotateX(-90deg);
-        -webkit-transform-style: preserve-3d !important;
-        transform-style: preserve-3d !important;
-        -webkit-transform-origin: 0 0 0 !important;
-        transform-origin: 0 0 0 !important;
-        z-index: 20;
-
-        &.r {
-            visibility: visible;
-            transition: background 0.2s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
-            transition: transform 0.2s linear 0.2s, background 0.2s linear 0.2s;
-            transition: transform 0.2s linear 0.2s, background 0.2s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
-            -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-            background: #fff;
-        }
-    }
-
-    .digit-bottom {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        pointer-events: none;
-        position: absolute;
-        overflow: hidden;
-        background: #fff;
-        height: 50%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9;
-        line-height: 0;
-        padding: 0 0.1em 0.1em;
-        border-bottom-left-radius: 0.1em;
-        border-bottom-right-radius: 0.1em;
-        box-sizing: border-box;
-        text-align: center;
-        transition: none;
-
-        &.r {
-            transition: background 0.2s linear;
-            background: #cccccc;
-        }
-    }
-
-    .flipper-digit:after {
-        content: "";
-        position: absolute;
-        height: 2px;
-        background: transparent;
-        top: 50%;
-        display: block;
-        z-index: 30;
-        left: 0;
-        right: 0;
+    .timer-end {
+        display: flex;
+        align-items: start;
+        font-size: 24px;
+        color: #006741;
+        font-weight: 700;
     }
 }
 

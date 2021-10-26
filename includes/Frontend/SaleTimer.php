@@ -2,6 +2,8 @@
 
 namespace WooAvailability\Frontend;
 
+use WooAvailability\Helper;
+
 /**
  * SaleTimer class.
  *
@@ -20,7 +22,7 @@ class SaleTimer {
      * Set hooks.
      */
     public function set_hooks() {
-        add_action( 'woocommerce_after_add_to_cart_button', [ $this, 'render_sale_timer_template' ] );
+        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'render_sale_timer_template' ] );
     }
 
     /**
@@ -36,6 +38,16 @@ class SaleTimer {
         if ( ! $product || $product->is_type( 'grouped' ) ) {
             return;
         }
+
+        $is_sale_time_active = Helper::is_sale_timer_active( $product );
+
+        if ( ! $is_sale_time_active ) {
+            return;
+        }
+
+        $sale_date_to   = $product->get_meta( '_sale_price_dates_to', true );
+        $sale_date_from = $product->get_meta( '_sale_price_dates_from', true );
+
 
         wavly_get_template_part(
             'sale-timer', '', []

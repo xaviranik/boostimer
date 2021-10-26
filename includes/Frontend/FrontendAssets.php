@@ -33,15 +33,9 @@ class FrontendAssets extends Assets {
      */
     protected function get_scripts() {
         return [
-            'woo-availability-frontend-flip-clock-script' => [
-                'src'       => WOO_AVAILABILITY_ASSET . '/lib/flip-timer.js',
-                'deps'      => [ 'jquery' ],
-                'version'   => $this->get_version(),
-                'in_footer' => true,
-            ],
             'woo-availability-frontend-script' => [
                 'src'       => WOO_AVAILABILITY_ASSET . '/js/frontend' . $this->get_suffix() . '.js',
-                'deps'      => [ 'jquery', 'woo-availability-frontend-flip-clock-script' ],
+                'deps'      => [ 'jquery' ],
                 'version'   => $this->get_version(),
                 'in_footer' => true,
             ],
