@@ -78,7 +78,7 @@
       this.timer.wavlyCountdown({
         endTime: this.sale_dates.sale_date_to * 1000,
         onEnd: function () {
-          // Things to do upon timer end
+          window.location.reload( false );
         }
       });
     },
