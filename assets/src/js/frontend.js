@@ -6,7 +6,9 @@
       {
         endTime: "",
         refresh: 1000,
-        onEnd: function () {}
+        onEnd: function () {
+          location.reload();
+        }
       },
       options
     );
