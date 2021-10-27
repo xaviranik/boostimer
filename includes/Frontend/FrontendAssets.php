@@ -65,8 +65,6 @@ class FrontendAssets extends Assets {
         if ( is_product() ) {
             wp_enqueue_script( 'woo-availability-frontend-script' );
             wp_enqueue_style( 'woo-availability-frontend-style' );
-
-            wp_enqueue_script( 'woo-availability-frontend-flip-clock-script' );
         }
     }
 }

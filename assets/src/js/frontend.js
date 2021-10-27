@@ -1,8 +1,8 @@
 (function ($) {
   "use strict";
-  $.fn.wavlyCountdown = function (options) {
-    const aks = $(this);
-    var settings = $.extend(
+  $.fn.wavlyCountdown = function ( options ) {
+    const wavly = $( this );
+    let settings = $.extend(
       {
         endTime: "",
         refresh: 1000,
@@ -10,27 +10,28 @@
       },
       options
     );
-    return this.each(function (i) {
+    return this.each( function ( i ) {
       function endTimeCheck(d1, d2) {
         return (
           d1.getFullYear() === d2.getFullYear() &&
           d1.getMonth() === d2.getMonth() &&
-          d1.getDate() === d2.getDate()
+          d1.getDate() === d2.getDate() &&
+          d1.getTime() === d2.getTime()
         );
       }
       function countTimer() {
-        var endTime = new Date(settings.endTime);
+        let endTime = new Date(settings.endTime);
         endTime = Date.parse(endTime) / 1000;
 
-        var now = new Date();
+        let now = new Date();
         now = Date.parse(now) / 1000;
 
-        var timeLeft = endTime - now;
+        let timeLeft = endTime - now;
 
-        var days = Math.floor(timeLeft / 86400);
-        var hours = Math.floor((timeLeft - days * 86400) / 3600);
-        var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-        var seconds = Math.floor(
+        let days = Math.floor(timeLeft / 86400);
+        let hours = Math.floor((timeLeft - days * 86400) / 3600);
+        let minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
+        let seconds = Math.floor(
           timeLeft - days * 86400 - hours * 3600 - minutes * 60
         );
 
@@ -44,16 +45,17 @@
           seconds = "0" + seconds;
         }
 
-        $(aks).find("[data-days]").html(days);
-        $(aks).find("[data-hours]").html(hours);
-        $(aks).find("[data-minutes]").html(minutes);
-        $(aks).find("[data-seconds]").html(seconds);
+        $(wavly).find("[data-wavly-days]").html(days);
+        $(wavly).find("[data-wavly-hours]").html(hours);
+        $(wavly).find("[data-wavly-minutes]").html(minutes);
+        $(wavly).find("[data-wavly-seconds]").html(seconds);
       }
-      var now = new Date();
-      var endTime = new Date(settings.endTime);
+
+      let now = new Date();
+      let endTime = new Date(settings.endTime);
 
       if (endTimeCheck(now, endTime) === true) {
-        settings.onEnd.call(aks);
+        settings.onEnd.call(wavly);
       } else {
         setInterval(function () {
           countTimer();
@@ -68,9 +70,11 @@
   "use strict";
 
   const Dokan_Woo_Availability_Frontend = {
+    timer: $("#wavly-timer"),
+    sale_dates: typeof wavly_sale_dates === 'undefined' ? {} : wavly_sale_dates,
     init: function () {
-      $("#timer").wavlyCountdown({
-        endTime: (1635280520 * 1000),
+      this.timer.wavlyCountdown({
+        endTime: this.sale_dates.sale_date_to * 1000,
         onEnd: function () {
           // Things to do upon timer end
         }

@@ -6,27 +6,41 @@
  *
  * @package WooAvailability
  */
+
+$sale_date_from = isset( $sale_date_from ) ? $sale_date_from : '';
+$sale_date_to   = isset( $sale_date_to ) ? $sale_date_to : '';
+
+wp_add_inline_script(
+    'woo-availability-frontend-script',
+    'let wavly_sale_dates =' . wp_json_encode(
+        [
+            'sale_date_from' => $sale_date_from,
+            'sale_date_to'   => $sale_date_to,
+        ]
+    ),
+    'before'
+);
 ?>
 
 <div id="wavly-sale-timer">
     <div class="wavly-flip-timer">
-        <div id="timer">
+        <div id="wavly-timer">
             <div class="number-list">
                 <div class="item">
-                    <span data-days="">--</span>
-                    <span class="title">Days</span>
+                    <span data-wavly-days="">--</span>
+                    <span class="title"><?php esc_html_e( 'Days', 'woo-availability' ); ?></span>
                 </div>
                 <div class="item">
-                    <span data-hours="">--</span>
-                    <span class="title">Hours</span>
+                    <span data-wavly-hours="">--</span>
+                    <span class="title"><?php esc_html_e( 'Hours', 'woo-availability' ); ?></span>
                 </div>
                 <div class="item">
-                    <span data-minutes="">--</span>
-                    <span class="title">Minutes</span>
+                    <span data-wavly-minutes="">--</span>
+                    <span class="title"><?php esc_html_e( 'Minutes', 'woo-availability' ); ?></span>
                 </div>
                 <div class="item">
-                    <span data-seconds="">--</span>
-                    <span class="title">Seconds</span>
+                    <span data-wavly-seconds="">--</span>
+                    <span class="title"><?php esc_html_e( 'Seconds', 'woo-availability' ); ?></span>
                 </div>
             </div>
         </div>
