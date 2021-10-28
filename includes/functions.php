@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Get template part implementation
+ * Get template part implementation.
  *
  * @since 1.0.0
  *
@@ -15,9 +15,9 @@ function wavly_get_template_part( $slug, $name = '', $args = [] ) {
     $template = '';
 
     /**
-     * Change template directory path filter
+     * Change template directory path filter.
      *
-     * @since 2.5.3
+     * @since 1.0.0
      */
     $template_path = apply_filters( 'wavbly_set_template_path', WOO_AVAILABILITY_DIR . '/templates', $template, $args );
 
@@ -30,10 +30,76 @@ function wavly_get_template_part( $slug, $name = '', $args = [] ) {
         $template = $template_path . "/{$slug}.php";
     }
 
-    // Allow 3rd party plugin filter template file from their plugin
+    /**
+     * Allow third party plugin to filter template.
+     *
+     * @since 1.0.0
+     */
     $template = apply_filters( 'wavbly_get_template_part', $template, $slug, $name );
 
     if ( $template ) {
         include $template;
     }
+}
+
+/**
+ * Gets current date time with respect to current timezone.
+ *
+ * @since 1.0.0
+ *
+ * @return DateTimeImmutable
+ */
+function wavly_current_datetime() {
+    if ( function_exists( 'current_datetime' ) ) {
+        return current_datetime();
+    }
+
+    try {
+        return new DateTimeImmutable( 'now', wavly_wp_timezone() );
+    } catch ( Exception $e ) {}
+}
+
+/**
+ * Function wp_timezone() compatibility for wp version < 5.3.
+ *
+ * @since 1.0.0
+ *
+ * @return DateTimeZone
+ */
+function wavly_wp_timezone() {
+    if ( function_exists( 'wp_timezone' ) ) {
+        return wp_timezone();
+    }
+
+    return new DateTimeZone( wavly_wp_timezone_string() );
+}
+
+/**
+ * Function wp_timezone_string() compatibility for wp version < 5.3
+ *
+ * @since 1.0.0
+ *
+ * @return string
+ */
+function wavly_wp_timezone_string() {
+    if ( function_exists( 'wp_timezone_string' ) ) {
+        return wp_timezone_string();
+    }
+
+    $timezone_string = get_option( 'timezone_string' );
+
+    if ( $timezone_string ) {
+        return $timezone_string;
+    }
+
+    $offset  = (float) get_option( 'gmt_offset' );
+    $hours   = (int) $offset;
+    $minutes = ( $offset - $hours );
+
+    $sign        = ( $offset < 0 ) ? '-' : '+';
+    $abs_hour    = abs( $hours );
+    $abs_minutes = abs( $minutes * 60 );
+    $tz_offset   = sprintf( '%s%02d:%02d', $sign, $abs_hour, $abs_minutes );
+
+    return $tz_offset;
 }
