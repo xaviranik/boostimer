@@ -16,6 +16,7 @@ wp_add_inline_script(
         [
             'sale_date_from' => $sale_date_from,
             'sale_date_to'   => $sale_date_to,
+            'timezone'       => wavly_wp_timezone_string(),
         ]
     ),
     'before'
