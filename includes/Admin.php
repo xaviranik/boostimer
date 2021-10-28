@@ -2,7 +2,7 @@
 
 namespace WooAvailability;
 
-use WooAvailability\Admin\Assets;
+use WooAvailability\Admin\AdminAssets;
 use WooAvailability\Admin\Menu;
 use WooAvailability\Admin\ProductData;
 
@@ -31,7 +31,7 @@ class Admin {
      */
     public function initialize() {
         // Asset Loader
-        new Assets();
+        new AdminAssets();
         // Admin menu manager
         new Menu();
         // Product data manager

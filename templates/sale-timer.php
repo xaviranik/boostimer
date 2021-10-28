@@ -23,6 +23,7 @@ wp_add_inline_script(
 ?>
 
 <div id="wavly-sale-timer">
+    <p><?php esc_html_e( 'Sale ends in:', 'woo-availability' ); ?></p>
     <div class="wavly-flip-timer">
         <div id="wavly-timer">
             <div class="number-list">
