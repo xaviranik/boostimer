@@ -3,7 +3,6 @@ import { __ } from "@wordpress/i18n";
 import { hot } from "react-hot-loader/root";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Settings from "./pages/Settings";
 import Sidebar from "./components/Sidebar";
 
@@ -17,8 +16,7 @@ const App = () => {
           </div>
           <div className="col-span-9">
             <Switch>
-              <Route path="/settings" component={Settings} />
-              <Route path="/" exact component={Home} />
+              <Route path="/" component={Settings} />
             </Switch>
           </div>
         </div>

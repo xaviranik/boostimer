@@ -13,7 +13,7 @@ const Sidebar = () => {
         <NavLink
           className="outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 flex items-center text-md uppercase tracking-wider focus:ring-0"
           exact
-          to={"/settings"}
+          to={"/"}
           activeClassName={
             "text-gray-600 bg-gray-100 rounded-md shadow font-semibold"
           }
