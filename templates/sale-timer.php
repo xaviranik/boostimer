@@ -9,6 +9,7 @@
 
 $sale_date_from = isset( $sale_date_from ) ? $sale_date_from : '';
 $sale_date_to   = isset( $sale_date_to ) ? $sale_date_to : '';
+$title          = isset( $title ) ? $title : '';
 
 wp_add_inline_script(
     'woo-availability-frontend-script',
@@ -24,7 +25,7 @@ wp_add_inline_script(
 ?>
 
 <div id="wavly-sale-timer">
-    <p><?php esc_html_e( 'Sale ends in:', 'woo-availability' ); ?></p>
+    <p><?php echo esc_html( $title ); ?></p>
     <div class="wavly-flip-timer">
         <div id="wavly-timer">
             <div class="number-list">

@@ -3,31 +3,24 @@
 namespace WooAvailability\Frontend;
 
 use WooAvailability\Helper;
+use WooAvailability\Abstracts\Timer;
 
 /**
  * SaleTimer class.
  *
  * @since 1.0.0
  */
-class SaleTimer {
+class SaleTimer extends Timer {
 
     /**
      * SaleTimer constructor.
      */
     public function __construct() {
-        $this->set_hooks();
+        parent::__construct();
+
+        $this->title = __( 'Sale ends in:', 'woo-availability' );
     }
 
-    /**
-     * Set hooks.
-     *
-     * @since 1.0.0
-     *
-     * @return void
-     */
-    public function set_hooks() {
-        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'render_sale_timer_template' ] );
-    }
 
     /**
      * Loads sale timer template and renders on product single page.
@@ -36,7 +29,7 @@ class SaleTimer {
      *
      * @return void
      */
-    public function render_sale_timer_template() {
+    public function render_timer_template() {
         global $post;
 
         $product = wc_get_product( $post->ID );
@@ -64,10 +57,13 @@ class SaleTimer {
             return;
         }
 
+        $title = apply_filters( 'wavly_sale_timer_title', $this->title );
+
         wavly_get_template_part(
             'sale-timer', '', [
                 'sale_date_to'   => $sale_date_to,
                 'sale_date_from' => $sale_date_from,
+                'title'          => $title,
             ]
         );
     }
