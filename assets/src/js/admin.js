@@ -8,6 +8,9 @@
     show_sale_timer_field_checkbox: $( '#_woo_availability_show_sale_timer_field' ),
     sale_price_dates_fields: $( '.sale_price_dates_fields' ),
 
+    show_stock_timer: $( '#_woo_availability_show_stock_timer' ),
+    restock_date: $( '._woo_availability_restock_date_field' ),
+
     init: function () {
       const self = this;
 
@@ -18,10 +21,17 @@
         altInput: true,
         altFormat: 'Y-m-d',
         dateFormat: 'Y-m-d',
-        disable: []
       };
 
       $( '.stock_timer' ).flatpickr(config);
+
+      this.show_stock_timer.on( 'change', function () {
+        if ( this.checked ) {
+          self.restock_date.show();
+        } else {
+          self.restock_date.hide();
+        }
+      } ).trigger( 'change' );
     },
 
     handle_sale_product_data: function ( self ) {
