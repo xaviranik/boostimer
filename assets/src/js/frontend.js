@@ -67,12 +67,12 @@
 
   const Dokan_Woo_Availability_Frontend = {
     timer: $("#wavly-timer"),
-    sale_dates: typeof wavly_sale_dates === 'undefined' ? {} : wavly_sale_dates,
+    dates: typeof wavly_dates === 'undefined' ? {} : wavly_dates,
 
     init: function () {
       this.timer.wavlyCountdown({
-        endTime: this.sale_dates.sale_date_to * 1000,
-        timezone: this.sale_dates.timezone,
+        endTime: this.dates.date_to * 1000,
+        timezone: this.dates.timezone,
       });
     },
   };

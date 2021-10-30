@@ -29,7 +29,7 @@ abstract class Timer {
      * @return void
      */
     public function set_hooks() {
-        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'render_timer_template' ] );
+        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'build_timer' ] );
     }
 
     /**
@@ -37,5 +37,26 @@ abstract class Timer {
      *
      * @return void
      */
-    abstract public function render_timer_template();
+    abstract public function build_timer();
+
+    /**
+     * Renders template file
+     *
+     * @since 1.0.0
+     *
+     * @param $date_to
+     * @param $date_from
+     * @param $title
+     *
+     * @return void
+     */
+    public function render( $title, $date_to, $date_from = '' ) {
+        wavly_get_template_part(
+            'countdown-timer', '', [
+                'date_to'   => $date_to,
+                'date_from' => $date_from,
+                'title'     => $title,
+            ]
+        );
+    }
 }

@@ -11,15 +11,29 @@
     init: function () {
       const self = this;
 
-      self.woocommerce_product_data.on( 'click', '.sale_schedule', function() {
+      this.handle_sale_product_data( self );
+
+      let config = {
+        minDate: 'today',
+        altInput: true,
+        altFormat: 'Y-m-d',
+        dateFormat: 'Y-m-d',
+        disable: []
+      };
+
+      $( '.stock_timer' ).flatpickr(config);
+    },
+
+    handle_sale_product_data: function ( self ) {
+      self.woocommerce_product_data.on( 'click', '.sale_schedule', function () {
         self.show_sale_timer_field.show();
       } );
 
-      self.woocommerce_product_data.on( 'click', '.cancel_sale_schedule', function() {
+      self.woocommerce_product_data.on( 'click', '.cancel_sale_schedule', function () {
         self.show_sale_timer_field.hide()
       } );
 
-      if ( self.sale_price_dates_fields.is(":visible") ) {
+      if ( self.sale_price_dates_fields.is( ":visible" ) ) {
         self.show_sale_timer_field.show();
       } else {
         self.show_sale_timer_field.hide();

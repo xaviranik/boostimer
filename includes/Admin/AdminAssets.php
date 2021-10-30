@@ -34,9 +34,15 @@ class AdminAssets extends Assets {
      */
     protected function get_scripts() {
         return [
+            'woo-availability-flatpickr-script' => [
+                'src'       => WOO_AVAILABILITY_ASSET . '/vendor/flatpickr.min.js',
+                'deps'      => [ 'jquery' ],
+                'version'   => $this->get_version(),
+                'in_footer' => true,
+            ],
             'woo-availability-admin-script' => [
                 'src'       => WOO_AVAILABILITY_ASSET . '/js/admin' . $this->get_suffix() . '.js',
-                'deps'      => [ 'jquery' ],
+                'deps'      => [ 'jquery', 'woo-availability-flatpickr-script' ],
                 'version'   => $this->get_version(),
                 'in_footer' => true,
             ],
@@ -49,7 +55,12 @@ class AdminAssets extends Assets {
      * @return array
      */
     protected function get_styles() {
-        return [];
+        return [
+            'woo-availability-flatpickr-style' => [
+                'src'     => WOO_AVAILABILITY_ASSET . '/vendor/flatpickr.min.css',
+                'version' => $this->get_version(),
+            ],
+        ];
     }
 
     /**
@@ -58,5 +69,7 @@ class AdminAssets extends Assets {
      * @return void
      */
     private function load_scripts() {
+        wp_enqueue_script( 'woo-availability-admin-script' );
+        wp_enqueue_style( 'woo-availability-flatpickr-style' );
     }
 }

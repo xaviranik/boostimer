@@ -32,8 +32,10 @@ class Admin {
     public function initialize() {
         // Asset Loader
         new AdminAssets();
+
         // Admin menu manager
         new Menu();
+
         // Product data manager
         new ProductData();
     }

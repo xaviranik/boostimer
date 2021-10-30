@@ -29,7 +29,7 @@ class SaleTimer extends Timer {
      *
      * @return void
      */
-    public function render_timer_template() {
+    public function build_timer() {
         global $post;
 
         $product = wc_get_product( $post->ID );
@@ -59,12 +59,6 @@ class SaleTimer extends Timer {
 
         $title = apply_filters( 'wavly_sale_timer_title', $this->title );
 
-        wavly_get_template_part(
-            'sale-timer', '', [
-                'sale_date_to'   => $sale_date_to,
-                'sale_date_from' => $sale_date_from,
-                'title'          => $title,
-            ]
-        );
+        $this->render( $title, $sale_date_to, $sale_date_from );
     }
 }

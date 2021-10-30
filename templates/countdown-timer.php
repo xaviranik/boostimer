@@ -7,24 +7,24 @@
  * @package WooAvailability
  */
 
-$sale_date_from = isset( $sale_date_from ) ? $sale_date_from : '';
-$sale_date_to   = isset( $sale_date_to ) ? $sale_date_to : '';
-$title          = isset( $title ) ? $title : '';
+$date_from = isset( $date_from ) ? $date_from : '';
+$date_to   = isset( $date_to ) ? $date_to : '';
+$title     = isset( $title ) ? $title : '';
 
 wp_add_inline_script(
     'woo-availability-frontend-script',
-    'let wavly_sale_dates =' . wp_json_encode(
+    'let wavly_dates =' . wp_json_encode(
         [
-            'sale_date_from' => $sale_date_from,
-            'sale_date_to'   => $sale_date_to,
-            'timezone'       => wavly_wp_timezone_string(),
+            'date_from' => $date_from,
+            'date_to'   => $date_to,
+            'timezone'  => wavly_wp_timezone_string(),
         ]
     ),
     'before'
 );
 ?>
 
-<div id="wavly-sale-timer">
+<div id="wavly-countdown-timer">
     <p><?php echo esc_html( $title ); ?></p>
     <div class="wavly-flip-timer">
         <div id="wavly-timer">
