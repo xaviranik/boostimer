@@ -15,4 +15,5 @@ dist/*
 # asset folder
 assets/css
 assets/js
+!assets/vendor
 !assets/lib
