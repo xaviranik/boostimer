@@ -94,6 +94,9 @@ final class WooAvailability {
      * @return void
      */
     public function init_plugin() {
+        // Load global functions
+        include_once WOO_AVAILABILITY_DIR . '/includes/functions.php';
+
         // Load admin manager
         if ( is_admin() ) {
             new WooAvailability\Admin();
@@ -103,9 +106,6 @@ final class WooAvailability {
         if ( ! is_admin() ) {
             new WooAvailability\Frontend();
         }
-
-        // Load global functions
-        include_once WOO_AVAILABILITY_DIR . '/includes/functions.php';
     }
 }
 
