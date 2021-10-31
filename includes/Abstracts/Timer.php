@@ -12,7 +12,7 @@ abstract class Timer {
     /**
      * @var string
      */
-    protected $title;
+    public static $title;
 
     /**
      * Timer constructor.

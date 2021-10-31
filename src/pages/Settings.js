@@ -53,11 +53,11 @@ const Settings = () => {
       data: data,
     })
       .then((response) => {
-        let message = response.message ?? __('Settings have been updated successfully');
+        let message = response.message ?? __('Settings have been updated successfully', 'woo-availability');
         toast.success(message);
       })
       .catch((error) => {
-        toast.success(__('Something went wrong.'));
+        toast.error(__('Timer titles can not be empty', 'woo-availability'));
       });
   };
 

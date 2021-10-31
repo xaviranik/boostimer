@@ -13,7 +13,7 @@ class StockTimer extends Timer {
     public function __construct() {
         parent::__construct();
 
-        $this->title = Helper::get_stock_timer_title();
+        self::$title = __( 'Expected restock in:', 'woo-availability' );
     }
 
     /**
@@ -58,7 +58,9 @@ class StockTimer extends Timer {
             return;
         }
 
-        $title                  = apply_filters( 'wavly_restock_timer_title', $this->title );
+        $title = Helper::get_stock_timer_title();
+
+        $title                  = apply_filters( 'wavly_restock_timer_title', empty( $title ) ? $this->title : $title );
         $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
 
         $this->render( $title, $restock_date_timestamp, '' );

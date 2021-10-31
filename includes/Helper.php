@@ -2,6 +2,8 @@
 
 namespace WooAvailability;
 
+use WooAvailability\Admin\Settings;
+
 /**
  * Helper class.
  *
@@ -47,7 +49,9 @@ class Helper {
      * @return string
      */
     public static function get_sale_timer_title() {
-        return __( 'Sale ends in:', 'woo-availability' );
+        $settings = Settings::get( 'sale_timer' );
+
+        return isset( $settings['title'] ) ? $settings['title'] : __( 'Sale ends in:', 'woo-availability' );
     }
 
     /**
@@ -58,6 +62,8 @@ class Helper {
      * @return string
      */
     public static function get_stock_timer_title() {
-        return __( 'Expected restock in:', 'woo-availability' );
+        $settings = Settings::get( 'stock_timer' );
+
+        return isset( $settings['title'] ) ? $settings['title'] : __( 'Expected restock in:', 'woo-availability' );
     }
 }

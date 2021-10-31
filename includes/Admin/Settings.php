@@ -2,6 +2,7 @@
 
 namespace WooAvailability\Admin;
 
+use WooAvailability\Frontend\SaleTimer;
 use WooAvailability\Helper;
 
 /**
@@ -24,11 +25,11 @@ class Settings {
     public static function all() {
         $default = apply_filters( 'wavly_settings_default', [
             'sale_timer'  => [
-                'title'   => Helper::get_stock_timer_title(),
+                'title'   => SaleTimer::$title,
                 'enabled' => 'yes',
             ],
             'stock_timer' => [
-                'title'   => Helper::get_stock_timer_title(),
+                'title'   => SaleTimer::$title,
                 'enabled' => 'yes',
             ],
         ] );

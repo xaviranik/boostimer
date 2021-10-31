@@ -1001,10 +1001,10 @@ var Settings = function Settings() {
     }).then(function (response) {
       var _response$message;
 
-      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully');
+      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'woo-availability');
       react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success(message);
     })["catch"](function (error) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Something went wrong.'));
+      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Timer titles can not be empty', 'woo-availability'));
     });
   };
 
