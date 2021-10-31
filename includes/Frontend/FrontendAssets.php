@@ -13,8 +13,7 @@ class FrontendAssets extends Assets {
      * Frontend Assets constructor.
      */
     public function __construct() {
-        add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ], 20 );
-        add_action( 'wp_enqueue_scripts', [ $this, 'load_scripts' ], 21 );
+        add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ], 20 );
     }
 
     /**
@@ -22,8 +21,9 @@ class FrontendAssets extends Assets {
      *
      * @return void
      */
-    public function register_scripts() {
+    public function enqueue_scripts() {
         $this->register();
+        $this->load_scripts();
     }
 
     /**

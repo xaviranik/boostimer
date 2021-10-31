@@ -13,7 +13,7 @@ class AdminAssets extends Assets {
      * AdminAssets constructor.
      */
     public function __construct() {
-        add_action( 'admin_enqueue_scripts', [ $this, 'register_scripts' ], 5 );
+        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 5 );
     }
 
     /**
@@ -21,7 +21,7 @@ class AdminAssets extends Assets {
      *
      * @return void
      */
-    public function register_scripts() {
+    public function enqueue_scripts() {
         $this->register();
         $this->load_scripts();
     }
