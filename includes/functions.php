@@ -99,9 +99,8 @@ function wavly_wp_timezone_string() {
     $sign        = ( $offset < 0 ) ? '-' : '+';
     $abs_hour    = abs( $hours );
     $abs_minutes = abs( $minutes * 60 );
-    $tz_offset   = sprintf( '%s%02d:%02d', $sign, $abs_hour, $abs_minutes );
 
-    return $tz_offset;
+    return sprintf( '%s%02d:%02d', $sign, $abs_hour, $abs_minutes );
 }
 
 /**

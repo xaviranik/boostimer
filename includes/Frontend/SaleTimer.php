@@ -18,7 +18,7 @@ class SaleTimer extends Timer {
     public function __construct() {
         parent::__construct();
 
-        $this->title = __( 'Sale ends in:', 'woo-availability' );
+        $this->title = Helper::get_sale_timer_title();
     }
 
 

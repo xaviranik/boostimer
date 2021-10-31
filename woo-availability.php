@@ -21,11 +21,18 @@ require __DIR__ . '/vendor/autoload.php';
 final class WooAvailability {
 
     /**
-     * Plugin version
+     * Plugin version.
      *
      * @var string
      */
     private $version = '1.0.0';
+
+    /**
+     * Instance container.
+     *
+     * @var array
+     */
+    private $container = [];
 
     /**
      * WooAvailability Constructor.
