@@ -18,6 +18,7 @@ class SaleTimer extends Timer {
     public function __construct() {
         parent::__construct();
 
+        self::$key   = 'sale_timer';
         self::$title = __( 'Sale ends in:', 'woo-availability' );
     }
 

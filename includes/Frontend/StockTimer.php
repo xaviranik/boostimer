@@ -13,6 +13,7 @@ class StockTimer extends Timer {
     public function __construct() {
         parent::__construct();
 
+        self::$key   = 'stock_timer';
         self::$title = __( 'Expected restock in:', 'woo-availability' );
     }
 
