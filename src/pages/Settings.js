@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { __ } from "@wordpress/i18n";
+import apiFetch from '@wordpress/api-fetch';
 import InputField from "../components/Utils/InputField";
 import SwitchField from "../components/Utils/SwitchField";
-import GoBack from "../components/Utils/GoBack";
 
 const Settings = () => {
+  const [settings, setSettings] = useState({});
+
+  useEffect(() => {
+    apiFetch({
+      path: '/wavly/v1/settings',
+      method: 'GET'
+    }).then((response) => {
+      console.log( response )
+      setSettings(response);
+    }).finally(() => {});
+  }, []);
+
   return (
     <div className="p-6 pt-0">
       <div className="grid grid-cols-12 gap-4">
