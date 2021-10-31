@@ -929,7 +929,7 @@
     core-js-pure "^3.16.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
@@ -4844,14 +4844,6 @@ document.contains@^1.0.1:
   integrity sha512-YcvYFs15mX8m3AO1QNQy3BlIpSMfNRj3Ujk2BEJxsZG+HZf7/hZ6jr7mDpXrF8q+ff95Vef5yjhiZxm8CGJr6Q==
   dependencies:
     define-properties "^1.1.3"
-
-dom-helpers@^5.0.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
-  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
-  dependencies:
-    "@babel/runtime" "^7.8.7"
-    csstype "^3.0.2"
 
 dom-scroll-into-view@^1.2.1:
   version "1.2.1"
@@ -10958,14 +10950,12 @@ react-textarea-autosize@^8.2.0:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react-toastify@^6.0.8:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.2.0.tgz#f2d76747c70b9de91f71f253d9feae6b53dc836c"
-  integrity sha512-XpjFrcBhQ0/nBOL4syqgP/TywFnOyxmstYLWgSQWcj39qpp+WU4vPt3C/ayIDx7RFyxRWfzWTdR2qOcDGo7G0w==
+react-toastify@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.0.3.tgz#7fbf65f69ec357aab8dd03c1496f9177aa92409a"
+  integrity sha512-rv3koC7f9lKKSkdpYgo/TGzgWlrB/aaiUInF1DyV7BpiM4kyTs+uhu6/r8XDMtBY2FOIHK+FlK3Iv7OzpA/tCA==
   dependencies:
     clsx "^1.1.1"
-    prop-types "^15.7.2"
-    react-transition-group "^4.4.1"
 
 react-tooltip@^4.2.21:
   version "4.2.21"
@@ -10974,16 +10964,6 @@ react-tooltip@^4.2.21:
   dependencies:
     prop-types "^15.7.2"
     uuid "^7.0.3"
-
-react-transition-group@^4.4.1:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
-  integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    dom-helpers "^5.0.1"
-    loose-envify "^1.4.0"
-    prop-types "^15.6.2"
 
 react-use-gesture@^9.0.0:
   version "9.1.3"

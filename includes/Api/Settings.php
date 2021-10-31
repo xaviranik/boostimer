@@ -58,6 +58,7 @@ class Settings extends BaseController {
      */
     public function get_items( $request ) {
         $response = AdminSettings::all();
+
         return rest_ensure_response( $response );
     }
 
@@ -73,11 +74,11 @@ class Settings extends BaseController {
 
         AdminSettings::update( $settings );
 
-        return rest_ensure_response( [ 'message' => 'Settings updated successfully!' ] );
+        return rest_ensure_response( [ 'message' => __( 'Settings have been updated successfully', 'woo-availability' ) ] );
     }
 
     /**
-     * Prepare item for database save
+     * Prepare item for database save.
      *
      * @since 1.0.0
      *

@@ -32,7 +32,7 @@
     "react-hot-loader": "^4.13.0",
     "react-loading-skeleton": "^2.1.1",
     "react-router-dom": "^5.2.0",
-    "react-toastify": "^6.0.8",
+    "react-toastify": "^8.0.3",
     "react-tooltip": "^4.2.21",
     "select2-react-component": "^5.10.3",
     "uglifyjs-webpack-plugin": "^2.2.0"

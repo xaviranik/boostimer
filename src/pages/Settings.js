@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { __ } from "@wordpress/i18n";
+import { toast } from 'react-toastify';
 import Loader from "../components/Loader";
 import apiFetch from "@wordpress/api-fetch";
 import InputField from "../components/Utils/InputField";
@@ -52,10 +53,11 @@ const Settings = () => {
       data: data,
     })
       .then((response) => {
-        console.log(response)
+        let message = response.message ?? __('Settings have been updated successfully');
+        toast.success(message);
       })
       .catch((error) => {
-        console.log( error )
+        toast.success(__('Something went wrong.'));
       });
   };
 
