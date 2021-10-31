@@ -12,11 +12,6 @@ abstract class Timer {
     /**
      * @var string
      */
-    public static $key;
-
-    /**
-     * @var string
-     */
     public static $title;
 
     /**

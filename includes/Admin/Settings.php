@@ -24,12 +24,12 @@ class Settings {
      */
     public static function all() {
         $default = apply_filters( 'wavly_settings_default', [
-            SaleTimer::$key  => [
+            'sale_timer'  => [
                 'title'   => SaleTimer::$title,
                 'enabled' => true,
             ],
-            StockTimer::$key => [
-                'title'   => SaleTimer::$title,
+            'stock_timer' => [
+                'title'   => StockTimer::$title,
                 'enabled' => true,
             ],
         ] );

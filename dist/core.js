@@ -1041,7 +1041,7 @@ var Settings = function Settings() {
     tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
     checked: settings.sale_timer.enabled,
     onChange: function onChange(e) {
-      return handleSwitchChange(e, 'sale_timer');
+      return handleSwitchChange(e, 'stock_timer');
     }
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
@@ -1052,7 +1052,7 @@ var Settings = function Settings() {
     tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
     checked: settings.stock_timer.enabled,
     onChange: function onChange(e) {
-      return handleSwitchChange(e, 'stock_timer');
+      return handleSwitchChange(e, 'sale_timer');
     }
   }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-12"

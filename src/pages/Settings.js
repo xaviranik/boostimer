@@ -105,7 +105,7 @@ const Settings = () => {
                         "woo-availability"
                       )}
                       checked={settings.sale_timer.enabled}
-                      onChange={(e) => handleSwitchChange(e, 'sale_timer')}
+                      onChange={(e) => handleSwitchChange(e, 'stock_timer')}
                     />
                   </div>
 
@@ -119,7 +119,7 @@ const Settings = () => {
                         "woo-availability"
                       )}
                       checked={settings.stock_timer.enabled}
-                      onChange={(e) => handleSwitchChange(e, 'stock_timer')}
+                      onChange={(e) => handleSwitchChange(e, 'sale_timer')}
                     />
                   </div>
                 </div>

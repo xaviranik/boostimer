@@ -3,6 +3,8 @@
 namespace WooAvailability;
 
 use WooAvailability\Admin\Settings;
+use WooAvailability\Frontend\SaleTimer;
+use WooAvailability\Frontend\StockTimer;
 
 /**
  * Helper class.
@@ -21,6 +23,14 @@ class Helper {
      * @return bool
      */
     public static function is_sale_timer_active( $product ) {
+        $settings = Settings::get( 'sale_timer' );
+
+        $enabled = isset( $settings['enabled'] ) ? $settings['enabled'] : false;
+
+        if ( ! $enabled ) {
+            return false;
+        }
+
         $is_sale_timer_active = $product->get_meta( '_woo_availability_show_sale_timer', true );
 
         return 'yes' === $is_sale_timer_active;
@@ -36,6 +46,14 @@ class Helper {
      * @return bool
      */
     public static function is_restock_timer_active( $product ) {
+        $settings = Settings::get( 'stock_timer' );
+
+        $enabled = isset( $settings['enabled'] ) ? $settings['enabled'] : false;
+
+        if ( ! $enabled ) {
+            return false;
+        }
+
         $is_restock_timer_active = $product->get_meta( '_woo_availability_show_stock_timer', true );
 
         return 'yes' === $is_restock_timer_active;
