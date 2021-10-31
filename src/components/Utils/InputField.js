@@ -1,7 +1,7 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
 
-const InputField = ({id, label, tooltip, placeholder, value}) => {
+const InputField = ({id, label, tooltip, placeholder, value, onChange}) => {
   return(
     <div className="flex flex-col justify-center">
       <div className="flex flex-col">
@@ -16,7 +16,7 @@ const InputField = ({id, label, tooltip, placeholder, value}) => {
         <ReactTooltip id={id} className="rounded-md" type="dark" effect="solid" delayHide={100}>
           <span className="mt-2 text-white text-xs">{tooltip}</span>
         </ReactTooltip>
-        <input className="woo-availability-input" type="text" placeholder={placeholder} defaultValue={value}/>
+        <input onChange={onChange} className="woo-availability-input" type="text" placeholder={placeholder} defaultValue={value}/>
       </div>
     </div>
   );

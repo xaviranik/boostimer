@@ -247,6 +247,148 @@ var _default = Object(react_hot_loader_root__WEBPACK_IMPORTED_MODULE_3__["hot"])
 
 /***/ }),
 
+/***/ "./src/components/Loader.js":
+/*!**********************************!*\
+  !*** ./src/components/Loader.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_content_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-content-loader */ "./node_modules/react-content-loader/dist/react-content-loader.es.js");
+
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+
+
+
+var Loader = function Loader() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_content_loader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    viewBox: "0 0 800 400",
+    height: '100%',
+    width: '100%',
+    className: "h-full"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "-8",
+    y: "30",
+    rx: "4",
+    ry: "4",
+    width: "120",
+    height: "10"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "70",
+    rx: "3",
+    ry: "3",
+    className: "h-2 w-full"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "90",
+    rx: "3",
+    ry: "3",
+    width: "422",
+    height: "7"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "120",
+    rx: "3",
+    ry: "3",
+    width: "424",
+    height: "7"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "-8",
+    y: "170",
+    rx: "4",
+    ry: "4",
+    width: "120",
+    height: "10"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "190",
+    rx: "3",
+    ry: "3",
+    className: "h-2 w-full"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "210",
+    rx: "3",
+    ry: "3",
+    width: "422",
+    height: "7"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "230",
+    rx: "3",
+    ry: "3",
+    width: "424",
+    height: "7"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "-8",
+    y: "280",
+    rx: "4",
+    ry: "4",
+    width: "120",
+    height: "10"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "300",
+    rx: "3",
+    ry: "3",
+    className: "h-2 w-full"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "320",
+    rx: "3",
+    ry: "3",
+    width: "422",
+    height: "7"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", {
+    x: "12",
+    y: "340",
+    rx: "3",
+    ry: "3",
+    width: "424",
+    height: "7"
+  }));
+};
+
+var _default = Loader;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Loader, "Loader", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
+  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./src/components/Sidebar.js":
 /*!***********************************!*\
   !*** ./src/components/Sidebar.js ***!
@@ -368,7 +510,8 @@ var InputField = function InputField(_ref) {
       label = _ref.label,
       tooltip = _ref.tooltip,
       placeholder = _ref.placeholder,
-      value = _ref.value;
+      value = _ref.value,
+      onChange = _ref.onChange;
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex flex-col justify-center"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -399,6 +542,7 @@ var InputField = function InputField(_ref) {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "mt-2 text-white text-xs"
   }, tooltip)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+    onChange: onChange,
     className: "woo-availability-input",
     type: "text",
     placeholder: placeholder,
@@ -541,7 +685,17 @@ var SwitchField = function SwitchField(_ref) {
       switchId = _ref.switchId,
       label = _ref.label,
       tooltip = _ref.tooltip,
-      checked = _ref.checked;
+      checked = _ref.checked,
+      onChange = _ref.onChange;
+
+  var getSwitchStatus = function getSwitchStatus(status) {
+    if (typeof status === "boolean") {
+      return status;
+    }
+
+    return 'yes' === status;
+  };
+
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "flex items-center justify-between w-full"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -572,8 +726,9 @@ var SwitchField = function SwitchField(_ref) {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "mt-2 text-white text-xs"
   }, tooltip))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_WooSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    onChange: onChange,
     id: switchId,
-    checked: checked
+    checked: getSwitchStatus(checked)
   }));
 };
 
@@ -629,13 +784,15 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 var WooSwitch = function WooSwitch(_ref) {
   var id = _ref.id,
-      checked = _ref.checked;
+      checked = _ref.checked,
+      onChange = _ref.onChange;
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("label", {
     htmlFor: id,
     className: "flex items-center cursor-pointer"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "relative"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+    onChange: onChange,
     id: id,
     type: "checkbox",
     className: "sr-only",
@@ -743,16 +900,20 @@ Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('woo-avail
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "./node_modules/@wordpress/i18n/build-module/index.js");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Utils_InputField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Utils/InputField */ "./src/components/Utils/InputField.js");
-/* harmony import */ var _components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Utils/SwitchField */ "./src/components/Utils/SwitchField.js");
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "./node_modules/@wordpress/i18n/build-module/index.js");
+/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Loader */ "./src/components/Loader.js");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Utils/InputField */ "./src/components/Utils/InputField.js");
+/* harmony import */ var _components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Utils/SwitchField */ "./src/components/Utils/SwitchField.js");
+
 
 
 
@@ -760,6 +921,10 @@ __webpack_require__.r(__webpack_exports__);
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
   enterModule && enterModule(module);
 })();
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
   return a;
@@ -771,83 +936,146 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
+
 var Settings = function Settings() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({}),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
+  var settingsSchema = {
+    sale_timer: {
+      title: '',
+      enabled: 0
+    },
+    stock_timer: {
+      title: '',
+      enabled: 0
+    }
+  };
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(settingsSchema),
+      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
       settings = _useState2[0],
       setSettings = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_4___default()({
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(true),
+      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState3, 2),
+      isLoading = _useState4[0],
+      setIsLoading = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    setIsLoading(true);
+    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6___default()({
       path: '/wavly/v1/settings',
       method: 'GET'
     }).then(function (response) {
-      console.log(response);
       setSettings(response);
+      setIsLoading(false);
     })["finally"](function () {});
   }, []);
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    var data = {
+      sale_timer: {
+        title: settings.sale_timer.title,
+        enabled: settings.sale_timer.enabled
+      },
+      stock_timer: {
+        title: settings.stock_timer.title,
+        enabled: settings.stock_timer.enabled
+      }
+    };
+    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6___default()({
+      path: '/wavly/v1/settings',
+      method: 'PUT',
+      data: data
+    }).then(function (response) {
+      console.log(response);
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  };
+
+  var handleSwitchChange = function handleSwitchChange(e, key) {
+    setSettings(_objectSpread(_objectSpread({}, settings), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, key, {
+      title: settings[key]['title'],
+      enabled: e.target.checked
+    })));
+  };
+
+  var handleInputChange = function handleInputChange(e, key) {
+    setSettings(_objectSpread(_objectSpread({}, settings), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, key, {
+      title: e.target.value,
+      enabled: settings[key]['enabled']
+    })));
+  };
+
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "p-6 pt-0"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "grid grid-cols-12 gap-4"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "col-span-12"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "bg-white p-8 shadow rounded-md"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
-    className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Countdown Timer", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, isLoading ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Loader__WEBPACK_IMPORTED_MODULE_5__["default"], null) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+    className: "uppercase tracking-widest text-gray-500 font-semibold"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Countdown", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "enable_in_stock_countdown_timer",
     switchId: "enable_in_stock_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Show Stock Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
-    checked: true
-  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "woo-availability"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
+    checked: settings.sale_timer.enabled,
+    onChange: function onChange(e) {
+      return handleSwitchChange(e, 'sale_timer');
+    }
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "enable_sale_countdown_timer",
     switchId: "enable_sale_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Show Sale Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
-    checked: true
-  }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "woo-availability"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
+    checked: settings.stock_timer.enabled,
+    onChange: function onChange(e) {
+      return handleSwitchChange(e, 'stock_timer');
+    }
+  }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-12"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
-    className: "text-xs uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Notify User", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+    className: "uppercase tracking-widest text-gray-500 font-semibold"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Timer title", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    id: "enable_notify_user",
-    switchId: "enable_notify_user_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Enable Notify User", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Enable this to show "notify me" button on single product page', "woo-availability"),
-    checked: false
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    id: "success_enroll_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Success Enrollment Message", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("This message will be displayed when a user successfully enrolls for the availability notification", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("You are enrolled successfully to get notified for stock availability!", "woo-availability"),
-    value: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("You are enrolled successfully to get notified for stock availability!", "woo-availability")
-  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "sale_timer_tooltip",
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale Timer Title", "woo-availability"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the sale timer title", "woo-availability"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale ends in:", "woo-availability"),
+    value: settings.sale_timer.title,
+    onChange: function onChange(e) {
+      return handleInputChange(e, 'sale_timer');
+    }
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__["default"], {
     id: "notify_me_btn_text_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('"Notify Me" Button Text', "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("This text will be displayed on an enrollment button on a product page", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Notify me!", "woo-availability"),
-    value: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Notify me!", "woo-availability")
-  })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Stock Timer Title', "woo-availability"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the stock timer title", "woo-availability"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Expected restock in:", "woo-availability"),
+    value: settings.stock_timer.title,
+    onChange: function onChange(e) {
+      return handleInputChange(e, 'stock_timer');
+    }
+  })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-12"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("button", {
-    className: "bg-blue-900 text-white px-8 py-2 uppercase text-md rounded-md hover:shadow-md transition delay-100 ease-in-out"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Save", "woo-availability")))))));
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("button", {
+    onClick: handleSubmit,
+    className: "bg-blue-900 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "woo-availability"))))))));
 };
 
-__signature__(Settings, "useState{[settings, setSettings]({})}\nuseEffect{}");
+__signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseEffect{}");
 
 var _default = Settings;
 /* harmony default export */ __webpack_exports__["default"] = (_default);

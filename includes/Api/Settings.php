@@ -132,9 +132,8 @@ class Settings extends BaseController {
                         ],
                         'enabled' => [
                             'description'       => __( 'Is sale timer enabled..', 'woo-availability' ),
-                            'type'              => 'string',
+                            'type'              => 'boolean',
                             'required'          => true,
-                            'enum'              => [ 'yes', 'no' ],
                             'sanitize_callback' => 'sanitize_text_field',
                             'validate_callback' => 'rest_validate_request_arg',
                         ],
@@ -156,9 +155,8 @@ class Settings extends BaseController {
                         ],
                         'enabled' => [
                             'description'       => __( 'Is stock timer enabled..', 'woo-availability' ),
-                            'type'              => 'string',
+                            'type'              => 'boolean',
                             'required'          => true,
-                            'enum'              => [ 'yes', 'no' ],
                             'sanitize_callback' => 'sanitize_text_field',
                             'validate_callback' => 'rest_validate_request_arg',
                         ],
