@@ -36,7 +36,7 @@ final class WooAvailability {
         register_activation_hook(__FILE__, array( $this, 'activate' ));
         register_deactivation_hook(__FILE__, array( $this, 'deactivate' ));
 
-        add_action( 'woocommerce_loaded', [ $this, 'init_plugin' ] );
+        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
     }
 
     /**
@@ -55,6 +55,8 @@ final class WooAvailability {
 
     /**
      * Activate plugin.
+     *
+     * @return void
      */
     public function activate() {
         if ( ! function_exists( 'WC' ) ) {
@@ -67,6 +69,8 @@ final class WooAvailability {
 
     /**
      * Deactivate plugin.
+     *
+     * @return void
      */
     public function deactivate() {
         // @todo codes to execute upon deactivation
@@ -77,6 +81,8 @@ final class WooAvailability {
      *
      * Checks for an existing WooAvailability instance
      * and if it doesn't find one, creates it.
+     *
+     * @return WooAvailability
      */
     public static function instance() {
         static $instance = false;
@@ -106,6 +112,9 @@ final class WooAvailability {
         if ( ! is_admin() ) {
             new WooAvailability\Frontend();
         }
+
+        // Load API manager
+        new WooAvailability\Api();
     }
 }
 
