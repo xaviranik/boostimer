@@ -1039,7 +1039,7 @@ var Settings = function Settings() {
     switchId: "enable_in_stock_countdown_timer_switch",
     label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "woo-availability"),
     tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
-    checked: settings.sale_timer.enabled,
+    checked: settings.stock_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'stock_timer');
     }
@@ -1050,7 +1050,7 @@ var Settings = function Settings() {
     switchId: "enable_sale_countdown_timer_switch",
     label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "woo-availability"),
     tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
-    checked: settings.stock_timer.enabled,
+    checked: settings.sale_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'sale_timer');
     }

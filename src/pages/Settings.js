@@ -104,7 +104,7 @@ const Settings = () => {
                         "Enable this to show countdown timer for next available stock on single product",
                         "woo-availability"
                       )}
-                      checked={settings.sale_timer.enabled}
+                      checked={settings.stock_timer.enabled}
                       onChange={(e) => handleSwitchChange(e, 'stock_timer')}
                     />
                   </div>
@@ -118,7 +118,7 @@ const Settings = () => {
                         "Enable this to show countdown timer for sale duration on single product",
                         "woo-availability"
                       )}
-                      checked={settings.stock_timer.enabled}
+                      checked={settings.sale_timer.enabled}
                       onChange={(e) => handleSwitchChange(e, 'sale_timer')}
                     />
                   </div>
