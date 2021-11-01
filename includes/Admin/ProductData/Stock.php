@@ -76,6 +76,10 @@ class Stock {
         $show_stock_timer = isset( $_POST['_woo_availability_show_stock_timer'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_show_stock_timer'] ) ) : 'no';
         $restock_date     = isset( $_POST['_woo_availability_restock_date'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_restock_date'] ) ) : '';
 
+        if ( ! strtotime( $restock_date ) ) {
+            return;
+        }
+
         $restock_date_timestamp = wavly_current_datetime()
                                     ->modify( $restock_date )
                                     ->setTime( 23, 59, 59 )
