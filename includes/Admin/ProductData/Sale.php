@@ -50,7 +50,7 @@ class Sale {
                 'label'         => __( 'Show sale timer?', 'woo-availability' ),
                 'wrapper_class' => 'hide_if_grouped',
                 'desc_tip'      => false,
-                'description'   => __( 'Show sale countdown timer if sale price dates are set', 'woo-availability' ),
+                'description'   => __( 'Show sale countdown timer if sale price and schedules are set', 'woo-availability' ),
                 'value'         => $show_sale_timer,
             ]
         );

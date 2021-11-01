@@ -95,19 +95,6 @@ const Settings = () => {
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
                     {__("Show Countdown", "woo-availability")}
                   </div>
-                  <div className="mt-6">
-                    <SwitchField
-                      id={"enable_in_stock_countdown_timer"}
-                      switchId={"enable_in_stock_countdown_timer_switch"}
-                      label={__("Show Stock Countdown Timer", "woo-availability")}
-                      tooltip={__(
-                        "Enable this to show countdown timer for next available stock on single product",
-                        "woo-availability"
-                      )}
-                      checked={settings.stock_timer.enabled}
-                      onChange={(e) => handleSwitchChange(e, 'stock_timer')}
-                    />
-                  </div>
 
                   <div className="mt-6">
                     <SwitchField
@@ -123,6 +110,20 @@ const Settings = () => {
                     />
                   </div>
                 </div>
+
+                  <div className="mt-6">
+                    <SwitchField
+                      id={"enable_in_stock_countdown_timer"}
+                      switchId={"enable_in_stock_countdown_timer_switch"}
+                      label={__("Show Stock Countdown Timer", "woo-availability")}
+                      tooltip={__(
+                        "Enable this to show countdown timer for next available stock on single product",
+                        "woo-availability"
+                      )}
+                      checked={settings.stock_timer.enabled}
+                      onChange={(e) => handleSwitchChange(e, 'stock_timer')}
+                    />
+                  </div>
 
                 <div className="mt-12">
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
