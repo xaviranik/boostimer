@@ -69,7 +69,7 @@ class Helper {
     public static function get_sale_timer_title() {
         $settings = Settings::get( 'sale_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : __( 'Sale ends in:', 'woo-availability' );
+        return isset( $settings['title'] ) ? $settings['title'] : SaleTimer::get_title();
     }
 
     /**
@@ -82,6 +82,6 @@ class Helper {
     public static function get_stock_timer_title() {
         $settings = Settings::get( 'stock_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : __( 'Expected restock in:', 'woo-availability' );
+        return isset( $settings['title'] ) ? $settings['title'] : StockTimer::get_title();
     }
 }

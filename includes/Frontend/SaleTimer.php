@@ -17,8 +17,15 @@ class SaleTimer extends Timer {
      */
     public function __construct() {
         parent::__construct();
+    }
 
-        self::$title = __( 'Sale ends in:', 'woo-availability' );
+    /**
+     * Gets timer title
+     *
+     * @return string
+     */
+    public static function get_title() {
+        return __( 'Sale ends in:', 'woo-availability' );
     }
 
 
@@ -59,7 +66,7 @@ class SaleTimer extends Timer {
 
         $title = Helper::get_sale_timer_title();
 
-        $title = apply_filters( 'wavly_sale_timer_title', empty( $title ) ? self::$title : $title );
+        $title = apply_filters( 'wavly_sale_timer_title', $title );
 
         $this->render( $title, $sale_date_to, $sale_date_from );
     }

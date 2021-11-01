@@ -28,7 +28,7 @@ $restock_date     = isset( $restock_date ) ? $restock_date : '';
     woocommerce_wp_text_input(
         [
             'id'            => '_woo_availability_restock_date',
-            'label'         => __( 'Restock date', 'woo-availability' ),
+            'label'         => __( 'Stock available after', 'woo-availability' ),
             'wrapper_class' => 'hide_if_grouped show_if_variable show_if_simple short',
             'class'         => 'stock_timer',
             'desc_tip'      => true,

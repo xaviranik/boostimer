@@ -10,11 +10,6 @@ namespace WooAvailability\Abstracts;
 abstract class Timer {
 
     /**
-     * @var string
-     */
-    public static $title;
-
-    /**
      * Timer constructor.
      */
     public function __construct() {
