@@ -72,6 +72,9 @@ final class WooAvailability {
 
             wp_die( '<div class="error"><p>' . sprintf( wp_kses_post( '<b>WooAvailability</b> requires <a href="%s">WooCommerce</a> to be installed & activated! Go back to <a href="%s">Plugin page</a>' ), 'https://wordpress.org/plugins/woocommerce/', esc_url( admin_url( 'plugins.php' ) ) ) . '</p></div>' );
         }
+
+        $installer = new WooAvailability\Install();
+        $installer->run();
     }
 
     /**
