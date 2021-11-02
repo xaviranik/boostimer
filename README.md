@@ -23,24 +23,31 @@ Using this plugin, it’s easy to know when the required product will be availab
 ### Features
 
 - Display a countdown timer to highlight when the product will be restocked.
-- Display a countdown timer to highlight sell products purchase availability end days and time.
-- Display an auto restock countdown timer when the sell countdown timer ends.
-- Manages restock and sell countdown for stock quantity
-- Works for both Simple and Variable Products
+- Display a countdown timer to highlight sale products purchase availability end days and time.
+- Display stock timer automatically after sale timer when stock goes zero.
+- Manages restock and sell countdown for stock quantity.
+- Display sale timer and restock timer countdown for Simple Product.
+- Display restock timer countdown for Variable Product.
+- Display Sale timer countdown for External/Affiliate Product.
+- Customize Sale Timer and Restock Timer title.
+- Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
 
-## Installation ##
+### Attractive User Interface
 
-Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
+A good UI can sometimes make a system even more attractive. WooAvailability has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
-## Frequently Asked Questions ##
+[![admin-settings.png](https://i.postimg.cc/SN46BLXG/07-admin-settings.png)]()
 
-### Question? ###
+[![simple-product-sale-admin](https://i.postimg.cc/ZqQP2139/05-simple-product-sale-admin.png)]()
 
-Answer
+[![sale-auto](https://i.postimg.cc/0NnFS5LT/09-sale-auto.png)]()
 
-## Screenshots ##
+[![variable-product-restock-admin](https://i.postimg.cc/8cQRPMZN/08-variable-product-restock-admin.png)]()
 
-1. Screenshot
+[![variable-product-restock-timer](https://i.postimg.cc/1zXcW9gh/02-variable-product-restock-timer.png)]()
+
+[![subscription-product-sale-timer](https://i.postimg.cc/wMXhtMrJ/03-subscription-product-sale-timer.png)]()
+
 
 ## Changelog ##
 

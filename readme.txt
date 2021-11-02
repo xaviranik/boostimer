@@ -23,10 +23,18 @@ Using this plugin, it’s easy to know when the required product will be availab
 ### Features
 
 - Display a countdown timer to highlight when the product will be restocked.
-- Display a countdown timer to highlight sell products purchase availability end days and time.
-- Display an auto restock countdown timer when the sell countdown timer ends.
-- Manages restock and sell countdown for stock quantity
-- Works for both Simple and Variable Products
+- Display a countdown timer to highlight sale products purchase availability end days and time.
+- Display stock timer automatically after sale timer when stock goes zero.
+- Manages restock and sell countdown for stock quantity.
+- Display sale timer and restock timer countdown for Simple Product.
+- Display restock timer countdown for Variable Product.
+- Display Sale timer countdown for External/Affiliate Product.
+- Customize Sale Timer and Restock Timer title.
+- Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
+
+### Attractive User Interface
+
+A good UI can sometimes make a system even more attractive. WooAvailability has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
 == Installation ==
 
