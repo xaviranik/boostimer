@@ -20,7 +20,7 @@ WooAvailability is a product wise availability plugin which shows a beautiful co
 Using this plugin, it’s easy to know when the required product will be available or restocked in the store. Furthermore, offering products on a limited sale time with a catchy countdown can create a sense of urgency which can trigger the user to make the purchase right away.
 
 
-### Features
+### Key Features
 
 - Display a countdown timer to highlight when the product will be restocked.
 - Display a countdown timer to highlight sale products purchase availability end days and time.

@@ -20,7 +20,7 @@ WooAvailability is a product wise availability plugin which shows a beautiful co
 Using this plugin, it’s easy to know when the required product will be available or restocked in the store. Furthermore, offering products on a limited sale time with a catchy countdown can create a sense of urgency which can trigger the user to make the purchase right away.
 
 
-### Features
+### Key Features
 
 - Display a countdown timer to highlight when the product will be restocked.
 - Display a countdown timer to highlight sale products purchase availability end days and time.
@@ -36,16 +36,22 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 A good UI can sometimes make a system even more attractive. WooAvailability has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
+#### Set Admin Settings
 [![admin-settings.png](https://i.postimg.cc/SN46BLXG/07-admin-settings.png)]()
 
+#### Set Sale countdown timer
 [![simple-product-sale-admin](https://i.postimg.cc/ZqQP2139/05-simple-product-sale-admin.png)]()
 
+#### View Sale timer countdown
 [![sale-auto](https://i.postimg.cc/0NnFS5LT/09-sale-auto.png)]()
 
+#### Set Restock countdown timer
 [![variable-product-restock-admin](https://i.postimg.cc/8cQRPMZN/08-variable-product-restock-admin.png)]()
 
+#### View Restock countdown timer
 [![variable-product-restock-timer](https://i.postimg.cc/1zXcW9gh/02-variable-product-restock-timer.png)]()
 
+#### Support for WooCommerce Subscription Product: Simple, Variable
 [![subscription-product-sale-timer](https://i.postimg.cc/wMXhtMrJ/03-subscription-product-sale-timer.png)]()
 
 
