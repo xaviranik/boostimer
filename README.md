@@ -25,7 +25,7 @@ Using this plugin, it’s easy to know when the required product will be availab
 - Display a countdown timer to highlight when the product will be restocked.
 - Display a countdown timer to highlight sale products purchase availability end days and time.
 - Display stock timer automatically after sale timer when stock goes zero.
-- Manages restock and sell countdown for stock quantity.
+- Manages Restock and Sale countdown for stock quantity.
 - Display sale timer and restock timer countdown for Simple Product.
 - Display restock timer countdown for Variable Product.
 - Display Sale timer countdown for External/Affiliate Product.
