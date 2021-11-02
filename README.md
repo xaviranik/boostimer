@@ -28,8 +28,6 @@ Using this plugin, it’s easy to know when the required product will be availab
 - Manages restock and sell countdown for stock quantity
 - Works for both Simple and Variable Products
 
-### Attractive User Interface
-
 ## Installation ##
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
