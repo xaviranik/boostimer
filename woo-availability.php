@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooAvailability
+ * Plugin Name: WooAvailability  - Product Availability Countdown And Scheduler For WooCommerce
  * Description: From sale to stock, Store-wise availability management in a breeze.
  * URI: https://zabiranik.com
  * Author: Zabir Anik
