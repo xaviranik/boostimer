@@ -42,9 +42,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Frequently Asked Questions ==
 
-= Question? =
+= Can I customize the timers? =
 
-Answer
+For now, you can not. The good news is, you might be able to do that in near future.
 
 == Screenshots ==
 
