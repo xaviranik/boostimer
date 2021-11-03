@@ -43,11 +43,10 @@ status "Generating build... 👷‍♀️"
 yarn build
 yarn makepot
 yarn pot2json
-yarn readme
 
 # Copy all files
 status "Copying files... ✌️"
-FILES=(woo-availability.php readme.txt dist includes assets templates languages composer.json composer.lock LICENCE)
+FILES=(woo-availability.php readme.txt dist includes assets templates languages composer.json composer.lock LICENSE)
 
 for file in ${FILES[@]}; do
     cp -R $file $BUILD_DIR
