@@ -1,6 +1,6 @@
 # WooAvailability  - Product Availability Countdown And Scheduler For Woocommerce #
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
-**Donate link:** https://zabiranik.com  
+**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Tags:** WooCommerce, wooAvailability, Product availability, Product scheduler, Product restock, Countdown, free plugin, woocommerce product availability and scheduler, Woocommerce product and scheduler plugin  
 **Requires at least:** 5.0  
 **Tested up to:** 5.8.1  
@@ -24,10 +24,10 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 - Display a countdown timer to highlight when the product will be restocked.
 - Display a countdown timer to highlight sale products purchase availability end days and time.
-- Display stock timer automatically after sale timer when stock goes zero.
+- Display Restock timer automatically after Sale timer when stock goes zero.
 - Manages Restock and Sale countdown for stock quantity.
-- Display sale timer and restock timer countdown for Simple Product.
-- Display restock timer countdown for Variable Product.
+- Display Sale timer and Restock timer countdown for Simple Product.
+- Display Restock timer countdown for Variable Product.
 - Display Sale timer countdown for External/Affiliate Product.
 - Customize Sale Timer and Restock Timer title.
 - Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
@@ -46,7 +46,7 @@ A good UI can sometimes make a system even more attractive. WooAvailability has 
 [![sale-auto](https://i.postimg.cc/0NnFS5LT/09-sale-auto.png)]()
 
 #### Set Restock countdown timer
-[![variable-product-restock-admin](https://i.postimg.cc/8cQRPMZN/08-variable-product-restock-admin.png)]()
+[![variable-product-restock-admin](https://i.postimg.cc/8CpLLxkK/1.png)]()
 
 #### View Restock countdown timer
 [![variable-product-restock-timer](https://i.postimg.cc/1zXcW9gh/02-variable-product-restock-timer.png)]()
