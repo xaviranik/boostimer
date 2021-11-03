@@ -43,6 +43,7 @@ final class WooAvailability {
         register_activation_hook(__FILE__, array( $this, 'activate' ));
         register_deactivation_hook(__FILE__, array( $this, 'deactivate' ));
 
+        add_action( 'init', [ $this, 'load_text_domain' ] );
         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
     }
 
@@ -84,6 +85,15 @@ final class WooAvailability {
      */
     public function deactivate() {
         // @todo codes to execute upon deactivation
+    }
+
+    /**
+     * Loads text domain
+     *
+     * @return void
+     */
+    public function load_text_domain() {
+        load_plugin_textdomain( 'woo-availability', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
 
     /**

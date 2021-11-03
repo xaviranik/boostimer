@@ -1,24 +1,24 @@
-# Copyright (c) $(date +'%Y') Zabir Anik. All Rights Reserved.
+# Copyright (c) 2021 Zabir Anik. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooAvailability ProductData Scheduler 1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-availability\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version: WooAvailability  - Product Availability Countdown And Scheduler For WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/xaviranik/woo-availability/issues\n"
+"Last-Translator: zabiranik.me@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-10-03T07:55:51+00:00\n"
+"POT-Creation-Date: 2021-11-03T16:03:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: woo-availability\n"
 
 #. Plugin Name of the plugin
-msgid "WooAvailability ProductData Scheduler"
+msgid "WooAvailability  - Product Availability Countdown And Scheduler For WooCommerce"
 msgstr ""
 
 #. Description of the plugin
-msgid "WooCommerce ProductData and stock availability scheduler plugin"
+msgid "From sale to stock, Store-wise availability management in a breeze."
 msgstr ""
 
 #. Author of the plugin
@@ -29,28 +29,142 @@ msgstr ""
 msgid "https://zabiranik.com"
 msgstr ""
 
-#: includes/Admin.php:24
-#: includes/Admin.php:25
+#: includes/Admin/Menu.php:28
+#: includes/Admin/Menu.php:29
 msgid "WooAvailability"
 msgstr ""
 
-#: dist/admin.js:292
-#: dist/admin.js:297
-#: src/components/Header.js:10
-#: src/components/Header.js:12
+#: includes/Admin/ProductData/Sale.php:50
+msgid "Show sale timer?"
+msgstr ""
+
+#: includes/Admin/ProductData/Sale.php:53
+msgid "Show sale countdown timer if sale price and schedules are set"
+msgstr ""
+
+#: includes/Api/Settings.php:77
+#: src/pages/Settings.js:56
+msgid "Settings have been updated successfully"
+msgstr ""
+
+#: includes/Api/Settings.php:121
+msgid "Sale timer."
+msgstr ""
+
+#: includes/Api/Settings.php:127
+msgid "Sale timer title."
+msgstr ""
+
+#: includes/Api/Settings.php:135
+msgid "Is sale timer enabled.."
+msgstr ""
+
+#: includes/Api/Settings.php:144
+msgid "Stock timer."
+msgstr ""
+
+#: includes/Api/Settings.php:150
+msgid "Stock timer title."
+msgstr ""
+
+#: includes/Api/Settings.php:158
+msgid "Is stock timer enabled.."
+msgstr ""
+
+#: includes/Frontend/SaleTimer.php:28
+#: src/pages/Settings.js:142
+msgid "Sale ends in:"
+msgstr ""
+
+#: includes/Frontend/StockTimer.php:23
+#: src/pages/Settings.js:159
+msgid "Expected restock in:"
+msgstr ""
+
+#: templates/admin/stock-product-data.php:20
+msgid "Show restock timer?"
+msgstr ""
+
+#: templates/admin/stock-product-data.php:23
+msgid "Show restock countdown timer"
+msgstr ""
+
+#: templates/admin/stock-product-data.php:31
+msgid "Stock available after"
+msgstr ""
+
+#: templates/admin/stock-product-data.php:35
+msgid "Sets probable restock date"
+msgstr ""
+
+#: templates/countdown-timer.php:34
+msgid "Days"
+msgstr ""
+
+#: templates/countdown-timer.php:38
+msgid "Hours"
+msgstr ""
+
+#: templates/countdown-timer.php:42
+msgid "Minutes"
+msgstr ""
+
+#: templates/countdown-timer.php:46
+msgid "Seconds"
+msgstr ""
+
+#: src/components/Sidebar.js:41
+msgid "Settings"
+msgstr ""
+
+#: src/pages/Home.js:11
 msgid "Home"
 msgstr ""
 
-#: dist/admin.js:300
-#: dist/admin.js:305
-#: src/components/Header.js:15
-#: src/components/Header.js:17
-msgid "Tools"
+#: src/pages/Settings.js:60
+msgid "Timer titles can not be empty"
 msgstr ""
 
-#: dist/admin.js:308
-#: dist/admin.js:313
-#: src/components/Header.js:23
-#: src/components/Header.js:26
-msgid "Settings"
+#: src/pages/Settings.js:96
+msgid "Show Countdown"
+msgstr ""
+
+#: src/pages/Settings.js:103
+msgid "Show Sale Countdown Timer"
+msgstr ""
+
+#: src/pages/Settings.js:104
+msgid "Enable this to show countdown timer for sale duration on single product"
+msgstr ""
+
+#: src/pages/Settings.js:118
+msgid "Show Stock Countdown Timer"
+msgstr ""
+
+#: src/pages/Settings.js:119
+msgid "Enable this to show countdown timer for next available stock on single product"
+msgstr ""
+
+#: src/pages/Settings.js:130
+msgid "Timer title"
+msgstr ""
+
+#: src/pages/Settings.js:137
+msgid "Sale Timer Title"
+msgstr ""
+
+#: src/pages/Settings.js:138
+msgid "This text will show on the sale timer title"
+msgstr ""
+
+#: src/pages/Settings.js:154
+msgid "Stock Timer Title"
+msgstr ""
+
+#: src/pages/Settings.js:155
+msgid "This text will show on the stock timer title"
+msgstr ""
+
+#: src/pages/Settings.js:177
+msgid "Save"
 msgstr ""
