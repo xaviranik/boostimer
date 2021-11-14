@@ -25,7 +25,7 @@ const Settings = () => {
     setIsLoading(true);
 
     apiFetch({
-      path: '/wavly/v1/settings',
+      path: '/boostimer/v1/settings',
       method: 'GET'
     }).then((response) => {
       setSettings(response);
@@ -48,7 +48,7 @@ const Settings = () => {
     };
 
     apiFetch({
-      path: '/wavly/v1/settings',
+      path: '/boostimer/v1/settings',
       method: 'PUT',
       data: data,
     })

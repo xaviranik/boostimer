@@ -67,7 +67,7 @@ class StockTimer extends Timer {
 
         $title = Helper::get_stock_timer_title();
 
-        $title                  = apply_filters( 'wavly_restock_timer_title', $title );
+        $title                  = apply_filters( 'boostimer_restock_timer_title', $title );
         $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
 
         $this->render( $title, $restock_date_timestamp, '' );

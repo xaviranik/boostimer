@@ -58,7 +58,7 @@ class SaleTimer extends Timer {
         $sale_date_to   = $product->get_date_on_sale_to()->getTimestamp();
         $sale_date_from = $product->get_date_on_sale_from()->getTimestamp();
 
-        $current_datetime = wavly_current_datetime()->getTimestamp();
+        $current_datetime = boostimer_current_datetime()->getTimestamp();
 
         if ( ! ( $sale_date_from < $current_datetime && $current_datetime < $sale_date_to ) ) {
             return;
@@ -66,7 +66,7 @@ class SaleTimer extends Timer {
 
         $title = Helper::get_sale_timer_title();
 
-        $title = apply_filters( 'wavly_sale_timer_title', $title );
+        $title = apply_filters( 'boostimer_sale_timer_title', $title );
 
         $this->render( $title, $sale_date_to, $sale_date_from );
     }

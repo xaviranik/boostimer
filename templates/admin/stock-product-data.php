@@ -12,7 +12,7 @@ $restock_date     = isset( $restock_date ) ? $restock_date : '';
 ?>
 
 
-<div id="wavly-stock-product-data">
+<div id="boostimer-stock-product-data">
     <?php
     woocommerce_wp_checkbox(
         [

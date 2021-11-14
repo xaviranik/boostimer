@@ -18,7 +18,7 @@ class Settings extends BaseController {
      * @return void
      */
     public function __construct() {
-        $this->namespace = 'wavly/v1';
+        $this->namespace = 'boostimer/v1';
         $this->rest_base = 'settings';
     }
 
@@ -174,6 +174,6 @@ class Settings extends BaseController {
          * @param array  $args   Query arguments.
          * @param string $method HTTP method of the request.
          */
-        return apply_filters( "wavly_rest_settings_{$key}_query_arguments", $args, $method );
+        return apply_filters( "boostimer_rest_settings_{$key}_query_arguments", $args, $method );
     }
 }

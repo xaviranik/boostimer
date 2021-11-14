@@ -46,7 +46,7 @@ abstract class Timer {
      * @return void
      */
     public function render( $title, $date_to, $date_from = '' ) {
-        wavly_get_template_part(
+        boostimer_get_template_part(
             'countdown-timer', '', [
                 'date_to'   => $date_to,
                 'date_from' => $date_from,

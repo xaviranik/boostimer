@@ -7,7 +7,7 @@
  *
  * @return void
  */
-function wavly_get_template_part( $slug, $name = '', $args = [] ) {
+function boostimer_get_template_part( $slug, $name = '', $args = [] ) {
     if ( $args && is_array( $args ) ) {
         extract( $args );
     }
@@ -49,13 +49,13 @@ function wavly_get_template_part( $slug, $name = '', $args = [] ) {
  *
  * @return DateTimeImmutable
  */
-function wavly_current_datetime() {
+function boostimer_current_datetime() {
     if ( function_exists( 'current_datetime' ) ) {
         return current_datetime();
     }
 
     try {
-        return new DateTimeImmutable( 'now', wavly_wp_timezone() );
+        return new DateTimeImmutable( 'now', boostimer_wp_timezone() );
     } catch ( Exception $e ) {}
 }
 
@@ -66,12 +66,12 @@ function wavly_current_datetime() {
  *
  * @return DateTimeZone
  */
-function wavly_wp_timezone() {
+function boostimer_wp_timezone() {
     if ( function_exists( 'wp_timezone' ) ) {
         return wp_timezone();
     }
 
-    return new DateTimeZone( wavly_wp_timezone_string() );
+    return new DateTimeZone( boostimer_wp_timezone_string() );
 }
 
 /**
@@ -81,7 +81,7 @@ function wavly_wp_timezone() {
  *
  * @return string
  */
-function wavly_wp_timezone_string() {
+function boostimer_wp_timezone_string() {
     if ( function_exists( 'wp_timezone_string' ) ) {
         return wp_timezone_string();
     }
@@ -113,10 +113,10 @@ function wavly_wp_timezone_string() {
  *
  * @return string|false The date, translated if locale specifies it. False on invalid timestamp input.
  */
-function wavly_format_datetime( $date = '', $format = false ) {
+function boostimer_format_datetime( $date = '', $format = false ) {
     // if date is empty, get current datetime timestamp
     if ( empty( $date ) ) {
-        $date = wavly_current_datetime()->getTimestamp();
+        $date = boostimer_current_datetime()->getTimestamp();
     }
 
     // if no format is specified, get default WordPress date format
@@ -126,7 +126,7 @@ function wavly_format_datetime( $date = '', $format = false ) {
 
     // if date is not timestamp, convert it to timestamp
     if ( ! is_numeric( $date ) && strtotime( $date ) ) {
-        $date = wavly_current_datetime()->modify( $date )->getTimestamp();
+        $date = boostimer_current_datetime()->modify( $date )->getTimestamp();
     }
 
     if ( function_exists( 'wp_date' ) ) {

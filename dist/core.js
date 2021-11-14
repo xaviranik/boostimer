@@ -971,7 +971,7 @@ var Settings = function Settings() {
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
     setIsLoading(true);
     _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
-      path: '/wavly/v1/settings',
+      path: '/boostimer/v1/settings',
       method: 'GET'
     }).then(function (response) {
       setSettings(response);
@@ -992,7 +992,7 @@ var Settings = function Settings() {
       }
     };
     _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
-      path: '/wavly/v1/settings',
+      path: '/boostimer/v1/settings',
       method: 'PUT',
       data: data
     }).then(function (response) {

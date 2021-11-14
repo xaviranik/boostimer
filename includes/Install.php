@@ -15,12 +15,12 @@ class Install {
      * @return void
      */
     public function run() {
-        $installed = get_option( 'wavly_installed' );
+        $installed = get_option( 'boostimer_installed' );
 
         if ( ! $installed ) {
-            update_option( 'wavly_installed', time() );
+            update_option( 'boostimer_installed', time() );
         }
 
-        update_option( 'wavly_version', BOOSTIMER_VERSION );
+        update_option( 'boostimer_version', BOOSTIMER_VERSION );
     }
 }
