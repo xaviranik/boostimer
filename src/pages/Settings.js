@@ -171,7 +171,7 @@ const Settings = () => {
                   <button
                     onClick={handleSubmit}
                     className={
-                      "bg-blue-900 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
+                      "bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
                     }
                   >
                     {__("Save", "boostimer")}

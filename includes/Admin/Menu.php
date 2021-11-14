@@ -24,13 +24,15 @@ class Menu {
      * @return void
      */
     public function register_menu() {
+        $icon = 'data:image/svg+xml;base64,' . base64_encode( '<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10Zm-9.75 1.915a3.911 3.911 0 0 1-2.585 1.818 3.904 3.904 0 1 1 2-6.59l-.85.85a2.703 2.703 0 1 0 .791 1.911h.086a3.904 3.904 0 1 1 .558 2.011Zm6.049-2.011a2.703 2.703 0 1 1-5.405 0 2.703 2.703 0 0 1 5.405 0Z" fill="#9EA3A8"/></svg>' );
+
         $menu = add_menu_page(
             __( 'Boostimer', 'boostimer' ),
             __( 'Boostimer', 'boostimer' ),
             'manage_options',
             'boostimer',
             [ $this, 'render_menu_page' ],
-            'dashicons-yes-alt',
+            $icon,
             57
         );
 

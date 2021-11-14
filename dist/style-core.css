@@ -33,7 +33,7 @@
 
 #boostimer-app .boostimer-app .boostimer-input:focus{
   --tw-border-opacity: 1;
-  border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+  border-color: rgba(55, 65, 81, var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
