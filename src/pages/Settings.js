@@ -20,6 +20,7 @@ const Settings = () => {
 
   const [settings, setSettings] = useState(settingsSchema);
   const [isLoading, setIsLoading] = useState(true);
+  const [iSSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -36,6 +37,8 @@ const Settings = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setIsSaving(true);
+
     const data = {
       sale_timer: {
         title: settings.sale_timer.title,
@@ -47,18 +50,32 @@ const Settings = () => {
       },
     };
 
-    apiFetch({
+    const saveSettings = apiFetch({
       path: '/boostimer/v1/settings',
       method: 'PUT',
       data: data,
-    })
-      .then((response) => {
-        let message = response.message ?? __('Settings have been updated successfully', 'boostimer');
-        toast.success(message);
-      })
-      .catch((error) => {
-        toast.error(__('Timer titles can not be empty', 'boostimer'));
-      });
+    });
+
+    toast.promise(
+      saveSettings,
+      {
+        pending: {
+          render() {
+            return __('Saving settings', 'boostimer');
+          },
+        },
+        success: {
+          render({data}) {
+            return data.message ? data.message : __('Settings have been updated successfully', 'boostimer');
+          },
+        },
+        error: {
+          render({data}) {
+            return data.message ? data.message : __('Settings could not be saved. Something went wrong', 'boostimer');
+          }
+        }
+      }
+    ).finally(()  => setIsSaving(false));
   };
 
   const handleSwitchChange = (e, key) => {
@@ -171,8 +188,9 @@ const Settings = () => {
                   <button
                     onClick={handleSubmit}
                     className={
-                      "bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
+                      `bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out ${iSSaving ? 'opacity-50' : ''}`
                     }
+                    disabled={iSSaving}
                   >
                     {__("Save", "boostimer")}
                   </button>

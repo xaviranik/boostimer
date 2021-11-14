@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <ToastContainer
         position="bottom-right"
-        autoClose={5000}
+        autoClose={2500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -19,6 +19,7 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+
       />
 
       <div className="boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12">

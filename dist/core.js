@@ -209,7 +209,7 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 var App = function App() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["HashRouter"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_toastify__WEBPACK_IMPORTED_MODULE_6__["ToastContainer"], {
     position: "bottom-right",
-    autoClose: 5000,
+    autoClose: 2500,
     hideProgressBar: false,
     newestOnTop: false,
     closeOnClick: true,
@@ -968,6 +968,11 @@ var Settings = function Settings() {
       isLoading = _useState4[0],
       setIsLoading = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState5, 2),
+      iSSaving = _useState6[0],
+      setIsSaving = _useState6[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
     setIsLoading(true);
     _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
@@ -981,6 +986,7 @@ var Settings = function Settings() {
 
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
+    setIsSaving(true);
     var data = {
       sale_timer: {
         title: settings.sale_timer.title,
@@ -991,17 +997,31 @@ var Settings = function Settings() {
         enabled: settings.stock_timer.enabled
       }
     };
-    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
+    var saveSettings = _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
       path: '/boostimer/v1/settings',
       method: 'PUT',
       data: data
-    }).then(function (response) {
-      var _response$message;
-
-      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'boostimer');
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success(message);
-    })["catch"](function (error) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Timer titles can not be empty', 'boostimer'));
+    });
+    react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].promise(saveSettings, {
+      pending: {
+        render: function render() {
+          return Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Saving settings', 'boostimer');
+        }
+      },
+      success: {
+        render: function render(_ref) {
+          var data = _ref.data;
+          return data.message ? data.message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'boostimer');
+        }
+      },
+      error: {
+        render: function render(_ref2) {
+          var data = _ref2.data;
+          return data.message ? data.message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings could not be saved. Something went wrong', 'boostimer');
+        }
+      }
+    })["finally"](function () {
+      return setIsSaving(false);
     });
   };
 
@@ -1083,11 +1103,12 @@ var Settings = function Settings() {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("button", {
     onClick: handleSubmit,
-    className: "bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
+    className: "bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out ".concat(iSSaving ? 'opacity-50' : ''),
+    disabled: iSSaving
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "boostimer"))))))));
 };
 
-__signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseEffect{}");
+__signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseState{[iSSaving, setIsSaving](false)}\nuseEffect{}");
 
 var _default = Settings;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
