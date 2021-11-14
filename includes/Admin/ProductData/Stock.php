@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability\Admin\ProductData;
+namespace Boostimer\Admin\ProductData;
 
 class Stock {
 

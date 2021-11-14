@@ -1,5 +1,5 @@
 {
-    "name": "xaviranik/woo-availability",
+    "name": "xaviranik/boostimer",
     "description": "WooCommerce Product and stock availability scheduler WordPress plugin",
     "type": "wordpress-plugin",
     "license": "GPL",
@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "WooAvailability\\": "includes/"
+            "Boostimer\\": "includes/"
         }
     },
     "require-dev": {

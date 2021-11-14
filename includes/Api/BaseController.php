@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability\Api;
+namespace Boostimer\Api;
 
 use WP_REST_Controller;
 

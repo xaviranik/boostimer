@@ -1,4 +1,4 @@
-# WooAvailability  - Product Availability Countdown And Scheduler For Woocommerce #
+# Boostimer  - Product Availability Countdown And Scheduler For Woocommerce #
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
 **Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Tags:** WooCommerce, wooAvailability, Product availability, Product scheduler, Product restock, Countdown, free plugin, woocommerce product availability and scheduler, Woocommerce product and scheduler plugin  
@@ -11,9 +11,9 @@
 
 ## Description ##
 
-WooAvailability is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
+Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
-📄 [Docs](https://github.com/xaviranik/woo-availability/wiki)
+📄 [Docs](https://github.com/xaviranik/boostimer/wiki)
 
 ### What does it do?
 
@@ -34,7 +34,7 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 ### Attractive User Interface
 
-A good UI can sometimes make a system even more attractive. WooAvailability has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
+A good UI can sometimes make a system even more attractive. Boostimer has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
 #### Set Admin Settings
 [![admin-settings.png](https://i.postimg.cc/SN46BLXG/07-admin-settings.png)]()

@@ -16,7 +16,7 @@ const coreModule = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    publicPath: "/wp-content/plugins/woo-availability/dist/",
+    publicPath: "/wp-content/plugins/boostimer/dist/",
     // chunkFilename: 'chunks/[name].js',
   },
   resolve: {

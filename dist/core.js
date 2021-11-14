@@ -152,7 +152,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/wp-content/plugins/woo-availability/dist/";
+/******/ 	__webpack_require__.p = "/wp-content/plugins/boostimer/dist/";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -218,7 +218,7 @@ var App = function App() {
     draggable: true,
     pauseOnHover: true
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "woo-availability-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12"
+    className: "boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "grid grid-cols-12 gap-0"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -460,7 +460,7 @@ var Sidebar = function Sidebar() {
     d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "ml-6"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Settings", "woo-availability")))));
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Settings", "boostimer")))));
 };
 
 var _default = Sidebar;
@@ -553,7 +553,7 @@ var InputField = function InputField(_ref) {
     className: "mt-2 text-white text-xs"
   }, tooltip)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
     onChange: onChange,
-    className: "woo-availability-input",
+    className: "boostimer-input",
     type: "text",
     placeholder: placeholder,
     defaultValue: value
@@ -876,9 +876,9 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
-var mountNode = document.getElementById('woo-availability-app');
+var mountNode = document.getElementById('boostimer-app');
 react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_App__WEBPACK_IMPORTED_MODULE_4__["default"], null), mountNode);
-Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('woo-availability');
+Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('boostimer');
 ;
 
 (function () {
@@ -1001,10 +1001,10 @@ var Settings = function Settings() {
     }).then(function (response) {
       var _response$message;
 
-      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'woo-availability');
+      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'boostimer');
       react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success(message);
     })["catch"](function (error) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Timer titles can not be empty', 'woo-availability'));
+      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Timer titles can not be empty', 'boostimer'));
     });
   };
 
@@ -1032,13 +1032,13 @@ var Settings = function Settings() {
     className: "bg-white p-8 shadow rounded-md"
   }, isLoading ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Loader__WEBPACK_IMPORTED_MODULE_6__["default"], null) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Countdown", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Countdown", "boostimer")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_9__["default"], {
     id: "enable_sale_countdown_timer",
     switchId: "enable_sale_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "boostimer"),
     checked: settings.sale_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'sale_timer');
@@ -1048,8 +1048,8 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_9__["default"], {
     id: "enable_in_stock_countdown_timer",
     switchId: "enable_in_stock_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "boostimer"),
     checked: settings.stock_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'stock_timer');
@@ -1058,15 +1058,15 @@ var Settings = function Settings() {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Timer title", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Timer title", "boostimer")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "sale_timer_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale Timer Title", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the sale timer title", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale ends in:", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale Timer Title", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the sale timer title", "boostimer"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale ends in:", "boostimer"),
     value: settings.sale_timer.title,
     onChange: function onChange(e) {
       return handleInputChange(e, 'sale_timer');
@@ -1075,9 +1075,9 @@ var Settings = function Settings() {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "notify_me_btn_text_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Stock Timer Title', "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the stock timer title", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Expected restock in:", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Stock Timer Title', "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the stock timer title", "boostimer"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Expected restock in:", "boostimer"),
     value: settings.stock_timer.title,
     onChange: function onChange(e) {
       return handleInputChange(e, 'stock_timer');
@@ -1087,7 +1087,7 @@ var Settings = function Settings() {
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("button", {
     onClick: handleSubmit,
     className: "bg-blue-900 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "woo-availability"))))))));
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "boostimer"))))))));
 };
 
 __signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseEffect{}");

@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability\Abstracts;
+namespace Boostimer\Abstracts;
 
 /**
  * Abstract Timer class

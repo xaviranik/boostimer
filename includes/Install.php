@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability;
+namespace Boostimer;
 
 /**
  * Installer Class
@@ -21,6 +21,6 @@ class Install {
             update_option( 'wavly_installed', time() );
         }
 
-        update_option( 'wavly_version', WOO_AVAILABILITY_VERSION );
+        update_option( 'wavly_version', BOOSTIMER_VERSION );
     }
 }

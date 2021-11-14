@@ -1,10 +1,10 @@
 <?php
 
-namespace WooAvailability;
+namespace Boostimer;
 
-use WooAvailability\Admin\AdminAssets;
-use WooAvailability\Admin\Menu;
-use WooAvailability\Admin\ProductData;
+use Boostimer\Admin\Menu;
+use Boostimer\Admin\AdminAssets;
+use Boostimer\Admin\ProductData;
 
 /**
  * Admin Manager Class.
@@ -53,7 +53,7 @@ class Admin {
     }
 
     /**
-     * Cleans admin notice for woo-availability page
+     * Cleans admin notice for boostimer page
      *
      * @since 1.0.0
      *
@@ -62,7 +62,7 @@ class Admin {
     public function cleanup_admin_notices() {
         global $pagenow;
 
-        if ( ! ( $pagenow == 'admin.php' && $_GET['page'] == 'woo-availability' ) ) {
+        if ( ! ( $pagenow == 'admin.php' && $_GET['page'] == 'boostimer' ) ) {
             return;
         }
 

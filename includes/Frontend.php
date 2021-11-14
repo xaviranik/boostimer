@@ -1,10 +1,10 @@
 <?php
 
-namespace WooAvailability;
+namespace Boostimer;
 
-use WooAvailability\Frontend\FrontendAssets;
-use WooAvailability\Frontend\SaleTimer;
-use WooAvailability\Frontend\StockTimer;
+use Boostimer\Frontend\FrontendAssets;
+use Boostimer\Frontend\SaleTimer;
+use Boostimer\Frontend\StockTimer;
 
 /**
  * Frontend manager class.

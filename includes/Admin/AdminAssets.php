@@ -1,8 +1,8 @@
 <?php
 
-namespace WooAvailability\Admin;
+namespace Boostimer\Admin;
 
-use WooAvailability\Abstracts\Assets;
+use Boostimer\Abstracts\Assets;
 
 /**
  * Scripts and Styles Class.
@@ -34,15 +34,15 @@ class AdminAssets extends Assets {
      */
     protected function get_scripts() {
         return [
-            'woo-availability-flatpickr-script' => [
-                'src'       => WOO_AVAILABILITY_ASSET . '/vendor/flatpickr.min.js',
+            'boostimer-flatpickr-script' => [
+                'src'       => BOOSTIMER_ASSET . '/vendor/flatpickr.min.js',
                 'deps'      => [ 'jquery' ],
                 'version'   => $this->get_version(),
                 'in_footer' => true,
             ],
-            'woo-availability-admin-script' => [
-                'src'       => WOO_AVAILABILITY_ASSET . '/js/admin' . $this->get_suffix() . '.js',
-                'deps'      => [ 'jquery', 'woo-availability-flatpickr-script' ],
+            'boostimer-admin-script' => [
+                'src'       => BOOSTIMER_ASSET . '/js/admin' . $this->get_suffix() . '.js',
+                'deps'      => [ 'jquery', 'boostimer-flatpickr-script' ],
                 'version'   => $this->get_version(),
                 'in_footer' => true,
             ],
@@ -56,8 +56,8 @@ class AdminAssets extends Assets {
      */
     protected function get_styles() {
         return [
-            'woo-availability-flatpickr-style' => [
-                'src'     => WOO_AVAILABILITY_ASSET . '/vendor/flatpickr.min.css',
+            'boostimer-flatpickr-style' => [
+                'src'     => BOOSTIMER_ASSET . '/vendor/flatpickr.min.css',
                 'version' => $this->get_version(),
             ],
         ];
@@ -69,7 +69,7 @@ class AdminAssets extends Assets {
      * @return void
      */
     private function load_scripts() {
-        wp_enqueue_script( 'woo-availability-admin-script' );
-        wp_enqueue_style( 'woo-availability-flatpickr-style' );
+        wp_enqueue_script( 'boostimer-admin-script' );
+        wp_enqueue_style( 'boostimer-flatpickr-style' );
     }
 }

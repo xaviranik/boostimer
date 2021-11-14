@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooAvailability  - Product Availability Countdown And Scheduler For WooCommerce
+ * Plugin Name: Boostimer - Product Availability Countdown And Scheduler For WooCommerce
  * Description: From sale to stock, Store-wise availability management in a breeze.
  * URI: https://zabiranik.com
  * Author: Zabir Anik
@@ -8,7 +8,7 @@
  * Version: 1.0.0
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: woo-availability
+ * Text Domain: boostimer
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,9 +16,9 @@ defined( 'ABSPATH' ) || exit;
 require __DIR__ . '/vendor/autoload.php';
 
 /**
- * WooAvailability Class.
+ * Boostimer Class.
  */
-final class WooAvailability {
+final class Boostimer {
 
     /**
      * Plugin version.
@@ -35,7 +35,7 @@ final class WooAvailability {
     private $container = [];
 
     /**
-     * WooAvailability Constructor.
+     * Boostimer Constructor.
      */
     public function __construct() {
         $this->define_constants();
@@ -53,12 +53,12 @@ final class WooAvailability {
      * @return void
      */
     public function define_constants() {
-        define( 'WOO_AVAILABILITY_VERSION', $this->version );
-        define( 'WOO_AVAILABILITY_DIR', __DIR__ );
-        define( 'WOO_AVAILABILITY_URL', plugins_url( '', __FILE__ ) );
-        define( 'WOO_AVAILABILITY_TEMPLATES', WOO_AVAILABILITY_DIR . '/templates' );
-        define( 'WOO_AVAILABILITY_ASSET', WOO_AVAILABILITY_URL . '/assets' );
-        define( 'WOO_AVAILABILITY_DIST', plugins_url( 'dist', __FILE__ ) );
+        define( 'BOOSTIMER_VERSION', $this->version );
+        define( 'BOOSTIMER_DIR', __DIR__ );
+        define( 'BOOSTIMER_URL', plugins_url( '', __FILE__ ) );
+        define( 'BOOSTIMER_TEMPLATES', BOOSTIMER_DIR . '/templates' );
+        define( 'BOOSTIMER_ASSET', BOOSTIMER_URL . '/assets' );
+        define( 'BOOSTIMER_DIST', plugins_url( 'dist', __FILE__ ) );
     }
 
     /**
@@ -71,10 +71,10 @@ final class WooAvailability {
             require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
             deactivate_plugins( plugin_basename( __FILE__ ) );
 
-            wp_die( '<div class="error"><p>' . sprintf( wp_kses_post( '<b>WooAvailability</b> requires <a href="%s">WooCommerce</a> to be installed & activated! Go back to <a href="%s">Plugin page</a>' ), 'https://wordpress.org/plugins/woocommerce/', esc_url( admin_url( 'plugins.php' ) ) ) . '</p></div>' );
+            wp_die( '<div class="error"><p>' . sprintf( wp_kses_post( '<b>Boostimer</b> requires <a href="%s">WooCommerce</a> to be installed & activated! Go back to <a href="%s">Plugin page</a>' ), 'https://wordpress.org/plugins/woocommerce/', esc_url( admin_url( 'plugins.php' ) ) ) . '</p></div>' );
         }
 
-        $installer = new WooAvailability\Install();
+        $installer = new Boostimer\Install();
         $installer->run();
     }
 
@@ -93,16 +93,16 @@ final class WooAvailability {
      * @return void
      */
     public function load_text_domain() {
-        load_plugin_textdomain( 'woo-availability', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+        load_plugin_textdomain( 'boostimer', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
 
     /**
-     * Initializes the WooAvailability class.
+     * Initializes the Boostimer class.
      *
-     * Checks for an existing WooAvailability instance
+     * Checks for an existing Boostimer instance
      * and if it doesn't find one, creates it.
      *
-     * @return WooAvailability
+     * @return Boostimer
      */
     public static function instance() {
         static $instance = false;
@@ -121,31 +121,31 @@ final class WooAvailability {
      */
     public function init_plugin() {
         // Load global functions
-        include_once WOO_AVAILABILITY_DIR . '/includes/functions.php';
+        include_once BOOSTIMER_DIR . '/includes/functions.php';
 
         // Load admin manager
         if ( is_admin() ) {
-            new WooAvailability\Admin();
+            new Boostimer\Admin();
         }
 
         // Load frontend manager
         if ( ! is_admin() ) {
-            new WooAvailability\Frontend();
+            new Boostimer\Frontend();
         }
 
         // Load API manager
-        new WooAvailability\Api();
+        new Boostimer\Api();
     }
 }
 
 /**
  * Return the instance.
  *
- * @return WooAvailability
+ * @return Boostimer
  */
-function woo_availability() {
-    return WooAvailability::instance();
+function boostimer() {
+    return Boostimer::instance();
 }
 
 // let's get started
-woo_availability();
+boostimer();

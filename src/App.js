@@ -21,7 +21,7 @@ const App = () => {
         pauseOnHover
       />
 
-      <div className="woo-availability-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12">
+      <div className="boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12">
         <div className="grid grid-cols-12 gap-0">
           <div className="col-span-3">
             <Sidebar />

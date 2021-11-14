@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Admin;
+namespace Boostimer\Admin;
 
-use WooAvailability\Frontend\SaleTimer;
-use WooAvailability\Frontend\StockTimer;
+use Boostimer\Frontend\SaleTimer;
+use Boostimer\Frontend\StockTimer;
 
 /**
  * Admin settings manager

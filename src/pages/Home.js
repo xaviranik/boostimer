@@ -8,7 +8,7 @@ const Home = () => {
       <div className="flex items-center">
         <GoBack />
         <h1 className="text-2xl font-semibold text-gray-600 ml-4 tracking-wider">
-          {__("Home", "woo-availability")}
+          {__("Home", "boostimer")}
         </h1>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability;
+namespace Boostimer;
 
 /**
  * API Manager Class

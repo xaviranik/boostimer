@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap);
 /* Font */
 
-#woo-availability-app {
+#boostimer-app {
   all: unset;
 }
 
-#woo-availability-app .woo-availability-app {
+#boostimer-app .boostimer-app {
   padding-right: 20px;
   padding-top: 20px;
   font-family: 'Poppins', sans-serif;
@@ -13,17 +13,17 @@
   /* Toggle */
 }
 
-#woo-availability-app .woo-availability-app a:focus, #woo-availability-app .woo-availability-app a:hover {
+#boostimer-app .boostimer-app a:focus, #boostimer-app .boostimer-app a:hover {
   color: #374151;
   outline: none;
 }
 
-#woo-availability-app .woo-availability-app input:checked ~ .dot {
+#boostimer-app .boostimer-app input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #10B981;
 }
 
-#woo-availability-app .woo-availability-app .woo-availability-input {
+#boostimer-app .boostimer-app .boostimer-input {
   margin-top: 0.5rem;
   border-radius: 0.375rem;
   border-width: 2px;
@@ -31,14 +31,14 @@
   border-color: rgba(243, 244, 246, var(--tw-border-opacity));
 }
 
-#woo-availability-app .woo-availability-app .woo-availability-input:focus{
+#boostimer-app .boostimer-app .boostimer-input:focus{
   --tw-border-opacity: 1;
   border-color: rgba(30, 58, 138, var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
-#woo-availability-app .woo-availability-app .woo-availability-input{
+#boostimer-app .boostimer-app .boostimer-input{
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -47,13 +47,13 @@
   outline-offset: 2px;
 }
 
-#woo-availability-app .woo-availability-app .woo-availability-input:focus{
+#boostimer-app .boostimer-app .boostimer-input:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-#woo-availability-app .woo-availability-app .woo-availability-input{
+#boostimer-app .boostimer-app .boostimer-input{
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;

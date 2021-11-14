@@ -53,11 +53,11 @@ const Settings = () => {
       data: data,
     })
       .then((response) => {
-        let message = response.message ?? __('Settings have been updated successfully', 'woo-availability');
+        let message = response.message ?? __('Settings have been updated successfully', 'boostimer');
         toast.success(message);
       })
       .catch((error) => {
-        toast.error(__('Timer titles can not be empty', 'woo-availability'));
+        toast.error(__('Timer titles can not be empty', 'boostimer'));
       });
   };
 
@@ -93,17 +93,17 @@ const Settings = () => {
               <div>
                 <div>
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
-                    {__("Show Countdown", "woo-availability")}
+                    {__("Show Countdown", "boostimer")}
                   </div>
 
                   <div className="mt-6">
                     <SwitchField
                       id={"enable_sale_countdown_timer"}
                       switchId={"enable_sale_countdown_timer_switch"}
-                      label={__("Show Sale Countdown Timer", "woo-availability")}
+                      label={__("Show Sale Countdown Timer", "boostimer")}
                       tooltip={__(
                         "Enable this to show countdown timer for sale duration on single product",
-                        "woo-availability"
+                        "boostimer"
                       )}
                       checked={settings.sale_timer.enabled}
                       onChange={(e) => handleSwitchChange(e, 'sale_timer')}
@@ -115,10 +115,10 @@ const Settings = () => {
                     <SwitchField
                       id={"enable_in_stock_countdown_timer"}
                       switchId={"enable_in_stock_countdown_timer_switch"}
-                      label={__("Show Stock Countdown Timer", "woo-availability")}
+                      label={__("Show Stock Countdown Timer", "boostimer")}
                       tooltip={__(
                         "Enable this to show countdown timer for next available stock on single product",
-                        "woo-availability"
+                        "boostimer"
                       )}
                       checked={settings.stock_timer.enabled}
                       onChange={(e) => handleSwitchChange(e, 'stock_timer')}
@@ -127,21 +127,21 @@ const Settings = () => {
 
                 <div className="mt-12">
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
-                    {__("Timer title", "woo-availability")}
+                    {__("Timer title", "boostimer")}
                   </div>
 
                   <div className="mt-6">
                     <div className="mt-6">
                       <InputField
                         id="sale_timer_tooltip"
-                        label={__("Sale Timer Title", "woo-availability")}
+                        label={__("Sale Timer Title", "boostimer")}
                         tooltip={__(
                           "This text will show on the sale timer title",
-                          "woo-availability"
+                          "boostimer"
                         )}
                         placeholder={__(
                           "Sale ends in:",
-                          "woo-availability"
+                          "boostimer"
                         )}
                         value={settings.sale_timer.title}
                         onChange={(e) => handleInputChange(e, 'sale_timer')}
@@ -151,14 +151,14 @@ const Settings = () => {
                     <div className="mt-6">
                       <InputField
                         id="notify_me_btn_text_tooltip"
-                        label={__('Stock Timer Title', "woo-availability")}
+                        label={__('Stock Timer Title', "boostimer")}
                         tooltip={__(
                           "This text will show on the stock timer title",
-                          "woo-availability"
+                          "boostimer"
                         )}
                         placeholder={__(
                           "Expected restock in:",
-                          "woo-availability"
+                          "boostimer"
                         )}
                         value={settings.stock_timer.title}
                         onChange={(e) => handleInputChange(e, 'stock_timer')}
@@ -174,7 +174,7 @@ const Settings = () => {
                       "bg-blue-900 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
                     }
                   >
-                    {__("Save", "woo-availability")}
+                    {__("Save", "boostimer")}
                   </button>
                 </div>
               </div>

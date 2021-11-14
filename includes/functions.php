@@ -19,7 +19,7 @@ function wavly_get_template_part( $slug, $name = '', $args = [] ) {
      *
      * @since 1.0.0
      */
-    $template_path = apply_filters( 'wavbly_set_template_path', WOO_AVAILABILITY_DIR . '/templates', $template, $args );
+    $template_path = apply_filters( 'wavbly_set_template_path', BOOSTIMER_DIR . '/templates', $template, $args );
 
     // Get default slug-name.php
     if ( $name && file_exists( $template_path . "/{$slug}-{$name}.php" ) ) {

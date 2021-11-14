@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Frontend;
+namespace Boostimer\Frontend;
 
-use WooAvailability\Abstracts\Timer;
-use WooAvailability\Helper;
+use Boostimer\Abstracts\Timer;
+use Boostimer\Helper;
 
 class StockTimer extends Timer {
 
@@ -20,7 +20,7 @@ class StockTimer extends Timer {
      * @return string
      */
     public static function get_title() {
-        return __( 'Expected restock in:', 'woo-availability' );
+        return __( 'Expected restock in:', 'boostimer' );
     }
 
     /**

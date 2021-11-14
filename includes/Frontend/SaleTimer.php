@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Frontend;
+namespace Boostimer\Frontend;
 
-use WooAvailability\Helper;
-use WooAvailability\Abstracts\Timer;
+use Boostimer\Helper;
+use Boostimer\Abstracts\Timer;
 
 /**
  * SaleTimer class.
@@ -25,7 +25,7 @@ class SaleTimer extends Timer {
      * @return string
      */
     public static function get_title() {
-        return __( 'Sale ends in:', 'woo-availability' );
+        return __( 'Sale ends in:', 'boostimer' );
     }
 
 
