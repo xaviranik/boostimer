@@ -54,11 +54,13 @@ final class Boostimer {
      */
     public function define_constants() {
         define( 'BOOSTIMER_VERSION', $this->version );
+        define( 'BOOSTIMER_PLUGIN_FILE', __FILE__ );
         define( 'BOOSTIMER_DIR', __DIR__ );
-        define( 'BOOSTIMER_URL', plugins_url( '', __FILE__ ) );
+        define( 'BOOSTIMER_PLUGIN_BASENAME', plugin_basename( BOOSTIMER_PLUGIN_FILE ) );
+        define( 'BOOSTIMER_URL', plugins_url( '', BOOSTIMER_PLUGIN_FILE ) );
         define( 'BOOSTIMER_TEMPLATES', BOOSTIMER_DIR . '/templates' );
         define( 'BOOSTIMER_ASSET', BOOSTIMER_URL . '/assets' );
-        define( 'BOOSTIMER_DIST', plugins_url( 'dist', __FILE__ ) );
+        define( 'BOOSTIMER_DIST', plugins_url( 'dist', BOOSTIMER_PLUGIN_FILE ) );
     }
 
     /**
