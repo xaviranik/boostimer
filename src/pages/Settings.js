@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { __ } from "@wordpress/i18n";
 import { toast } from 'react-toastify';
 import Loader from "../components/Loader";
-import apiFetch from "@wordpress/api-fetch";
 import InputField from "../components/Utils/InputField";
 import SwitchField from "../components/Utils/SwitchField";
+import {
+  GET_SETTINGS,
+  UPDATE_SETTINGS
+} from "../api/settings";
 
 const Settings = () => {
   const settingsSchema = {
@@ -25,10 +28,7 @@ const Settings = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    apiFetch({
-      path: '/boostimer/v1/settings',
-      method: 'GET'
-    }).then((response) => {
+    GET_SETTINGS().then((response) => {
       setSettings(response);
       setIsLoading(false);
     }).finally(() => {});
@@ -50,14 +50,8 @@ const Settings = () => {
       },
     };
 
-    const saveSettings = apiFetch({
-      path: '/boostimer/v1/settings',
-      method: 'PUT',
-      data: data,
-    });
-
     toast.promise(
-      saveSettings,
+      UPDATE_SETTINGS(data),
       {
         pending: {
           render() {
@@ -198,7 +192,6 @@ const Settings = () => {
               </div>
             )
           }
-
           </div>
         </div>
       </div>
