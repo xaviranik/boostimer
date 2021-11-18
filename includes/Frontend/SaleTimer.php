@@ -17,17 +17,10 @@ class SaleTimer extends Timer {
      */
     public function __construct() {
         parent::__construct();
-    }
 
-    /**
-     * Gets timer title
-     *
-     * @return string
-     */
-    public static function get_title() {
-        return __( 'Sale ends in:', 'boostimer' );
+        // Setting default title
+        $this->set_default_title( __( 'Sale ends in:', 'boostimer' ) );
     }
-
 
     /**
      * Loads sale timer template and renders on product single page.
@@ -64,10 +57,12 @@ class SaleTimer extends Timer {
             return;
         }
 
-        $title = Helper::get_sale_timer_title();
+        $title = apply_filters( 'boostimer_sale_timer_title', Helper::get_sale_timer_title() );
 
-        $title = apply_filters( 'boostimer_sale_timer_title', $title );
+        $this->set_date_from( $sale_date_from );
+        $this->set_date_to( $sale_date_to );
+        $this->set_title( $title );
 
-        $this->render( $title, $sale_date_to, $sale_date_from );
+        $this->render();
     }
 }

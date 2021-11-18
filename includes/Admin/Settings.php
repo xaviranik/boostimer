@@ -25,11 +25,11 @@ class Settings {
     public static function all() {
         $default = apply_filters( 'boostimer_settings_default', [
             'sale_timer'  => [
-                'title'   => SaleTimer::get_title(),
+                'title'   => boostimer()->frontend->saletimer->get_default_title(),
                 'enabled' => true,
             ],
             'stock_timer' => [
-                'title'   => StockTimer::get_title(),
+                'title'   => boostimer()->frontend->stocktimer->get_default_title(),
                 'enabled' => true,
             ],
         ] );

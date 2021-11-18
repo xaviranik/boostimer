@@ -10,10 +10,98 @@ namespace Boostimer\Abstracts;
 abstract class Timer {
 
     /**
+     * @var string $title
+     */
+    protected $title;
+
+    /**
+     * @var string $default_title
+     */
+    protected $default_title;
+
+    /**
+     * @var string $date_from
+     */
+    protected $date_from;
+
+    /**
+     * @var string $date_to
+     */
+    protected $date_to;
+
+    /**
      * Timer constructor.
      */
     public function __construct() {
         $this->set_hooks();
+    }
+
+    /**
+     * Gets timer title.
+     *
+     * @return string
+     */
+    public function get_title() {
+        return $this->title;
+    }
+
+    /**
+     * Sets timer title.
+     *
+     * @param string $title
+     */
+    public function set_title( $title ) {
+        $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function get_default_title() {
+        return $this->default_title;
+    }
+
+    /**
+     * @param string $default_title
+     */
+    public function set_default_title( $default_title ) {
+        $this->default_title = $default_title;
+    }
+
+    /**
+     * Gets date from, in which the timer will display.
+     *
+     * @return string
+     */
+    public function get_date_from() {
+        return $this->date_from;
+    }
+
+    /**
+     * Sets date from, in which the timer will display.
+     *
+     * @param string $date_from
+     */
+    public function set_date_from( $date_from ) {
+        $this->date_from = $date_from;
+    }
+
+    /**
+     * Gets date to, in which the timer will display.
+     *
+     * @return string
+     */
+    public function get_date_to() {
+        return $this->date_to;
+    }
+
+    /**
+     * Sets date to, in which the timer will display.
+     *
+     * @param string $date_to
+     */
+    public function set_date_to( $date_to ) {
+        $this->date_to = $date_to;
     }
 
     /**
@@ -39,18 +127,14 @@ abstract class Timer {
      *
      * @since 1.0.0
      *
-     * @param $date_to
-     * @param $date_from
-     * @param $title
-     *
      * @return void
      */
-    public function render( $title, $date_to, $date_from = '' ) {
+    public function render() {
         boostimer_get_template_part(
             'countdown-timer', '', [
-                'date_to'   => $date_to,
-                'date_from' => $date_from,
-                'title'     => $title,
+                'date_to'   => $this->date_to,
+                'date_from' => $this->date_from,
+                'title'     => $this->title,
             ]
         );
     }

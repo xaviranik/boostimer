@@ -12,15 +12,9 @@ class StockTimer extends Timer {
      */
     public function __construct() {
         parent::__construct();
-    }
 
-    /**
-     * Gets timer title
-     *
-     * @return string
-     */
-    public static function get_title() {
-        return __( 'Expected restock in:', 'boostimer' );
+        // Setting default title
+        $this->set_default_title( __( 'Expected restock in:', 'boostimer' ) );
     }
 
     /**
@@ -70,6 +64,9 @@ class StockTimer extends Timer {
         $title                  = apply_filters( 'boostimer_restock_timer_title', $title );
         $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
 
-        $this->render( $title, $restock_date_timestamp, '' );
+        $this->set_title( $title );
+        $this->set_date_to( $restock_date_timestamp );
+
+        $this->render();
     }
 }

@@ -2,14 +2,17 @@
 
 namespace Boostimer;
 
-use Boostimer\Frontend\FrontendAssets;
+use Boostimer\traits\Container;
 use Boostimer\Frontend\SaleTimer;
 use Boostimer\Frontend\StockTimer;
+use Boostimer\Frontend\FrontendAssets;
 
 /**
  * Frontend manager class.
  */
 class Frontend {
+
+    use Container;
 
     /**
      * Frontend manager constructor.
@@ -19,12 +22,12 @@ class Frontend {
      */
     public function __construct() {
         // Frontend assets
-        new FrontendAssets();
+        $this->container['frontend_assets'] = new FrontendAssets();
 
         // Sale timer
-        new SaleTimer();
+        $this->container['saletimer'] = new SaleTimer();
 
         // Stock timer
-        new StockTimer();
+        $this->container['stocktimer'] = new StockTimer();
     }
 }
