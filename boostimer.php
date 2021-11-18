@@ -20,19 +20,14 @@ require __DIR__ . '/vendor/autoload.php';
  */
 final class Boostimer {
 
+    use \Boostimer\traits\Container;
+
     /**
      * Plugin version.
      *
      * @var string
      */
     private $version = '1.0.0';
-
-    /**
-     * Instance container.
-     *
-     * @var array
-     */
-    private $container = [];
 
     /**
      * Boostimer Constructor.
@@ -127,12 +122,12 @@ final class Boostimer {
 
         // Load admin manager
         if ( is_admin() ) {
-            new Boostimer\Admin();
+            $this->container['admin'] = new Boostimer\Admin();
         }
 
         // Load frontend manager
         if ( ! is_admin() ) {
-            new Boostimer\Frontend();
+            $this->container['frontend'] = new Boostimer\Frontend();
         }
 
         // Load API manager
