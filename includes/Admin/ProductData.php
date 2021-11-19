@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Admin;
+namespace Boostimer\Admin;
 
-use WooAvailability\Admin\ProductData\Sale;
-use WooAvailability\Admin\ProductData\Stock;
+use Boostimer\Admin\ProductData\Sale;
+use Boostimer\Admin\ProductData\Stock;
 
 /**
  * WooCommerce product data meta box handler class.

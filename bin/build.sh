@@ -7,7 +7,7 @@ set -e
 cd "$(dirname "$0")"
 cd ..
 DIR=$(pwd)
-BUILD_DIR="$DIR/build/woo-availability"
+BUILD_DIR="$DIR/build/boostimer"
 
 # Enable nicer messaging for build status.
 BLUE_BOLD='\033[1;34m'
@@ -29,7 +29,7 @@ warning() {
     echo -e "\n${YELLOW_BOLD}$1${COLOR_RESET}\n"
 }
 
-status "Building woo-availability zip file..."
+status "Building boostimer zip file..."
 
 # remove the build directory if exists and create one
 rm -rf "$DIR/build"
@@ -46,7 +46,7 @@ yarn pot2json
 
 # Copy all files
 status "Copying files... ✌️"
-FILES=(woo-availability.php readme.txt dist includes assets templates languages composer.json composer.lock LICENSE)
+FILES=(boostimer.php readme.txt dist includes assets templates languages composer.json composer.lock LICENSE)
 
 for file in ${FILES[@]}; do
     cp -R $file $BUILD_DIR
@@ -63,9 +63,9 @@ rm composer.json composer.lock
 # go one up, to the build dir
 status "Creating archive... 🎁"
 cd ..
-zip -r -q woo-availability.zip woo-availability
+zip -r -q boostimer.zip boostimer
 
 # remove the source directory
-rm -rf woo-availability
+rm -rf boostimer
 
-success "Done. You've built woo-availability! 🎉 "
+success "Done. You've built boostimer! 🎉 "

@@ -152,7 +152,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/wp-content/plugins/woo-availability/dist/";
+/******/ 	__webpack_require__.p = "/wp-content/plugins/boostimer/dist/";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -209,7 +209,7 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 var App = function App() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["HashRouter"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(react_toastify__WEBPACK_IMPORTED_MODULE_6__["ToastContainer"], {
     position: "bottom-right",
-    autoClose: 5000,
+    autoClose: 2500,
     hideProgressBar: false,
     newestOnTop: false,
     closeOnClick: true,
@@ -218,7 +218,7 @@ var App = function App() {
     draggable: true,
     pauseOnHover: true
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "woo-availability-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12"
+    className: "boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: "grid grid-cols-12 gap-0"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -243,8 +243,8 @@ var _default = Object(react_hot_loader_root__WEBPACK_IMPORTED_MODULE_2__["hot"])
     return;
   }
 
-  reactHotLoader.register(App, "App", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/App.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/App.js");
+  reactHotLoader.register(App, "App", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/App.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/App.js");
 })();
 
 ;
@@ -254,6 +254,178 @@ var _default = Object(react_hot_loader_root__WEBPACK_IMPORTED_MODULE_2__["hot"])
   leaveModule && leaveModule(module);
 })();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./src/api/index.js":
+/*!**************************!*\
+  !*** ./src/api/index.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+
+var base = 'boostimer';
+var version = 'v1';
+var BoostApi = {
+  get: function get(endpoint) {
+    return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+      path: "/".concat(base, "/").concat(version, "/").concat(endpoint),
+      method: 'GET'
+    });
+  },
+  put: function put(endpoint, data) {
+    return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+      path: "/".concat(base, "/").concat(version, "/").concat(endpoint),
+      method: 'PUT',
+      data: data
+    });
+  }
+};
+var _default = BoostApi;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(base, "base", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(version, "version", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(BoostApi, "BoostApi", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./src/api/settings.js":
+/*!*****************************!*\
+  !*** ./src/api/settings.js ***!
+  \*****************************/
+/*! exports provided: GET_SETTINGS, UPDATE_SETTINGS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_SETTINGS", function() { return GET_SETTINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_SETTINGS", function() { return UPDATE_SETTINGS; });
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index */ "./src/api/index.js");
+
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+
+var endpoint = 'settings';
+
+var GET_SETTINGS = /*#__PURE__*/function () {
+  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return _index__WEBPACK_IMPORTED_MODULE_2__["default"].get(endpoint);
+
+          case 2:
+            return _context.abrupt("return", _context.sent);
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function GET_SETTINGS() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var UPDATE_SETTINGS = /*#__PURE__*/function () {
+  var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(data) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _index__WEBPACK_IMPORTED_MODULE_2__["default"].put(endpoint, data);
+
+          case 2:
+            return _context2.abrupt("return", _context2.sent);
+
+          case 3:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function UPDATE_SETTINGS(_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(endpoint, "endpoint", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
+  reactHotLoader.register(GET_SETTINGS, "GET_SETTINGS", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
+  reactHotLoader.register(UPDATE_SETTINGS, "UPDATE_SETTINGS", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -385,8 +557,8 @@ var _default = Loader;
     return;
   }
 
-  reactHotLoader.register(Loader, "Loader", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
+  reactHotLoader.register(Loader, "Loader", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Loader.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Loader.js");
 })();
 
 ;
@@ -460,7 +632,7 @@ var Sidebar = function Sidebar() {
     d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     className: "ml-6"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Settings", "woo-availability")))));
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Settings", "boostimer")))));
 };
 
 var _default = Sidebar;
@@ -474,8 +646,8 @@ var _default = Sidebar;
     return;
   }
 
-  reactHotLoader.register(Sidebar, "Sidebar", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Sidebar.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Sidebar.js");
+  reactHotLoader.register(Sidebar, "Sidebar", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Sidebar.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Sidebar.js");
 })();
 
 ;
@@ -553,7 +725,7 @@ var InputField = function InputField(_ref) {
     className: "mt-2 text-white text-xs"
   }, tooltip)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
     onChange: onChange,
-    className: "woo-availability-input",
+    className: "boostimer-input",
     type: "text",
     placeholder: placeholder,
     defaultValue: value
@@ -571,8 +743,8 @@ var _default = InputField;
     return;
   }
 
-  reactHotLoader.register(InputField, "InputField", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
+  reactHotLoader.register(InputField, "InputField", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
 })();
 
 ;
@@ -613,26 +785,23 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 var Logo = function Logo() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    width: "200",
-    height: "26",
+    width: "169",
+    height: "23",
     fill: "none",
-    viewBox: "0 0 200 26"
+    viewBox: "0 0 169 23"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-    fill: "#374151",
+    fill: "#1F2937",
+    d: "M74.934 16.477c0 1.972-.713 3.52-2.14 4.642-1.425 1.123-3.393 1.684-5.901 1.684s-4.562-.389-6.16-1.168v-3.429c1.012.476 2.084.85 3.217 1.123 1.143.273 2.205.41 3.186.41 1.436 0 2.493-.273 3.17-.82.689-.546 1.032-1.28 1.032-2.2 0-.829-.313-1.532-.94-2.108-.627-.577-1.922-1.26-3.884-2.049-2.023-.819-3.45-1.755-4.279-2.806-.83-1.052-1.244-2.317-1.244-3.793 0-1.851.658-3.308 1.973-4.37C64.278.531 66.044 0 68.258 0c2.124 0 4.239.465 6.342 1.396l-1.153 2.958c-1.972-.83-3.732-1.244-5.28-1.244-1.173 0-2.063.258-2.67.774-.607.506-.91 1.178-.91 2.018 0 .576.121 1.072.364 1.487.243.404.642.789 1.199 1.153.556.364 1.557.844 3.004 1.441 1.628.678 2.822 1.31 3.58 1.897.759.586 1.315 1.249 1.67 1.987.353.738.53 1.608.53 2.61zM86.89 22.5h-3.627V3.429H76.74V.319h16.674v3.11H86.89V22.5zM96.827 22.5V.319h3.626V22.5h-3.626zM115.913 22.5l-6.432-18.525h-.122c.172 2.751.258 5.33.258 7.738V22.5h-3.292V.319h5.113l6.16 17.645h.091L124.03.319h5.129V22.5h-3.49V11.53c0-1.102.025-2.538.076-4.308.061-1.77.111-2.842.152-3.217h-.122l-6.66 18.495h-3.202zM147.547 22.5H135V.319h12.547v3.064h-8.921v6.039h8.36v3.034h-8.36v6.964h8.921v3.08zM155.982 10.636h2.519c1.689 0 2.913-.314 3.672-.941.758-.627 1.138-1.558 1.138-2.792 0-1.254-.41-2.154-1.229-2.7-.82-.547-2.054-.82-3.702-.82h-2.398v7.252zm0 3.004v8.86h-3.626V.319h6.266c2.863 0 4.982.536 6.357 1.608 1.376 1.072 2.064 2.69 2.064 4.855 0 2.761-1.436 4.728-4.309 5.902L169 22.5h-4.127l-5.31-8.86h-3.581zM0 .319h6.585c3.054 0 5.26.445 6.615 1.335 1.365.89 2.048 2.296 2.048 4.218 0 1.294-.334 2.371-1.002 3.231-.667.86-1.628 1.401-2.882 1.624v.151c1.557.294 2.7.875 3.429 1.745.738.86 1.107 2.028 1.107 3.505 0 1.992-.698 3.555-2.094 4.688-1.385 1.123-3.317 1.684-5.795 1.684H0V.319zm3.626 9.163h3.49c1.517 0 2.624-.237 3.322-.713.698-.485 1.047-1.304 1.047-2.457 0-1.042-.38-1.796-1.138-2.261-.748-.465-1.942-.698-3.58-.698h-3.14v6.13zm0 2.944v7.024H7.48c1.517 0 2.66-.288 3.429-.864.778-.587 1.168-1.508 1.168-2.762 0-1.153-.395-2.007-1.184-2.564-.789-.556-1.987-.834-3.595-.834H3.626z"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+    fill: "#E50914",
     fillRule: "evenodd",
-    d: "M16.808 4.198a9.55 9.55 0 105.664 8.729v-1.033a1.685 1.685 0 013.37 0v1.035a12.922 12.922 0 11-7.662-11.81 1.685 1.685 0 11-1.372 3.079z",
+    d: "M38.246 18.152a10.805 10.805 0 002.453-6.855h-3.323a7.48 7.48 0 11-2.19-5.292l2.348-2.349a10.806 10.806 0 10.712 14.496z",
     clipRule: "evenodd"
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-    fill: "#1E3A8A",
+    fill: "#E50914",
     fillRule: "evenodd",
-    d: "M25.348 2.74c.659.657.66 1.724.002 2.382L14.114 16.36a1.686 1.686 0 01-2.384 0l-3.371-3.367a1.683 1.683 0 010-2.382 1.686 1.686 0 012.383 0l2.179 2.177L22.965 2.74a1.686 1.686 0 012.383-.001z",
+    d: "M48.416 22.102c5.968 0 10.805-4.837 10.805-10.805S54.384.491 48.416.491 37.61 5.33 37.61 11.297c0 5.968 4.838 10.805 10.806 10.805zm-.006-3.328a7.48 7.48 0 100-14.961 7.48 7.48 0 000 14.961z",
     clipRule: "evenodd"
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-    fill: "#374151",
-    d: "M53.3 5.243l-3.71 14.443H45.39L43.12 10.18l-2.353 9.505h-4.198l-3.61-14.443h3.711l2.049 10.513 2.535-10.513h3.813L47.5 15.756 49.57 5.243H53.3zM60.191 19.85c-1.109 0-2.11-.24-3.002-.72a5.318 5.318 0 01-2.088-2.057c-.5-.892-.75-1.934-.75-3.127 0-1.18.256-2.215.77-3.107a5.246 5.246 0 012.109-2.078c.892-.48 1.893-.72 3.002-.72 1.108 0 2.109.24 3.001.72a5.246 5.246 0 012.11 2.078c.513.892.77 1.927.77 3.107 0 1.18-.264 2.222-.79 3.127a5.248 5.248 0 01-2.13 2.057c-.893.48-1.893.72-3.002.72zm0-3.045c.663 0 1.224-.247 1.683-.74.474-.494.71-1.2.71-2.12 0-.918-.23-1.625-.69-2.118a2.15 2.15 0 00-1.662-.74c-.676 0-1.237.246-1.684.74-.446.48-.669 1.186-.669 2.119 0 .919.216 1.625.649 2.119.446.493 1 .74 1.663.74zM73.104 19.85c-1.108 0-2.109-.24-3.001-.72a5.319 5.319 0 01-2.09-2.057c-.5-.892-.75-1.934-.75-3.127 0-1.18.257-2.215.771-3.107a5.246 5.246 0 012.11-2.078c.892-.48 1.892-.72 3-.72 1.11 0 2.11.24 3.002.72a5.246 5.246 0 012.11 2.078c.513.892.77 1.927.77 3.107 0 1.18-.263 2.222-.79 3.127a5.248 5.248 0 01-2.13 2.057c-.893.48-1.893.72-3.002.72zm0-3.045c.663 0 1.224-.247 1.683-.74.474-.494.71-1.2.71-2.12 0-.918-.23-1.625-.69-2.118a2.15 2.15 0 00-1.662-.74c-.676 0-1.237.246-1.683.74-.447.48-.67 1.186-.67 2.119 0 .919.216 1.625.65 2.119.445.493 1 .74 1.662.74z"
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-    fill: "#1E3A8A",
-    d: "M89.967 17.167h-5.325l-.854 2.526H80.15l5.163-14.305h4.024L94.5 19.694h-3.679l-.854-2.527zm-.894-2.69L87.305 9.24l-1.748 5.237h3.516zM101.173 16.433l2.46-8.11h3.699l-4.024 11.37h-4.29l-4.024-11.37h3.72l2.459 8.11zM108.104 13.988c0-1.169.217-2.194.651-3.077.447-.883 1.05-1.563 1.809-2.038a4.688 4.688 0 012.541-.713c.799 0 1.497.163 2.093.489.61.326 1.078.754 1.403 1.283v-1.61h3.476v11.372h-3.476v-1.61c-.339.53-.813.957-1.423 1.283-.596.326-1.294.49-2.094.49a4.652 4.652 0 01-2.52-.714c-.759-.489-1.362-1.175-1.809-2.058-.434-.896-.651-1.929-.651-3.097zm8.497.02c0-.87-.244-1.555-.732-2.058a2.309 2.309 0 00-1.748-.754c-.691 0-1.281.251-1.768.754-.475.489-.712 1.168-.712 2.038 0 .87.237 1.562.712 2.078a2.372 2.372 0 001.768.754c.691 0 1.274-.251 1.748-.754.488-.502.732-1.188.732-2.058zM124.339 7.14c-.61 0-1.111-.176-1.504-.53a1.8 1.8 0 01-.569-1.344c0-.543.19-.992.569-1.345.393-.367.894-.55 1.504-.55.596 0 1.084.183 1.464.55.393.353.589.802.589 1.345 0 .53-.196.978-.589 1.345-.38.353-.868.53-1.464.53zm1.728 1.183v11.37h-3.476V8.324h3.476zM132.062 4.614v15.08h-3.476V4.614h3.476zM133.889 13.988c0-1.169.217-2.194.651-3.077.447-.883 1.05-1.563 1.809-2.038a4.688 4.688 0 012.541-.713c.799 0 1.497.163 2.093.489.61.326 1.078.754 1.403 1.283v-1.61h3.476v11.372h-3.476v-1.61c-.339.53-.813.957-1.423 1.283-.596.326-1.294.49-2.094.49a4.652 4.652 0 01-2.52-.714c-.759-.489-1.362-1.175-1.809-2.058-.434-.896-.651-1.929-.651-3.097zm8.497.02c0-.87-.244-1.555-.732-2.058a2.309 2.309 0 00-1.748-.754c-.691 0-1.28.251-1.768.754-.475.489-.712 1.168-.712 2.038 0 .87.237 1.562.712 2.078a2.373 2.373 0 001.768.754c.691 0 1.274-.251 1.748-.754.488-.502.732-1.188.732-2.058zM151.852 9.932c.325-.53.793-.957 1.403-1.283.61-.326 1.307-.49 2.093-.49.935 0 1.782.238 2.541.714.759.475 1.355 1.155 1.789 2.038.447.883.671 1.908.671 3.077 0 1.168-.224 2.2-.671 3.097-.434.883-1.03 1.57-1.789 2.058a4.688 4.688 0 01-2.541.713c-.799 0-1.497-.156-2.093-.468a3.774 3.774 0 01-1.403-1.284v1.59h-3.476V4.614h3.476v5.318zm4.96 4.056c0-.87-.244-1.55-.732-2.038-.474-.503-1.064-.754-1.768-.754-.691 0-1.281.251-1.769.754-.474.503-.711 1.189-.711 2.058 0 .87.237 1.556.711 2.058a2.376 2.376 0 001.769.754c.691 0 1.28-.251 1.768-.754.488-.516.732-1.209.732-2.078zM163.92 7.14c-.61 0-1.111-.176-1.504-.53a1.8 1.8 0 01-.569-1.344c0-.543.19-.992.569-1.345.393-.367.894-.55 1.504-.55.596 0 1.084.183 1.464.55.393.353.589.802.589 1.345 0 .53-.196.978-.589 1.345-.38.353-.868.53-1.464.53zm1.728 1.183v11.37h-3.476V8.324h3.476zM171.643 4.614v15.08h-3.476V4.614h3.476zM175.91 7.14c-.61 0-1.112-.176-1.505-.53a1.8 1.8 0 01-.569-1.344c0-.543.19-.992.569-1.345.393-.367.895-.55 1.505-.55.596 0 1.084.183 1.463.55.393.353.59.802.59 1.345 0 .53-.197.978-.59 1.345-.379.353-.867.53-1.463.53zm1.727 1.183v11.37h-3.475V8.324h3.475zM186.478 16.739v2.954h-1.769c-1.26 0-2.242-.305-2.947-.917-.705-.625-1.057-1.637-1.057-3.036v-4.524h-1.382V8.323h1.382V5.55h3.476v2.772h2.276v2.893h-2.276v4.565c0 .34.081.584.244.734.162.149.433.224.813.224h1.24zM200 8.323l-7.114 16.77h-3.74l2.601-5.787-4.614-10.983h3.883l2.622 7.111 2.602-7.111H200z"
   }));
 };
 
@@ -647,8 +816,8 @@ var _default = Logo;
     return;
   }
 
-  reactHotLoader.register(Logo, "Logo", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
+  reactHotLoader.register(Logo, "Logo", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
 })();
 
 ;
@@ -753,8 +922,8 @@ var _default = SwitchField;
     return;
   }
 
-  reactHotLoader.register(SwitchField, "SwitchField", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
+  reactHotLoader.register(SwitchField, "SwitchField", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
 })();
 
 ;
@@ -825,8 +994,8 @@ var _default = WooSwitch;
     return;
   }
 
-  reactHotLoader.register(WooSwitch, "WooSwitch", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
+  reactHotLoader.register(WooSwitch, "WooSwitch", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
 })();
 
 ;
@@ -876,9 +1045,9 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
-var mountNode = document.getElementById('woo-availability-app');
+var mountNode = document.getElementById('boostimer-app');
 react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_App__WEBPACK_IMPORTED_MODULE_4__["default"], null), mountNode);
-Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('woo-availability');
+Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('boostimer');
 ;
 
 (function () {
@@ -888,7 +1057,7 @@ Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('woo-avail
     return;
   }
 
-  reactHotLoader.register(mountNode, "mountNode", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/index.js");
+  reactHotLoader.register(mountNode, "mountNode", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/index.js");
 })();
 
 ;
@@ -920,10 +1089,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "./node_modules/@wordpress/i18n/build-module/index.js");
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Loader */ "./src/components/Loader.js");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_Utils_InputField__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Utils/InputField */ "./src/components/Utils/InputField.js");
-/* harmony import */ var _components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Utils/SwitchField */ "./src/components/Utils/SwitchField.js");
+/* harmony import */ var _components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Utils/InputField */ "./src/components/Utils/InputField.js");
+/* harmony import */ var _components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Utils/SwitchField */ "./src/components/Utils/SwitchField.js");
+/* harmony import */ var _api_settings__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../api/settings */ "./src/api/settings.js");
 
 
 
@@ -971,12 +1139,14 @@ var Settings = function Settings() {
       isLoading = _useState4[0],
       setIsLoading = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState5, 2),
+      iSSaving = _useState6[0],
+      setIsSaving = _useState6[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
     setIsLoading(true);
-    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
-      path: '/wavly/v1/settings',
-      method: 'GET'
-    }).then(function (response) {
+    Object(_api_settings__WEBPACK_IMPORTED_MODULE_9__["GET_SETTINGS"])().then(function (response) {
       setSettings(response);
       setIsLoading(false);
     })["finally"](function () {});
@@ -984,6 +1154,7 @@ var Settings = function Settings() {
 
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
+    setIsSaving(true);
     var data = {
       sale_timer: {
         title: settings.sale_timer.title,
@@ -994,17 +1165,26 @@ var Settings = function Settings() {
         enabled: settings.stock_timer.enabled
       }
     };
-    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_7___default()({
-      path: '/wavly/v1/settings',
-      method: 'PUT',
-      data: data
-    }).then(function (response) {
-      var _response$message;
-
-      var message = (_response$message = response.message) !== null && _response$message !== void 0 ? _response$message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'woo-availability');
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success(message);
-    })["catch"](function (error) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error(Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Timer titles can not be empty', 'woo-availability'));
+    react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].promise(Object(_api_settings__WEBPACK_IMPORTED_MODULE_9__["UPDATE_SETTINGS"])(data), {
+      pending: {
+        render: function render() {
+          return Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Saving settings', 'boostimer');
+        }
+      },
+      success: {
+        render: function render(_ref) {
+          var data = _ref.data;
+          return data.message ? data.message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings have been updated successfully', 'boostimer');
+        }
+      },
+      error: {
+        render: function render(_ref2) {
+          var data = _ref2.data;
+          return data.message ? data.message : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Settings could not be saved. Something went wrong', 'boostimer');
+        }
+      }
+    })["finally"](function () {
+      return setIsSaving(false);
     });
   };
 
@@ -1032,24 +1212,24 @@ var Settings = function Settings() {
     className: "bg-white p-8 shadow rounded-md"
   }, isLoading ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Loader__WEBPACK_IMPORTED_MODULE_6__["default"], null) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Countdown", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Countdown", "boostimer")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "enable_sale_countdown_timer",
     switchId: "enable_sale_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Sale Countdown Timer", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for sale duration on single product", "boostimer"),
     checked: settings.sale_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'sale_timer');
     }
   }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_8__["default"], {
     id: "enable_in_stock_countdown_timer",
     switchId: "enable_in_stock_countdown_timer_switch",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Show Stock Countdown Timer", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Enable this to show countdown timer for next available stock on single product", "boostimer"),
     checked: settings.stock_timer.enabled,
     onChange: function onChange(e) {
       return handleSwitchChange(e, 'stock_timer');
@@ -1058,26 +1238,26 @@ var Settings = function Settings() {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Timer title", "woo-availability")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Timer title", "boostimer")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__["default"], {
     id: "sale_timer_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale Timer Title", "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the sale timer title", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale ends in:", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale Timer Title", "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the sale timer title", "boostimer"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Sale ends in:", "boostimer"),
     value: settings.sale_timer.title,
     onChange: function onChange(e) {
       return handleInputChange(e, 'sale_timer');
     }
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", {
     className: "mt-6"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_7__["default"], {
     id: "notify_me_btn_text_tooltip",
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Stock Timer Title', "woo-availability"),
-    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the stock timer title", "woo-availability"),
-    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Expected restock in:", "woo-availability"),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Stock Timer Title', "boostimer"),
+    tooltip: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("This text will show on the stock timer title", "boostimer"),
+    placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Expected restock in:", "boostimer"),
     value: settings.stock_timer.title,
     onChange: function onChange(e) {
       return handleInputChange(e, 'stock_timer');
@@ -1086,11 +1266,12 @@ var Settings = function Settings() {
     className: "mt-12"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__["createElement"])("button", {
     onClick: handleSubmit,
-    className: "bg-blue-900 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "woo-availability"))))))));
+    className: "bg-gray-800 text-white px-8 py-2 uppercase text-md font-medium rounded-md hover:shadow-md transition delay-100 ease-in-out ".concat(iSSaving ? 'opacity-50' : ''),
+    disabled: iSSaving
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Save", "boostimer"))))))));
 };
 
-__signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseEffect{}");
+__signature__(Settings, "useState{[settings, setSettings](settingsSchema)}\nuseState{[isLoading, setIsLoading](true)}\nuseState{[iSSaving, setIsSaving](false)}\nuseEffect{}");
 
 var _default = Settings;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
@@ -1103,8 +1284,8 @@ var _default = Settings;
     return;
   }
 
-  reactHotLoader.register(Settings, "Settings", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/pages/Settings.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/pages/Settings.js");
+  reactHotLoader.register(Settings, "Settings", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/pages/Settings.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/pages/Settings.js");
 })();
 
 ;
@@ -1177,8 +1358,8 @@ var _default = menuFix;
     return;
   }
 
-  reactHotLoader.register(menuFix, "menuFix", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
+  reactHotLoader.register(menuFix, "menuFix", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
 })();
 
 ;

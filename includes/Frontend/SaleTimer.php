@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Frontend;
+namespace Boostimer\Frontend;
 
-use WooAvailability\Helper;
-use WooAvailability\Abstracts\Timer;
+use Boostimer\Helper;
+use Boostimer\Abstracts\Timer;
 
 /**
  * SaleTimer class.
@@ -17,57 +17,55 @@ class SaleTimer extends Timer {
      */
     public function __construct() {
         parent::__construct();
+
+        // Setting default title
+        $this->set_default_title( __( 'Sale ends in:', 'boostimer' ) );
     }
 
     /**
-     * Gets timer title
-     *
-     * @return string
-     */
-    public static function get_title() {
-        return __( 'Sale ends in:', 'woo-availability' );
-    }
-
-
-    /**
-     * Loads sale timer template and renders on product single page.
+     * Validate the sale timer for frontend display.
      *
      * @since 1.0.0
      *
-     * @return void
+     * @return bool
      */
-    public function build_timer() {
-        global $post;
-
-        $product = wc_get_product( $post->ID );
-
-        if ( ! $product || $product->is_type( 'grouped' ) ) {
-            return;
+    public function validate() {
+        if ( ! $this->product->is_on_sale() ) {
+            return false;
         }
 
-        if ( ! $product->is_on_sale() ) {
-            return;
-        }
-
-        $is_sale_time_active = Helper::is_sale_timer_active( $product );
+        $is_sale_time_active = Helper::is_sale_timer_active( $this->product );
 
         if ( ! $is_sale_time_active ) {
-            return;
+            return false;
         }
 
-        $sale_date_to   = $product->get_date_on_sale_to()->getTimestamp();
-        $sale_date_from = $product->get_date_on_sale_from()->getTimestamp();
+        return true;
+    }
 
-        $current_datetime = wavly_current_datetime()->getTimestamp();
+    /**
+     * Sets the sale timer data.
+     *
+     * @since 1.0.0
+     *
+     * @throws \Exception
+     *
+     * @return void
+     */
+    public function setup() {
+        $sale_date_to   = $this->product->get_date_on_sale_to()->getTimestamp();
+        $sale_date_from = $this->product->get_date_on_sale_from()->getTimestamp();
+
+        $current_datetime = boostimer_current_datetime()->getTimestamp();
 
         if ( ! ( $sale_date_from < $current_datetime && $current_datetime < $sale_date_to ) ) {
-            return;
+            throw new \Exception( 'Sale timer is off' );
         }
 
-        $title = Helper::get_sale_timer_title();
+        $title = apply_filters( 'boostimer_sale_timer_title', Helper::get_sale_timer_title() );
 
-        $title = apply_filters( 'wavly_sale_timer_title', $title );
-
-        $this->render( $title, $sale_date_to, $sale_date_from );
+        $this->set_date_from( $sale_date_from );
+        $this->set_date_to( $sale_date_to );
+        $this->set_title( $title );
     }
 }

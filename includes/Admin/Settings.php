@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Admin;
+namespace Boostimer\Admin;
 
-use WooAvailability\Frontend\SaleTimer;
-use WooAvailability\Frontend\StockTimer;
+use Boostimer\Frontend\SaleTimer;
+use Boostimer\Frontend\StockTimer;
 
 /**
  * Admin settings manager
@@ -15,7 +15,7 @@ class Settings {
     /**
      * @var string
      */
-    public static $OPTION_KEY = 'wavly_settings';
+    public static $OPTION_KEY = 'boostimer_settings';
 
     /**
      * Return all settings.
@@ -23,13 +23,13 @@ class Settings {
      * @return array
      */
     public static function all() {
-        $default = apply_filters( 'wavly_settings_default', [
+        $default = apply_filters( 'boostimer_settings_default', [
             'sale_timer'  => [
-                'title'   => SaleTimer::get_title(),
+                'title'   => boostimer()->frontend->saletimer->get_default_title(),
                 'enabled' => true,
             ],
             'stock_timer' => [
-                'title'   => StockTimer::get_title(),
+                'title'   => boostimer()->frontend->stocktimer->get_default_title(),
                 'enabled' => true,
             ],
         ] );

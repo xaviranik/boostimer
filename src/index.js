@@ -7,7 +7,7 @@ import App from './App';
 import './styles/style.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-const mountNode = document.getElementById('woo-availability-app');
+const mountNode = document.getElementById('boostimer-app');
 ReactDOM.render(<App />, mountNode);
 
-menuFix('woo-availability');
+menuFix('boostimer');

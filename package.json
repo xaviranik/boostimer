@@ -1,5 +1,5 @@
 {
-  "name": "woo-availability",
+  "name": "boostimer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,8 +13,8 @@
     "build": "wp-scripts build --mode=production --progress",
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
-    "makepot": "wp i18n make-pot --exclude='dist,node_modules,vendors' . --headers='{\"Last-Translator\":\"zabiranik.me@gmail.com\",\"Report-Msgid-Bugs-To\":\"https://github.com/xaviranik/woo-availability/issues\"}' --file-comment=\"Copyright (c) $(date +'%Y') Zabir Anik. All Rights Reserved.\" languages/woo-availability.pot",
-    "pot2json": "po2json languages/woo-availability.pot languages/woo-availability.json --format jed --pretty",
+    "makepot": "wp i18n make-pot --exclude='dist,node_modules,vendors' . --headers='{\"Last-Translator\":\"zabiranik.me@gmail.com\",\"Report-Msgid-Bugs-To\":\"https://github.com/xaviranik/boostimer/issues\"}' --file-comment=\"Copyright (c) $(date +'%Y') Zabir Anik. All Rights Reserved.\" languages/boostimer.pot",
+    "pot2json": "po2json languages/boostimer.pot languages/boostimer.json --format jed --pretty",
     "readme": "wp-readme-to-md",
     "zip": "./bin/build.sh"
   },

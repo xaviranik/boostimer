@@ -16,7 +16,7 @@ const InputField = ({id, label, tooltip, placeholder, value, onChange}) => {
         <ReactTooltip id={id} className="rounded-md" type="dark" effect="solid" delayHide={100}>
           <span className="mt-2 text-white text-xs">{tooltip}</span>
         </ReactTooltip>
-        <input onChange={onChange} className="woo-availability-input" type="text" placeholder={placeholder} defaultValue={value}/>
+        <input onChange={onChange} className="boostimer-input" type="text" placeholder={placeholder} defaultValue={value}/>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Frontend;
+namespace Boostimer\Frontend;
 
-use WooAvailability\Abstracts\Timer;
-use WooAvailability\Helper;
+use Boostimer\Abstracts\Timer;
+use Boostimer\Helper;
 
 class StockTimer extends Timer {
 
@@ -12,15 +12,9 @@ class StockTimer extends Timer {
      */
     public function __construct() {
         parent::__construct();
-    }
 
-    /**
-     * Gets timer title
-     *
-     * @return string
-     */
-    public static function get_title() {
-        return __( 'Expected restock in:', 'woo-availability' );
+        // Setting default title
+        $this->set_default_title( __( 'Expected restock in:', 'boostimer' ) );
     }
 
     /**
@@ -31,45 +25,54 @@ class StockTimer extends Timer {
      * @return void
      */
     public function set_hooks() {
-        add_action( 'woocommerce_single_product_summary', [ $this, 'build_timer' ] );
+        add_action( 'woocommerce_single_product_summary', [ $this, 'build'] );
     }
 
-
     /**
-     * Loads sale timer template and renders on product single page.
+     * Validates the timer for frontend display.
      *
      * @since 1.0.0
      *
-     * @return void
+     * @return bool
      */
-    public function build_timer() {
-        global $post;
-
-        $product = wc_get_product( $post->ID );
-
-        if ( ! $product || $product->is_type( 'grouped' ) ) {
-            return;
+    public function validate() {
+        if ( ! $this->product->managing_stock() && $this->product->is_in_stock() ) {
+            return false;
         }
 
-        if ( ! $product->managing_stock() && $product->is_in_stock() ) {
-            return;
+        if ( $this->product->get_stock_quantity() > 0 ) {
+            return false;
         }
 
-        if ( $product->get_stock_quantity() > 0 ) {
-            return;
-        }
-
-        $is_restock_timer_active = Helper::is_restock_timer_active( $product );
+        $is_restock_timer_active = Helper::is_restock_timer_active( $this->product );
 
         if ( ! $is_restock_timer_active ) {
-            return;
+            return false;
         }
 
-        $title = Helper::get_stock_timer_title();
+        return true;
+    }
 
-        $title                  = apply_filters( 'wavly_restock_timer_title', $title );
-        $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
+    /**
+     * Sets the stock timer data.
+     *
+     * @since 1.0.0
+     *
+     * @throws \Exception
+     *
+     * @return void
+     */
+    public function setup() {
+        $title                  = apply_filters( 'boostimer_restock_timer_title', Helper::get_stock_timer_title() );
+        $restock_date_timestamp = absint( $this->product->get_meta( '_woo_availability_restock_date', true ) );
 
-        $this->render( $title, $restock_date_timestamp, '' );
+        $current_datetime = boostimer_current_datetime()->getTimestamp();
+
+        if ( $restock_date_timestamp < $current_datetime ) {
+            throw new \Exception( 'Stock timer is off' );
+        }
+
+        $this->set_title( $title );
+        $this->set_date_to( $restock_date_timestamp );
     }
 }

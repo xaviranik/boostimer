@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAvailability\Api;
+namespace Boostimer\Api;
 
 use WP_REST_Server;
-use WooAvailability\Admin\Settings as AdminSettings;
+use Boostimer\Admin\Settings as AdminSettings;
 
 /**
  * Settings controller.
@@ -18,7 +18,7 @@ class Settings extends BaseController {
      * @return void
      */
     public function __construct() {
-        $this->namespace = 'wavly/v1';
+        $this->namespace = 'boostimer/v1';
         $this->rest_base = 'settings';
     }
 
@@ -74,7 +74,7 @@ class Settings extends BaseController {
 
         AdminSettings::update( $settings );
 
-        return rest_ensure_response( [ 'message' => __( 'Settings have been updated successfully', 'woo-availability' ) ] );
+        return rest_ensure_response( [ 'message' => __( 'Settings have been updated successfully', 'boostimer' ) ] );
     }
 
     /**
@@ -118,13 +118,13 @@ class Settings extends BaseController {
         if ( WP_REST_Server::EDITABLE === $method ) {
             $args = [
                 'sale_timer' => [
-                    'description' => __( 'Sale timer.', 'woo-availability' ),
+                    'description' => __( 'Sale timer.', 'boostimer' ),
                     'type'        => 'object',
                     'items'       => [ 'type' => 'object' ],
                     'required'    => true,
                     'properties'  => [
                         'title'   => [
-                            'description'       => __( 'Sale timer title.', 'woo-availability' ),
+                            'description'       => __( 'Sale timer title.', 'boostimer' ),
                             'type'              => 'string',
                             'required'          => true,
                             'minLength'         => 1,
@@ -132,7 +132,7 @@ class Settings extends BaseController {
                             'validate_callback' => 'rest_validate_request_arg',
                         ],
                         'enabled' => [
-                            'description'       => __( 'Is sale timer enabled..', 'woo-availability' ),
+                            'description'       => __( 'Is sale timer enabled..', 'boostimer' ),
                             'type'              => 'boolean',
                             'required'          => true,
                             'sanitize_callback' => 'sanitize_text_field',
@@ -141,13 +141,13 @@ class Settings extends BaseController {
                     ],
                 ],
                 'stock_timer' => [
-                    'description' => __( 'Stock timer.', 'woo-availability' ),
+                    'description' => __( 'Stock timer.', 'boostimer' ),
                     'type'        => 'object',
                     'items'       => [ 'type' => 'object' ],
                     'required'    => true,
                     'properties'  => [
                         'title'   => [
-                            'description'       => __( 'Stock timer title.', 'woo-availability' ),
+                            'description'       => __( 'Stock timer title.', 'boostimer' ),
                             'type'              => 'string',
                             'required'          => true,
                             'minLength'         => 1,
@@ -155,7 +155,7 @@ class Settings extends BaseController {
                             'validate_callback' => 'rest_validate_request_arg',
                         ],
                         'enabled' => [
-                            'description'       => __( 'Is stock timer enabled..', 'woo-availability' ),
+                            'description'       => __( 'Is stock timer enabled..', 'boostimer' ),
                             'type'              => 'boolean',
                             'required'          => true,
                             'sanitize_callback' => 'sanitize_text_field',
@@ -174,6 +174,6 @@ class Settings extends BaseController {
          * @param array  $args   Query arguments.
          * @param string $method HTTP method of the request.
          */
-        return apply_filters( "wavly_rest_settings_{$key}_query_arguments", $args, $method );
+        return apply_filters( "boostimer_rest_settings_{$key}_query_arguments", $args, $method );
     }
 }

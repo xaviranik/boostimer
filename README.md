@@ -1,24 +1,25 @@
-# WooAvailability  - Product Availability Countdown And Scheduler For Woocommerce #
-**Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
-**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
-**Tags:** WooCommerce, wooAvailability, Product availability, Product scheduler, Product restock, Countdown, free plugin, woocommerce product availability and scheduler, Woocommerce product and scheduler plugin  
-**Requires at least:** 5.0  
-**Tested up to:** 5.8.1  
-**Stable tag:** 1.0.0  
-**Requires PHP:** 5.6  
-**License:** GPLv2 or later  
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
+# Boostimer - Product Availability Countdown And Scheduler For Woocommerce #
+**Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)
+**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)
+**Tags:** WooCommerce, boostimer, woo, product availability, product scheduler, product restock, countdown, free plugin, woocommerce product availability and scheduler, woocommerce product, scheduler plugin
+**Requires at least:** 5.0
+**Tested up to:** 5.8.1
+**Stable tag:** 1.0.0
+**Requires PHP:** 5.6
+**License:** GPLv2 or later
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description ##
 
-WooAvailability is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
+Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
-📄 [Docs](https://github.com/xaviranik/woo-availability/wiki)
+### Documentation
+
+📄 [Boostimer Documentation](https://boostimer.netlify.app)
 
 ### What does it do?
 
 Using this plugin, it’s easy to know when the required product will be available or restocked in the store. Furthermore, offering products on a limited sale time with a catchy countdown can create a sense of urgency which can trigger the user to make the purchase right away.
-
 
 ### Key Features
 
@@ -34,7 +35,7 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 ### Attractive User Interface
 
-A good UI can sometimes make a system even more attractive. WooAvailability has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
+A good UI can sometimes make a system even more attractive. Boostimer has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
 #### Set Admin Settings
 [![admin-settings.png](https://i.postimg.cc/SN46BLXG/07-admin-settings.png)]()

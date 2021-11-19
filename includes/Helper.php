@@ -1,10 +1,10 @@
 <?php
 
-namespace WooAvailability;
+namespace Boostimer;
 
-use WooAvailability\Admin\Settings;
-use WooAvailability\Frontend\SaleTimer;
-use WooAvailability\Frontend\StockTimer;
+use Boostimer\Admin\Settings;
+use Boostimer\Frontend\SaleTimer;
+use Boostimer\Frontend\StockTimer;
 
 /**
  * Helper class.
@@ -69,7 +69,7 @@ class Helper {
     public static function get_sale_timer_title() {
         $settings = Settings::get( 'sale_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : SaleTimer::get_title();
+        return isset( $settings['title'] ) ? $settings['title'] : boostimer()->frontend->saletimer->get_default_title();
     }
 
     /**
@@ -82,6 +82,6 @@ class Helper {
     public static function get_stock_timer_title() {
         $settings = Settings::get( 'stock_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : StockTimer::get_title();
+        return isset( $settings['title'] ) ? $settings['title'] : boostimer()->frontend->stocktimer->get_default_title();
     }
 }

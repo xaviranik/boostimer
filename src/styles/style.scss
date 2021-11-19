@@ -1,10 +1,10 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-#woo-availability-app {
+#boostimer-app {
     all: unset;
 
-    .woo-availability-app {
+    .boostimer-app {
         padding-right: 20px;
         padding-top: 20px;
         font-family: 'Poppins', sans-serif;
@@ -21,8 +21,8 @@
             background-color: #10B981;
         }
 
-        .woo-availability-input {
-            @apply border-2 border-gray-100 px-4 py-2 outline-none mt-2 rounded-md focus:border-blue-900 focus:ring-0 focus:bg-gray-50 transition delay-100 ease-in-out;
+        .boostimer-input {
+            @apply border-2 border-gray-100 px-4 py-2 outline-none mt-2 rounded-md focus:border-gray-700 focus:ring-0 focus:bg-gray-50 transition delay-100 ease-in-out;
         }
     }
 

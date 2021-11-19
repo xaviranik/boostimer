@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability\Admin\ProductData;
+namespace Boostimer\Admin\ProductData;
 
 class Stock {
 
@@ -42,9 +42,9 @@ class Stock {
         $show_stock_timer       = $product->get_meta( '_woo_availability_show_stock_timer', true );
         $restock_date_timestamp = $product->get_meta( '_woo_availability_restock_date', true );
 
-        $restock_date = wavly_format_datetime( $restock_date_timestamp, 'Y-m-d' );
+        $restock_date = boostimer_format_datetime( $restock_date_timestamp, 'Y-m-d' );
 
-        wavly_get_template_part(
+        boostimer_get_template_part(
             'admin/stock-product-data',
             '',
             [
@@ -80,7 +80,7 @@ class Stock {
             return;
         }
 
-        $restock_date_timestamp = wavly_current_datetime()
+        $restock_date_timestamp = boostimer_current_datetime()
                                     ->modify( $restock_date )
                                     ->setTime( 23, 59, 59 )
                                     ->getTimestamp();

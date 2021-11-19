@@ -2,8 +2,8 @@
 
   "use strict";
 
-  $.fn.wavlyCountdown = function ( options ) {
-    const wavly = $( this );
+  $.fn.boostimerCountdown = function ( options ) {
+    const boostimer = $( this );
     let settings = $.extend(
       {
         endTime: '',
@@ -52,10 +52,10 @@
           seconds = "0" + seconds;
         }
 
-        $(wavly).find("[data-wavly-days]").html(days);
-        $(wavly).find("[data-wavly-hours]").html(hours);
-        $(wavly).find("[data-wavly-minutes]").html(minutes);
-        $(wavly).find("[data-wavly-seconds]").html(seconds);
+        $(boostimer).find("[data-boostimer-days]").html(days);
+        $(boostimer).find("[data-boostimer-hours]").html(hours);
+        $(boostimer).find("[data-boostimer-minutes]").html(minutes);
+        $(boostimer).find("[data-boostimer-seconds]").html(seconds);
       }
     });
   };
@@ -66,11 +66,11 @@
   "use strict";
 
   const Dokan_Woo_Availability_Frontend = {
-    timer: $("#wavly-timer"),
-    dates: typeof wavly_dates === 'undefined' ? {} : wavly_dates,
+    timer: $("#boostimer-timer"),
+    dates: typeof boostimer_dates === 'undefined' ? {} : boostimer_dates,
 
     init: function () {
-      this.timer.wavlyCountdown({
+      this.timer.boostimerCountdown({
         endTime: this.dates.date_to * 1000,
         timezone: this.dates.timezone,
       });

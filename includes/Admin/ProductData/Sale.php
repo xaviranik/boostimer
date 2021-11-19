@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAvailability\Admin\ProductData;
+namespace Boostimer\Admin\ProductData;
 
 /**
  * Sale product data
@@ -47,10 +47,10 @@ class Sale {
         woocommerce_wp_checkbox(
             [
                 'id'            => '_woo_availability_show_sale_timer',
-                'label'         => __( 'Show sale timer?', 'woo-availability' ),
+                'label'         => __( 'Show sale timer?', 'boostimer' ),
                 'wrapper_class' => 'hide_if_grouped',
                 'desc_tip'      => false,
-                'description'   => __( 'Show sale countdown timer if sale price and schedules are set', 'woo-availability' ),
+                'description'   => __( 'Show sale countdown timer if sale price and schedules are set', 'boostimer' ),
                 'value'         => $show_sale_timer,
             ]
         );

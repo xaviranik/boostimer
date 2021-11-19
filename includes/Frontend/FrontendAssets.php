@@ -1,8 +1,8 @@
 <?php
 
-namespace WooAvailability\Frontend;
+namespace Boostimer\Frontend;
 
-use WooAvailability\Abstracts\Assets;
+use Boostimer\Abstracts\Assets;
 
 /**
  * Scripts and Styles Class.
@@ -33,8 +33,8 @@ class FrontendAssets extends Assets {
      */
     protected function get_scripts() {
         return [
-            'woo-availability-frontend-script' => [
-                'src'       => WOO_AVAILABILITY_ASSET . '/js/frontend' . $this->get_suffix() . '.js',
+            'boostimer-frontend-script' => [
+                'src'       => BOOSTIMER_ASSET . '/js/frontend' . $this->get_suffix() . '.js',
                 'deps'      => [ 'jquery' ],
                 'version'   => $this->get_version(),
                 'in_footer' => true,
@@ -49,8 +49,8 @@ class FrontendAssets extends Assets {
      */
     protected function get_styles() {
         return [
-            'woo-availability-frontend-style' => [
-                'src'     => WOO_AVAILABILITY_ASSET . '/css/frontend.css',
+            'boostimer-frontend-style' => [
+                'src'     => BOOSTIMER_ASSET . '/css/frontend.css',
                 'version' => $this->get_version(),
             ],
         ];
@@ -63,8 +63,8 @@ class FrontendAssets extends Assets {
      */
     public function load_scripts() {
         if ( is_product() ) {
-            wp_enqueue_script( 'woo-availability-frontend-script' );
-            wp_enqueue_style( 'woo-availability-frontend-style' );
+            wp_enqueue_script( 'boostimer-frontend-script' );
+            wp_enqueue_style( 'boostimer-frontend-style' );
         }
     }
 }
