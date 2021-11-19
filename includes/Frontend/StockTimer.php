@@ -36,21 +36,15 @@ class StockTimer extends Timer {
      * @return bool
      */
     public function validate() {
-        $product = wc_get_product( get_the_ID() );
-
-        if ( ! $product || $product->is_type( 'grouped' ) ) {
+        if ( ! $this->product->managing_stock() && $this->product->is_in_stock() ) {
             return false;
         }
 
-        if ( ! $product->managing_stock() && $product->is_in_stock() ) {
+        if ( $this->product->get_stock_quantity() > 0 ) {
             return false;
         }
 
-        if ( $product->get_stock_quantity() > 0 ) {
-            return false;
-        }
-
-        $is_restock_timer_active = Helper::is_restock_timer_active( $product );
+        $is_restock_timer_active = Helper::is_restock_timer_active( $this->product );
 
         if ( ! $is_restock_timer_active ) {
             return false;
@@ -69,12 +63,8 @@ class StockTimer extends Timer {
      * @return void
      */
     public function setup() {
-        $product = wc_get_product( get_the_ID() );
-
-        $title = Helper::get_stock_timer_title();
-
-        $title                  = apply_filters( 'boostimer_restock_timer_title', $title );
-        $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
+        $title                  = apply_filters( 'boostimer_restock_timer_title', Helper::get_stock_timer_title() );
+        $restock_date_timestamp = absint( $this->product->get_meta( '_woo_availability_restock_date', true ) );
 
         $current_datetime = boostimer_current_datetime()->getTimestamp();
 

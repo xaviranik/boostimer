@@ -23,24 +23,18 @@ class SaleTimer extends Timer {
     }
 
     /**
-     * Validate the timer for frontend display.
+     * Validate the sale timer for frontend display.
      *
      * @since 1.0.0
      *
      * @return bool
      */
     public function validate() {
-        $product = wc_get_product( get_the_ID() );
-
-        if ( ! $product || $product->is_type( 'grouped' ) ) {
+        if ( ! $this->product->is_on_sale() ) {
             return false;
         }
 
-        if ( ! $product->is_on_sale() ) {
-            return false;
-        }
-
-        $is_sale_time_active = Helper::is_sale_timer_active( $product );
+        $is_sale_time_active = Helper::is_sale_timer_active( $this->product );
 
         if ( ! $is_sale_time_active ) {
             return false;
@@ -59,10 +53,8 @@ class SaleTimer extends Timer {
      * @return void
      */
     public function setup() {
-        $product = wc_get_product( get_the_ID() );
-
-        $sale_date_to   = $product->get_date_on_sale_to()->getTimestamp();
-        $sale_date_from = $product->get_date_on_sale_from()->getTimestamp();
+        $sale_date_to   = $this->product->get_date_on_sale_to()->getTimestamp();
+        $sale_date_from = $this->product->get_date_on_sale_from()->getTimestamp();
 
         $current_datetime = boostimer_current_datetime()->getTimestamp();
 

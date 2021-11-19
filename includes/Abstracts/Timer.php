@@ -30,6 +30,11 @@ abstract class Timer {
     protected $date_to;
 
     /**
+     * @var \WC_Product $product
+     */
+    protected $product;
+
+    /**
      * Timer constructor.
      */
     public function __construct() {
@@ -123,7 +128,11 @@ abstract class Timer {
      * @return void
      */
     public function build() {
-        if ( ! $this->validate() ) {
+        $product = wc_get_product( get_the_ID() );
+
+        $this->product = $product;
+
+        if ( ! $this->valid_product() || ! $this->validate() ) {
             return;
         }
 
@@ -131,6 +140,19 @@ abstract class Timer {
             $this->setup();
             $this->render();
         } catch ( \Exception $e ) {}
+    }
+
+    /**
+     * Checks if the product is valid for timer type.
+     *
+     * @return bool
+     */
+    public function valid_product() {
+        if ( ! $this->product || $this->product->is_type( 'grouped' ) ) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
