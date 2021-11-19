@@ -20,7 +20,7 @@ require __DIR__ . '/vendor/autoload.php';
  */
 final class Boostimer {
 
-    use \Boostimer\traits\Container;
+    use \Boostimer\Traits\Container;
 
     /**
      * Plugin version.

@@ -112,15 +112,43 @@ abstract class Timer {
      * @return void
      */
     public function set_hooks() {
-        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'build_timer' ] );
+        add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'build'] );
     }
 
     /**
      * Loads template and renders on product single page.
      *
+     * @throws \Exception
+     *
      * @return void
      */
-    abstract public function build_timer();
+    public function build() {
+        if ( ! $this->validate() ) {
+            return;
+        }
+
+        try {
+            $this->setup();
+            $this->render();
+        } catch ( \Exception $e ) {
+        }
+    }
+
+    /**
+     * Validates the timer for displaying on frontend.
+     *
+     * @return bool
+     */
+    abstract public function validate();
+
+    /**
+     * Sets up the timer.
+     *
+     * @throws \Exception
+     *
+     * @return void
+     */
+    abstract public function setup();
 
     /**
      * Renders template file

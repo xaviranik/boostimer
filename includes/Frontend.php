@@ -2,7 +2,7 @@
 
 namespace Boostimer;
 
-use Boostimer\traits\Container;
+use Boostimer\Traits\Container;
 use Boostimer\Frontend\SaleTimer;
 use Boostimer\Frontend\StockTimer;
 use Boostimer\Frontend\FrontendAssets;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Boostimer\traits;
+namespace Boostimer\Traits;
 
 trait Container {
 

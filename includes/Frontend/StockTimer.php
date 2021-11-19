@@ -25,39 +25,49 @@ class StockTimer extends Timer {
      * @return void
      */
     public function set_hooks() {
-        add_action( 'woocommerce_single_product_summary', [ $this, 'build_timer' ] );
+        add_action( 'woocommerce_single_product_summary', [ $this, 'build'] );
     }
 
-
     /**
-     * Loads sale timer template and renders on product single page.
+     * Validates the timer for frontend display.
      *
      * @since 1.0.0
      *
-     * @return void
+     * @return bool
      */
-    public function build_timer() {
-        global $post;
-
-        $product = wc_get_product( $post->ID );
+    public function validate() {
+        $product = wc_get_product( get_the_ID() );
 
         if ( ! $product || $product->is_type( 'grouped' ) ) {
-            return;
+            return false;
         }
 
         if ( ! $product->managing_stock() && $product->is_in_stock() ) {
-            return;
+            return false;
         }
 
         if ( $product->get_stock_quantity() > 0 ) {
-            return;
+            return false;
         }
 
         $is_restock_timer_active = Helper::is_restock_timer_active( $product );
 
         if ( ! $is_restock_timer_active ) {
-            return;
+            return false;
         }
+
+        return true;
+    }
+
+    /**
+     * Sets the stock timer data.
+     *
+     * @since 1.0.0
+     *
+     * @return void
+     */
+    public function setup() {
+        $product = wc_get_product( get_the_ID() );
 
         $title = Helper::get_stock_timer_title();
 
@@ -66,7 +76,5 @@ class StockTimer extends Timer {
 
         $this->set_title( $title );
         $this->set_date_to( $restock_date_timestamp );
-
-        $this->render();
     }
 }

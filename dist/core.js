@@ -243,8 +243,8 @@ var _default = Object(react_hot_loader_root__WEBPACK_IMPORTED_MODULE_2__["hot"])
     return;
   }
 
-  reactHotLoader.register(App, "App", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/App.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/App.js");
+  reactHotLoader.register(App, "App", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/App.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/App.js");
 })();
 
 ;
@@ -306,10 +306,10 @@ var _default = BoostApi;
     return;
   }
 
-  reactHotLoader.register(base, "base", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/index.js");
-  reactHotLoader.register(version, "version", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/index.js");
-  reactHotLoader.register(BoostApi, "BoostApi", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/index.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(base, "base", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(version, "version", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(BoostApi, "BoostApi", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/index.js");
 })();
 
 ;
@@ -414,9 +414,9 @@ var UPDATE_SETTINGS = /*#__PURE__*/function () {
     return;
   }
 
-  reactHotLoader.register(endpoint, "endpoint", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/settings.js");
-  reactHotLoader.register(GET_SETTINGS, "GET_SETTINGS", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/settings.js");
-  reactHotLoader.register(UPDATE_SETTINGS, "UPDATE_SETTINGS", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/api/settings.js");
+  reactHotLoader.register(endpoint, "endpoint", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
+  reactHotLoader.register(GET_SETTINGS, "GET_SETTINGS", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
+  reactHotLoader.register(UPDATE_SETTINGS, "UPDATE_SETTINGS", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/api/settings.js");
 })();
 
 ;
@@ -557,8 +557,8 @@ var _default = Loader;
     return;
   }
 
-  reactHotLoader.register(Loader, "Loader", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Loader.js");
+  reactHotLoader.register(Loader, "Loader", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Loader.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Loader.js");
 })();
 
 ;
@@ -646,8 +646,8 @@ var _default = Sidebar;
     return;
   }
 
-  reactHotLoader.register(Sidebar, "Sidebar", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Sidebar.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Sidebar.js");
+  reactHotLoader.register(Sidebar, "Sidebar", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Sidebar.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Sidebar.js");
 })();
 
 ;
@@ -743,8 +743,8 @@ var _default = InputField;
     return;
   }
 
-  reactHotLoader.register(InputField, "InputField", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
+  reactHotLoader.register(InputField, "InputField", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/InputField.js");
 })();
 
 ;
@@ -816,8 +816,8 @@ var _default = Logo;
     return;
   }
 
-  reactHotLoader.register(Logo, "Logo", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
+  reactHotLoader.register(Logo, "Logo", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/Logo.js");
 })();
 
 ;
@@ -922,8 +922,8 @@ var _default = SwitchField;
     return;
   }
 
-  reactHotLoader.register(SwitchField, "SwitchField", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
+  reactHotLoader.register(SwitchField, "SwitchField", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/SwitchField.js");
 })();
 
 ;
@@ -994,8 +994,8 @@ var _default = WooSwitch;
     return;
   }
 
-  reactHotLoader.register(WooSwitch, "WooSwitch", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
+  reactHotLoader.register(WooSwitch, "WooSwitch", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/components/Utils/WooSwitch.js");
 })();
 
 ;
@@ -1057,7 +1057,7 @@ Object(_utils_admin_menu_fix__WEBPACK_IMPORTED_MODULE_3__["default"])('boostimer
     return;
   }
 
-  reactHotLoader.register(mountNode, "mountNode", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/index.js");
+  reactHotLoader.register(mountNode, "mountNode", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/index.js");
 })();
 
 ;
@@ -1284,8 +1284,8 @@ var _default = Settings;
     return;
   }
 
-  reactHotLoader.register(Settings, "Settings", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/pages/Settings.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/pages/Settings.js");
+  reactHotLoader.register(Settings, "Settings", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/pages/Settings.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/pages/Settings.js");
 })();
 
 ;
@@ -1358,8 +1358,8 @@ var _default = menuFix;
     return;
   }
 
-  reactHotLoader.register(menuFix, "menuFix", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
-  reactHotLoader.register(_default, "default", "/home/xavir/Public/Sites/dev/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
+  reactHotLoader.register(menuFix, "menuFix", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
+  reactHotLoader.register(_default, "default", "/Users/xvr/Public/Sites/xvvr/wp-content/plugins/woo-availability/src/utils/admin-menu-fix.js");
 })();
 
 ;
