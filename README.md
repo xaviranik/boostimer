@@ -1,12 +1,12 @@
 # Boostimer - Product Availability Countdown And Scheduler For Woocommerce #
-**Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)
-**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)
-**Tags:** WooCommerce, boostimer, woo, product availability, product scheduler, product restock, countdown, free plugin, woocommerce product availability and scheduler, woocommerce product, scheduler plugin
-**Requires at least:** 5.0
-**Tested up to:** 5.8.1
-**Stable tag:** 1.0.0
-**Requires PHP:** 5.6
-**License:** GPLv2 or later
+**Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
+**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
+**Tags:** WooCommerce, boostimer, Product availability, Product scheduler, Product restock, Countdown, free plugin, woocommerce product availability and scheduler, Woocommerce product and scheduler plugin  
+**Requires at least:** 5.0  
+**Tested up to:** 5.8.1  
+**Stable tag:** 1.0.0  
+**Requires PHP:** 5.6  
+**License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description ##
