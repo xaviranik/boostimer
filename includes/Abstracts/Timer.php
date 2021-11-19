@@ -130,8 +130,7 @@ abstract class Timer {
         try {
             $this->setup();
             $this->render();
-        } catch ( \Exception $e ) {
-        }
+        } catch ( \Exception $e ) {}
     }
 
     /**

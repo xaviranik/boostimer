@@ -64,6 +64,8 @@ class StockTimer extends Timer {
      *
      * @since 1.0.0
      *
+     * @throws \Exception
+     *
      * @return void
      */
     public function setup() {
@@ -73,6 +75,12 @@ class StockTimer extends Timer {
 
         $title                  = apply_filters( 'boostimer_restock_timer_title', $title );
         $restock_date_timestamp = absint( $product->get_meta( '_woo_availability_restock_date', true ) );
+
+        $current_datetime = boostimer_current_datetime()->getTimestamp();
+
+        if ( $restock_date_timestamp < $current_datetime ) {
+            throw new \Exception( 'Stock timer is off' );
+        }
 
         $this->set_title( $title );
         $this->set_date_to( $restock_date_timestamp );
