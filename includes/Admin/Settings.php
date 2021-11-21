@@ -29,7 +29,7 @@ class Settings {
                 'enabled' => true,
             ],
             'stock_timer' => [
-                'title'   => '',
+                'title'   => boostimer()->frontend->stocktimer->get_default_title(),
                 'enabled' => true,
             ],
         ] );
