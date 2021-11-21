@@ -38,7 +38,7 @@ Using this plugin, it’s easy to know when the required product will be availab
 A good UI can sometimes make a system even more attractive. Boostimer has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
 
 #### Set Admin Settings
-[![admin-settings.png](https://i.postimg.cc/SN46BLXG/07-admin-settings.png)]()
+[![admin-settings.png](https://i.postimg.cc/ydJctCTs/admin-dashboard.png)]()
 
 #### Set Sale countdown timer
 [![simple-product-sale-admin](https://i.postimg.cc/ZqQP2139/05-simple-product-sale-admin.png)]()
