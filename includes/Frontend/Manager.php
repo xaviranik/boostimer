@@ -1,16 +1,13 @@
 <?php
 
-namespace Boostimer;
+namespace Boostimer\Frontend;
 
 use Boostimer\Traits\Container;
-use Boostimer\Frontend\SaleTimer;
-use Boostimer\Frontend\StockTimer;
-use Boostimer\Frontend\FrontendAssets;
 
 /**
  * Frontend manager class.
  */
-class Frontend {
+class Manager {
 
     use Container;
 

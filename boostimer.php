@@ -127,7 +127,7 @@ final class Boostimer {
 
         // Load frontend manager
         if ( ! is_admin() ) {
-            $this->container['frontend'] = new Boostimer\Frontend();
+            $this->container['frontend'] = new Boostimer\Frontend\Manager();
         }
 
         // Load API manager
