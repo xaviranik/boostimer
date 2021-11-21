@@ -4,12 +4,12 @@
 
   const Dokan_Woo_Availability_Admin = {
     woocommerce_product_data: $( '#woocommerce-product-data' ),
-    show_sale_timer_field: $( '._woo_availability_show_sale_timer_field' ),
-    show_sale_timer_field_checkbox: $( '#_woo_availability_show_sale_timer_field' ),
+    show_sale_timer_field: $( '._boostimer_show_sale_timer_field' ),
+    show_sale_timer_field_checkbox: $( '#_boostimer_show_sale_timer_field' ),
     sale_price_dates_fields: $( '.sale_price_dates_fields' ),
 
-    show_stock_timer: $( '#_woo_availability_show_stock_timer' ),
-    restock_date: $( '._woo_availability_restock_date_field' ),
+    show_stock_timer: $( '#_boostimer_show_stock_timer' ),
+    restock_date: $( '._boostimer_restock_date_field' ),
 
     init: function () {
       const self = this;

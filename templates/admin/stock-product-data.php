@@ -16,7 +16,7 @@ $restock_date     = isset( $restock_date ) ? $restock_date : '';
     <?php
     woocommerce_wp_checkbox(
         [
-            'id'            => '_woo_availability_show_stock_timer',
+            'id'            => '_boostimer_show_stock_timer',
             'label'         => __( 'Show restock timer?', 'boostimer' ),
             'wrapper_class' => 'hide_if_grouped show_if_variable show_if_simple',
             'desc_tip'      => false,
@@ -27,7 +27,7 @@ $restock_date     = isset( $restock_date ) ? $restock_date : '';
 
     woocommerce_wp_text_input(
         [
-            'id'            => '_woo_availability_restock_date',
+            'id'            => '_boostimer_restock_date',
             'label'         => __( 'Stock available after', 'boostimer' ),
             'wrapper_class' => 'hide_if_grouped show_if_variable show_if_simple short',
             'class'         => 'stock_timer',
