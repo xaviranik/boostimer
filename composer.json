@@ -21,7 +21,9 @@
         "wp-coding-standards/wpcs": "dev-master",
         "phpcompatibility/php-compatibility": "*",
         "phpcompatibility/phpcompatibility-wp": "*",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "phpunit/phpunit": "^7",
+        "yoast/phpunit-polyfills": "^1.0"
     },
     "scripts": {
         "phpcs": [
