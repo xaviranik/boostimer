@@ -39,8 +39,8 @@ class Stock {
             return;
         }
 
-        $show_stock_timer       = $product->get_meta( '_woo_availability_show_stock_timer', true );
-        $restock_date_timestamp = $product->get_meta( '_woo_availability_restock_date', true );
+        $show_stock_timer       = $product->get_meta( '_boostimer_show_stock_timer', true );
+        $restock_date_timestamp = $product->get_meta( '_boostimer_restock_date', true );
 
         $restock_date = boostimer_format_datetime( $restock_date_timestamp, 'Y-m-d' );
 
@@ -73,8 +73,8 @@ class Stock {
         // phpcs:disable WordPress.Security.NonceVerification.Missing
         // phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-        $show_stock_timer = isset( $_POST['_woo_availability_show_stock_timer'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_show_stock_timer'] ) ) : 'no';
-        $restock_date     = isset( $_POST['_woo_availability_restock_date'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_restock_date'] ) ) : '';
+        $show_stock_timer = isset( $_POST['_boostimer_show_stock_timer'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_show_stock_timer'] ) ) : 'no';
+        $restock_date     = isset( $_POST['_boostimer_restock_date'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_restock_date'] ) ) : '';
 
         if ( ! strtotime( $restock_date ) ) {
             return;
@@ -85,8 +85,8 @@ class Stock {
                                     ->setTime( 23, 59, 59 )
                                     ->getTimestamp();
 
-        $product->update_meta_data( '_woo_availability_show_stock_timer', $show_stock_timer );
-        $product->update_meta_data( '_woo_availability_restock_date', $restock_date_timestamp );
+        $product->update_meta_data( '_boostimer_show_stock_timer', $show_stock_timer );
+        $product->update_meta_data( '_boostimer_restock_date', $restock_date_timestamp );
         $product->save_meta_data();
 
         // phpcs:enable WordPress.Security.NonceVerification.Missing

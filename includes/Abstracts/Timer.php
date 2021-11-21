@@ -2,12 +2,19 @@
 
 namespace Boostimer\Abstracts;
 
+use Boostimer\Admin\Settings;
+
 /**
  * Abstract Timer class
  *
  * @since 1.0.0
  */
 abstract class Timer {
+
+    /**
+     * @var string $key
+     */
+    protected $key;
 
     /**
      * @var string $title
@@ -110,6 +117,34 @@ abstract class Timer {
     }
 
     /**
+     * @return \WC_Product
+     */
+    public function get_product() {
+        return $this->product;
+    }
+
+    /**
+     * @param \WC_Product $product
+     */
+    public function set_product( $product ) {
+        $this->product = $product;
+    }
+
+    /**
+     * @return string
+     */
+    public function get_key() {
+        return $this->key;
+    }
+
+    /**
+     * @param string $key
+     */
+    public function set_key( $key ) {
+        $this->key = $key;
+    }
+
+    /**
      * Set hooks.
      *
      * @since 1.0.0
@@ -121,6 +156,22 @@ abstract class Timer {
     }
 
     /**
+     * Validates the timer for displaying on frontend.
+     *
+     * @return bool
+     */
+    abstract public function validate();
+
+    /**
+     * Sets up the timer.
+     *
+     * @throws \Exception
+     *
+     * @return void
+     */
+    abstract public function setup();
+
+    /**
      * Loads template and renders on product single page.
      *
      * @throws \Exception
@@ -128,11 +179,17 @@ abstract class Timer {
      * @return void
      */
     public function build() {
-        $product = wc_get_product( get_the_ID() );
+        if ( ! $this->is_timer_enabled_globally() ) {
+            return;
+        }
 
-        $this->product = $product;
+        $this->product = wc_get_product( get_the_ID() );
 
         if ( ! $this->valid_product() || ! $this->validate() ) {
+            return;
+        }
+
+        if ( ! $this->is_timer_enabled_for_product() ) {
             return;
         }
 
@@ -156,20 +213,26 @@ abstract class Timer {
     }
 
     /**
-     * Validates the timer for displaying on frontend.
+     * Checks if timer is enabled globally.
      *
      * @return bool
      */
-    abstract public function validate();
+    public function is_timer_enabled_globally() {
+        $settings = Settings::get( $this->key );
+
+        return isset( $settings['enabled'] ) ? $settings['enabled'] : false;
+    }
 
     /**
-     * Sets up the timer.
+     * Check if timer is active for a product
      *
-     * @throws \Exception
+     * @since 1.0.0
      *
-     * @return void
+     * @return bool
      */
-    abstract public function setup();
+    public function is_timer_enabled_for_product() {
+        return 'yes' === $this->product->get_meta( "_boostimer_show_{$this->key}", true );
+    }
 
     /**
      * Renders template file

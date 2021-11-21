@@ -14,29 +14,6 @@ use Boostimer\Frontend\StockTimer;
 class Helper {
 
     /**
-     * Check if sale timer is active for a product
-     *
-     * @since 1.0.0
-     *
-     * @param \WC_Product $product
-     *
-     * @return bool
-     */
-    public static function is_sale_timer_active( $product ) {
-        $settings = Settings::get( 'sale_timer' );
-
-        $enabled = isset( $settings['enabled'] ) ? $settings['enabled'] : false;
-
-        if ( ! $enabled ) {
-            return false;
-        }
-
-        $is_sale_timer_active = $product->get_meta( '_woo_availability_show_sale_timer', true );
-
-        return 'yes' === $is_sale_timer_active;
-    }
-
-    /**
      * Check if restock timer is active for a product
      *
      * @since 1.0.0
@@ -54,7 +31,7 @@ class Helper {
             return false;
         }
 
-        $is_restock_timer_active = $product->get_meta( '_woo_availability_show_stock_timer', true );
+        $is_restock_timer_active = $product->get_meta( '_boostimer_show_stock_timer', true );
 
         return 'yes' === $is_restock_timer_active;
     }

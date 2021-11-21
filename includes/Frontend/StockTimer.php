@@ -15,6 +15,9 @@ class StockTimer extends Timer {
 
         // Setting default title
         $this->set_default_title( __( 'Expected restock in:', 'boostimer' ) );
+
+        // Setting timer key
+        $this->set_key( 'stock_timer' );
     }
 
     /**
@@ -44,12 +47,6 @@ class StockTimer extends Timer {
             return false;
         }
 
-        $is_restock_timer_active = Helper::is_restock_timer_active( $this->product );
-
-        if ( ! $is_restock_timer_active ) {
-            return false;
-        }
-
         return true;
     }
 
@@ -64,12 +61,12 @@ class StockTimer extends Timer {
      */
     public function setup() {
         $title                  = apply_filters( 'boostimer_restock_timer_title', Helper::get_stock_timer_title() );
-        $restock_date_timestamp = absint( $this->product->get_meta( '_woo_availability_restock_date', true ) );
+        $restock_date_timestamp = absint( $this->product->get_meta( '_boostimer_restock_date', true ) );
 
         $current_datetime = boostimer_current_datetime()->getTimestamp();
 
         if ( $restock_date_timestamp < $current_datetime ) {
-            throw new \Exception( 'Stock timer is off' );
+            throw new \Exception( 'Stock timer has ended' );
         }
 
         $this->set_title( $title );

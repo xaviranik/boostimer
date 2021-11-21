@@ -42,11 +42,11 @@ class Sale {
             return;
         }
 
-        $show_sale_timer = $product->get_meta( '_woo_availability_show_sale_timer', true );
+        $show_sale_timer = $product->get_meta( '_boostimer_show_sale_timer', true );
 
         woocommerce_wp_checkbox(
             [
-                'id'            => '_woo_availability_show_sale_timer',
+                'id'            => '_boostimer_show_sale_timer',
                 'label'         => __( 'Show sale timer?', 'boostimer' ),
                 'wrapper_class' => 'hide_if_grouped',
                 'desc_tip'      => false,
@@ -85,14 +85,14 @@ class Sale {
 
         // If sale date to and from is not a valid date, set show sale timer to 'no' and return
         if ( empty( $sale_date_to ) || empty( $sale_date_from ) || ! strtotime( $sale_date_to ) || ! strtotime( $sale_date_from ) ) {
-            $product->update_meta_data( '_woo_availability_show_sale_timer', 'no' );
+            $product->update_meta_data( '_boostimer_show_sale_timer', 'no' );
             $product->save_meta_data();
             return;
         }
 
-        $show_sale_timer = isset( $_POST['_woo_availability_show_sale_timer'] ) ? wc_clean( wp_unslash( $_POST['_woo_availability_show_sale_timer'] ) ) : 'no';
+        $show_sale_timer = isset( $_POST['_boostimer_show_sale_timer'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_show_sale_timer'] ) ) : 'no';
 
-        $product->update_meta_data( '_woo_availability_show_sale_timer', $show_sale_timer );
+        $product->update_meta_data( '_boostimer_show_sale_timer', $show_sale_timer );
         $product->save_meta_data();
 
         // phpcs:enable WordPress.Security.NonceVerification.Missing

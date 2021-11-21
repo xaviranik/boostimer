@@ -20,6 +20,9 @@ class SaleTimer extends Timer {
 
         // Setting default title
         $this->set_default_title( __( 'Sale ends in:', 'boostimer' ) );
+
+        // Setting timer key
+        $this->set_key( 'sale_timer' );
     }
 
     /**
@@ -30,17 +33,7 @@ class SaleTimer extends Timer {
      * @return bool
      */
     public function validate() {
-        if ( ! $this->product->is_on_sale() ) {
-            return false;
-        }
-
-        $is_sale_time_active = Helper::is_sale_timer_active( $this->product );
-
-        if ( ! $is_sale_time_active ) {
-            return false;
-        }
-
-        return true;
+        return $this->product->is_on_sale();
     }
 
     /**
@@ -64,6 +57,7 @@ class SaleTimer extends Timer {
 
         $title = apply_filters( 'boostimer_sale_timer_title', Helper::get_sale_timer_title() );
 
+        // Setting params for the timer
         $this->set_date_from( $sale_date_from );
         $this->set_date_to( $sale_date_to );
         $this->set_title( $title );
