@@ -6,7 +6,7 @@ use Boostimer\Frontend\SaleTimer;
 use Boostimer\Frontend\StockTimer;
 
 /**
- * Admin settings manager
+ * Admin settings manager.
  *
  * @since 1.0.0
  */

@@ -3,7 +3,9 @@
 namespace Boostimer;
 
 /**
- * WooCommerce Dependency Checker class
+ * WooCommerce Dependency Checker class.
+ *
+ * @since 1.0.0
  */
 class DependencyChecker {
 
@@ -16,7 +18,7 @@ class DependencyChecker {
     }
 
     /**
-     * Missing WooCommerce notice
+     * Missing WooCommerce notice.
      *
      * @since 1.0.0
      *

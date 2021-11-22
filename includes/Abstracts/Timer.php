@@ -5,7 +5,7 @@ namespace Boostimer\Abstracts;
 use Boostimer\Admin\Settings;
 
 /**
- * Abstract Timer class
+ * Abstract Timer class.
  *
  * @since 1.0.0
  */
@@ -67,6 +67,8 @@ abstract class Timer {
     }
 
     /**
+     * Gets default title.
+     *
      * @return string
      */
     public function get_default_title() {
@@ -74,6 +76,8 @@ abstract class Timer {
     }
 
     /**
+     * Sets default title.
+     *
      * @param string $default_title
      */
     public function set_default_title( $default_title ) {
@@ -117,6 +121,8 @@ abstract class Timer {
     }
 
     /**
+     * Gets the product.
+     *
      * @return \WC_Product
      */
     public function get_product() {
@@ -124,6 +130,8 @@ abstract class Timer {
     }
 
     /**
+     * Sets the product.
+     *
      * @param \WC_Product $product
      */
     public function set_product( $product ) {
@@ -131,6 +139,8 @@ abstract class Timer {
     }
 
     /**
+     * Gets timer key.
+     *
      * @return string
      */
     public function get_key() {
@@ -138,6 +148,8 @@ abstract class Timer {
     }
 
     /**
+     * Sets timer key.
+     *
      * @param string $key
      */
     public function set_key( $key ) {
@@ -160,7 +172,7 @@ abstract class Timer {
      *
      * @return bool
      */
-    abstract public function validate();
+    abstract public function can_be_displayed();
 
     /**
      * Sets up the timer.
@@ -185,7 +197,7 @@ abstract class Timer {
 
         $this->product = wc_get_product( get_the_ID() );
 
-        if ( ! $this->valid_product() || ! $this->validate() ) {
+        if ( ! $this->valid_product() || ! $this->can_be_displayed() ) {
             return;
         }
 
@@ -224,7 +236,7 @@ abstract class Timer {
     }
 
     /**
-     * Check if timer is active for a product
+     * Check if timer is active for a product.
      *
      * @since 1.0.0
      *
@@ -235,7 +247,7 @@ abstract class Timer {
     }
 
     /**
-     * Renders template file
+     * Renders template file.
      *
      * @since 1.0.0
      *

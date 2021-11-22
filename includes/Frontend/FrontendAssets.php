@@ -6,6 +6,8 @@ use Boostimer\Abstracts\Assets;
 
 /**
  * Scripts and Styles Class.
+ *
+ * @since 1.0.0
  */
 class FrontendAssets extends Assets {
 

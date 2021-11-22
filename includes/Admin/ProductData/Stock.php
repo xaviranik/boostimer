@@ -2,6 +2,11 @@
 
 namespace Boostimer\Admin\ProductData;
 
+/**
+ * Sale product data
+ *
+ * @since 1.0.0
+ */
 class Stock {
 
     /**

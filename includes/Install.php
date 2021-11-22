@@ -3,7 +3,9 @@
 namespace Boostimer;
 
 /**
- * Installer Class
+ * Installer Class.
+ *
+ * @since 1.0.0
  */
 class Install {
 

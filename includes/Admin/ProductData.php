@@ -7,6 +7,8 @@ use Boostimer\Admin\ProductData\Stock;
 
 /**
  * WooCommerce product data meta box handler class.
+ *
+ * @since 1.0.0
  */
 class ProductData {
 

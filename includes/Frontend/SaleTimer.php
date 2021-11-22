@@ -32,7 +32,7 @@ class SaleTimer extends Timer {
      *
      * @return bool
      */
-    public function validate() {
+    public function can_be_displayed() {
         return $this->product->is_on_sale();
     }
 

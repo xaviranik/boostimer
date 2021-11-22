@@ -2,7 +2,7 @@
 
   "use strict";
 
-  const Dokan_Woo_Availability_Admin = {
+  const Boostimer_Admin = {
     woocommerce_product_data: $( '#woocommerce-product-data' ),
     show_sale_timer_field: $( '._boostimer_show_sale_timer_field' ),
     show_sale_timer_field_checkbox: $( '#_boostimer_show_sale_timer_field' ),
@@ -52,7 +52,7 @@
   };
 
   $( document ).ready( function() {
-    Dokan_Woo_Availability_Admin.init();
+    Boostimer_Admin.init();
   } );
 
 })(jQuery);

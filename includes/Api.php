@@ -3,7 +3,9 @@
 namespace Boostimer;
 
 /**
- * API Manager Class
+ * API Manager Class.
+ *
+ * @since 1.0.0
  */
 class Api {
 
@@ -15,7 +17,7 @@ class Api {
     protected $classes;
 
     /**
-     * Api Manager constructor
+     * Api Manager constructor.
      */
     public function __construct() {
         $this->classes = [
@@ -26,7 +28,7 @@ class Api {
     }
 
     /**
-     * Register APIs
+     * Register APIs.
      *
      * @return void
      */

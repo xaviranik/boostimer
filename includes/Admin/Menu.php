@@ -4,6 +4,8 @@ namespace Boostimer\Admin;
 
 /**
  * Admin menu class.
+ *
+ * @since 1.0.0
  */
 class Menu {
 

@@ -65,7 +65,7 @@
 
   "use strict";
 
-  const Dokan_Woo_Availability_Frontend = {
+  const Boostimer_Frontend = {
     timer: $("#boostimer-timer"),
     dates: typeof boostimer_dates === 'undefined' ? {} : boostimer_dates,
 
@@ -78,7 +78,7 @@
   };
 
   $( document ).ready( function() {
-    Dokan_Woo_Availability_Frontend.init();
+    Boostimer_Frontend.init();
   } );
 
 })(jQuery);

@@ -8,6 +8,8 @@ use Boostimer\Admin\ProductData;
 
 /**
  * Admin Manager Class.
+ *
+ * @since 1.0.0
  */
 class Admin {
 
@@ -23,7 +25,7 @@ class Admin {
     }
 
     /**
-     * Initiates admin classes
+     * Initiates admin classes.
      *
      * @since 1.0.0
      *
@@ -53,7 +55,7 @@ class Admin {
     }
 
     /**
-     * Cleans admin notice for boostimer page
+     * Cleans admin notice for boostimer page.
      *
      * @since 1.0.0
      *

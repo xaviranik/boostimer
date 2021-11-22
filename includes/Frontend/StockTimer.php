@@ -5,6 +5,11 @@ namespace Boostimer\Frontend;
 use Boostimer\Abstracts\Timer;
 use Boostimer\Helper;
 
+/**
+ * StockTimer class
+ *
+ * @since 1.0.0
+ */
 class StockTimer extends Timer {
 
     /**
@@ -38,7 +43,7 @@ class StockTimer extends Timer {
      *
      * @return bool
      */
-    public function validate() {
+    public function can_be_displayed() {
         if ( ! $this->product->managing_stock() && $this->product->is_in_stock() ) {
             return false;
         }

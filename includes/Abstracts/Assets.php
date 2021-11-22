@@ -2,6 +2,11 @@
 
 namespace Boostimer\Abstracts;
 
+/**
+ * Assets abstract class.
+ *
+ * @since 1.0.0
+ */
 abstract class Assets {
 
     /**
@@ -15,7 +20,7 @@ abstract class Assets {
     }
 
     /**
-     * Gets version based on SCRIPT_DEBUG
+     * Gets version based on SCRIPT_DEBUG.
      *
      * @return string
      */
@@ -81,7 +86,7 @@ abstract class Assets {
     abstract protected function get_scripts();
 
     /**
-     * Get registered styles
+     * Get registered styles.
      *
      * @return array
      */

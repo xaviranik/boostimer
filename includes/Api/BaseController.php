@@ -4,6 +4,11 @@ namespace Boostimer\Api;
 
 use WP_REST_Controller;
 
+/**
+ * BaseController for Boostimer REST controllers
+ *
+ * @since 1.0.0
+ */
 class BaseController extends WP_REST_Controller {
 
     /**

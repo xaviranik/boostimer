@@ -89,7 +89,7 @@ final class Boostimer {
     }
 
     /**
-     * Loads text domain
+     * Loads text domain.
      *
      * @return void
      */
@@ -134,7 +134,7 @@ final class Boostimer {
     }
 
     /**
-     * Loads all the classes
+     * Loads all the classes.
      *
      * @return void
      */

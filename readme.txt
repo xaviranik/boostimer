@@ -52,7 +52,7 @@ For now, you can not. The good news is, you might be able to do that in near fut
 
 == Changelog ==
 
-= v1.0.0 (3rd November 2021) =
+= v1.0.0 (26th November 2021) =
 
 - Initial Release
 

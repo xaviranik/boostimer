@@ -2,17 +2,22 @@
 
 namespace Boostimer\Traits;
 
+/**
+ * Container trait
+ *
+ * @since 1.0.0
+ */
 trait Container {
 
     /**
-     * Contains chainable class instances
+     * Contains chainable class instances.
      *
      * @var array
      */
     protected $container = [];
 
     /**
-     * Magic getter to get chainable container instance
+     * Magic getter to get chainable container instance.
      *
      * @since 1.0.0
      *

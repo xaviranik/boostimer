@@ -6,6 +6,8 @@ use Boostimer\Traits\Container;
 
 /**
  * Frontend manager class.
+ *
+ * @since 1.0.0
  */
 class Manager {
 
