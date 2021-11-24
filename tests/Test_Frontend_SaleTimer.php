@@ -8,7 +8,7 @@ use Boostimer\Frontend\SaleTimer;
 class Test_Frontend_SaleTimer extends WP_UnitTestCase {
 
     /**
-     * A single example test.
+     * Test if hook is registered.
      */
     public function test_setup_hook() {
         $sale_timer = new SaleTimer();

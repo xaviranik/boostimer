@@ -40,6 +40,9 @@ final class Boostimer {
 
         add_action( 'init', [ $this, 'load_text_domain' ] );
         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+
+        // Plugin row meta docs link
+        add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
     }
 
     /**
@@ -64,13 +67,6 @@ final class Boostimer {
      * @return void
      */
     public function activate() {
-        if ( ! function_exists( 'WC' ) ) {
-            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-            deactivate_plugins( plugin_basename( __FILE__ ) );
-
-            wp_die( '<div class="error"><p>' . sprintf( wp_kses_post( '<b>Boostimer</b> requires <a href="%s">WooCommerce</a> to be installed & activated! Go back to <a href="%s">Plugin page</a>' ), 'https://wordpress.org/plugins/woocommerce/', esc_url( admin_url( 'plugins.php' ) ) ) . '</p></div>' );
-        }
-
         $installer = new Boostimer\Install();
         $installer->run();
     }
@@ -118,8 +114,23 @@ final class Boostimer {
      */
     public function init_plugin() {
         // Load global functions
-        include_once BOOSTIMER_DIR . '/includes/functions.php';
+        require_once BOOSTIMER_DIR . '/includes/functions.php';
 
+        $checker = new \Boostimer\DependencyChecker();
+
+        if ( ! $checker->has_woocommerce() ) {
+            return;
+        }
+
+        $this->load_classes();
+    }
+
+    /**
+     * Loads all the classes
+     *
+     * @return void
+     */
+    protected function load_classes() {
         // Load admin manager
         if ( is_admin() ) {
             $this->container['admin'] = new Boostimer\Admin();
@@ -132,6 +143,29 @@ final class Boostimer {
 
         // Load API manager
         new Boostimer\Api();
+    }
+
+    /**
+     * Show row meta on the plugin screen.
+     *
+     * @since 1.0.0
+     *
+     * @param array $links Plugin Row Meta.
+     * @param mixed $file  Plugin Base file.
+     *
+     * @return array
+     */
+    public static function plugin_row_meta( $links, $file ) {
+        if ( BOOSTIMER_PLUGIN_BASENAME !== $file ) {
+            return $links;
+        }
+
+        $row_meta = [
+            'docs'    => '<a href="' . esc_url( apply_filters( 'boostimer_docs_url', 'https://boostimer.netlify.app/' ) ) . '" aria-label="' . esc_attr__( 'View Boostimer documentation', 'boostimer' ) . '">' . esc_html__( 'Docs', 'boostimer' ) . '</a>',
+            'support' => '<a href="' . esc_url( apply_filters( 'boostimer_community_support_url', 'https://wordpress.org/support/plugin/boostimer/' ) ) . '" aria-label="' . esc_attr__( 'Visit Boostimer forums', 'boostimer' ) . '">' . esc_html__( 'Community support', 'boostimer' ) . '</a>',
+        ];
+
+        return array_merge( $links, $row_meta );
     }
 }
 
