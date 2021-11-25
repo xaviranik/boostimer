@@ -34,15 +34,7 @@ final class Boostimer {
      */
     public function __construct() {
         $this->define_constants();
-
-        register_activation_hook(__FILE__, array( $this, 'activate' ));
-        register_deactivation_hook(__FILE__, array( $this, 'deactivate' ));
-
-        add_action( 'init', [ $this, 'load_text_domain' ] );
-        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
-
-        // Plugin row meta docs link
-        add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
+        $this->init_hooks();
     }
 
     /**
@@ -59,6 +51,22 @@ final class Boostimer {
         define( 'BOOSTIMER_TEMPLATES', BOOSTIMER_DIR . '/templates' );
         define( 'BOOSTIMER_ASSET', BOOSTIMER_URL . '/assets' );
         define( 'BOOSTIMER_DIST', plugins_url( 'dist', BOOSTIMER_PLUGIN_FILE ) );
+    }
+
+    /**
+     * Inits hooks
+     *
+     * @return void
+     */
+    public function init_hooks() {
+        register_activation_hook( __FILE__, array( $this, 'activate' ) );
+        register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
+
+        add_action( 'init', [ $this, 'load_text_domain' ] );
+        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+
+        // Plugin row meta docs link
+        add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
     }
 
     /**
