@@ -48,7 +48,7 @@ class Sale {
             [
                 'id'            => '_boostimer_show_sale_timer',
                 'label'         => __( 'Show sale timer?', 'boostimer' ),
-                'wrapper_class' => 'hide_if_grouped',
+                'wrapper_class' => 'hide_if_grouped hide_if_variable',
                 'desc_tip'      => false,
                 'description'   => __( 'Show sale countdown timer if sale price and schedules are set', 'boostimer' ),
                 'value'         => $show_sale_timer,
