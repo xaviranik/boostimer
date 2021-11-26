@@ -40,7 +40,6 @@ status "Installing npm dependencies... 📦"
 # npm install
 
 status "Generating build... 👷‍♀️"
-yarn start
 yarn build
 yarn makepot
 yarn pot2json
