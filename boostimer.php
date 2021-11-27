@@ -163,7 +163,7 @@ final class Boostimer {
      *
      * @return array
      */
-    public static function plugin_row_meta( $links, $file ) {
+    public function plugin_row_meta( $links, $file ) {
         if ( BOOSTIMER_PLUGIN_BASENAME !== $file ) {
             return $links;
         }
