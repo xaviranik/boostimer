@@ -47,6 +47,8 @@ const coreModule = {
     minimize: PROD,
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
     splitChunks: {
+      chunks: "all",
+      name: "vendors",
       cacheGroups: {
         ...defaultConfig.optimization.splitChunks.cacheGroups,
         vendor: {
