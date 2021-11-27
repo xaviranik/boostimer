@@ -29,17 +29,17 @@ warning() {
     echo -e "\n${YELLOW_BOLD}$1${COLOR_RESET}\n"
 }
 
-status "Building boostimer zip file..."
+status "Building Boostimer zip... 📁"
 
 # remove the build directory if exists and create one
 rm -rf "$DIR/build"
 mkdir -p "$BUILD_DIR"
 
 # Run the build.
-status "Installing npm dependencies... 📦"
-# npm install
+status "Installing yarn dependencies... 📦"
+# yarn install
 
-status "Generating build... 👷‍♀️"
+status "Generating build... 🔨"
 yarn build
 yarn makepot
 yarn pot2json
@@ -52,13 +52,18 @@ for file in ${FILES[@]}; do
     cp -R $file $BUILD_DIR
 done
 
+success "All required files are copied! 😎"
+
 # Install composer dependencies
 status "Installing dependencies... 📦"
 cd $BUILD_DIR
 composer install --optimize-autoloader --no-dev -q
 
-# Remove composer files
+success "Installing composer dependencies are completed! 💪"
+
+# Remove files and folders that are not needed.
 rm composer.json composer.lock
+rm -rf assets/src assets/scss
 
 # go one up, to the build dir
 status "Creating archive... 🎁"
@@ -68,4 +73,4 @@ zip -r -q boostimer.zip boostimer
 # remove the source directory
 rm -rf boostimer
 
-success "Done. You've built boostimer! 🎉 "
+success "Done. You've built Boostimer! 🔥 "
