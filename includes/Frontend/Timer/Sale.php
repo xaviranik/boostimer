@@ -1,6 +1,6 @@
 <?php
 
-namespace Boostimer\Frontend;
+namespace Boostimer\Frontend\Timer;
 
 use Boostimer\Helper;
 use Boostimer\Abstracts\Timer;
@@ -10,7 +10,7 @@ use Boostimer\Abstracts\Timer;
  *
  * @since 1.0.0
  */
-class SaleTimer extends Timer {
+class Sale extends Timer {
 
     /**
      * SaleTimer constructor.

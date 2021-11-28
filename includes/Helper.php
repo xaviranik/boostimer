@@ -3,8 +3,6 @@
 namespace Boostimer;
 
 use Boostimer\Admin\Settings;
-use Boostimer\Frontend\SaleTimer;
-use Boostimer\Frontend\StockTimer;
 
 /**
  * Helper class.

@@ -3,7 +3,7 @@
 namespace Boostimer\Admin;
 
 use Boostimer\Frontend\SaleTimer;
-use Boostimer\Frontend\StockTimer;
+use Boostimer\Frontend\Stock;
 
 /**
  * Admin settings manager.
