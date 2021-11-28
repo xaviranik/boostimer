@@ -2,12 +2,14 @@
 
 namespace Boostimer\Admin;
 
+use Boostimer\Abstracts\BaseManager;
+
 /**
  * Admin Manager Class.
  *
  * @since 1.0.0
  */
-class Manager {
+class Manager extends BaseManager {
 
     /**
      * Admin manager constructor.
@@ -16,26 +18,22 @@ class Manager {
      * @since 1.0.0
      */
     public function __construct() {
-        $this->initialize();
+        parent::__construct();
+
         $this->set_hooks();
     }
 
     /**
-     * Initiates admin classes.
-     *
-     * @since 1.0.0
+     * Loads classmap for the manager
      *
      * @return void
      */
-    public function initialize() {
-        // Asset Loader
-        new AdminAssets();
-
-        // Admin menu manager
-        new Menu();
-
-        // Product data manager
-        new ProductData();
+    protected function load_classmap() {
+        $this->classes = [
+            'admin_asset'  => AdminAssets::class,
+            'admin_menu'   => Menu::class,
+            'product_data' => ProductData::class,
+        ];
     }
 
     /**
