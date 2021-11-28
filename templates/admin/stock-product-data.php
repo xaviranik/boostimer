@@ -36,5 +36,7 @@ $restock_date     = isset( $restock_date ) ? $restock_date : '';
             'value'         => $restock_date,
         ]
     );
+
+    wp_nonce_field( 'boostimer_stock_timer_meta_save', 'boostimer_stock_timer_nonce' );
     ?>
 </div>
