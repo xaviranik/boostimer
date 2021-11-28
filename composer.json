@@ -15,7 +15,8 @@
     "autoload": {
         "psr-4": {
             "Boostimer\\": "includes/"
-        }
+        },
+        "files": ["includes/functions.php"]
     },
     "require-dev": {
         "wp-coding-standards/wpcs": "dev-master",

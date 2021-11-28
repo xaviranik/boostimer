@@ -121,9 +121,6 @@ final class Boostimer {
      * @return void
      */
     public function init_plugin() {
-        // Load global functions
-        require_once BOOSTIMER_DIR . '/includes/functions.php';
-
         $checker = new \Boostimer\DependencyChecker();
 
         if ( ! $checker->has_woocommerce() ) {
