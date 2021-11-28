@@ -5,7 +5,7 @@ namespace Boostimer\Abstracts;
 /**
  * TimerData class
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.0.0
  */
 abstract class TimerData {
 
