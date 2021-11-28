@@ -52,7 +52,7 @@ class FrontendAssets extends Assets {
     protected function get_styles() {
         return [
             'boostimer-frontend-style' => [
-                'src'     => BOOSTIMER_ASSET . '/css/frontend.css',
+                'src'     => BOOSTIMER_ASSET . '/css/frontend' . $this->get_suffix() . '.css',
                 'version' => $this->get_version(),
             ],
         ];
