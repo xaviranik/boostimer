@@ -3,14 +3,14 @@
 namespace Boostimer\Frontend\Timer;
 
 use Boostimer\Helper;
-use Boostimer\Abstracts\Timer;
+use Boostimer\Abstracts\FrontendTimer;
 
 /**
  * SaleTimer class.
  *
  * @since 1.0.0
  */
-class Sale extends Timer {
+class Sale extends FrontendTimer {
 
     /**
      * SaleTimer constructor.

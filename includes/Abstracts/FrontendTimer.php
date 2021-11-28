@@ -9,7 +9,7 @@ use Boostimer\Admin\Settings;
  *
  * @since 1.0.0
  */
-abstract class Timer extends TimerData {
+abstract class FrontendTimer extends TimerData {
 
     /**
      * Timer constructor.
