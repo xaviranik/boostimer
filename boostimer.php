@@ -141,7 +141,7 @@ final class Boostimer {
     protected function load_classes() {
         // Load admin manager
         if ( is_admin() ) {
-            $this->container['admin'] = new Boostimer\Admin();
+            $this->container['admin'] = new Boostimer\Admin\Manager();
         }
 
         // Load frontend manager
@@ -150,7 +150,7 @@ final class Boostimer {
         }
 
         // Load API manager
-        new Boostimer\Api();
+        new Boostimer\Api\Manager();
     }
 
     /**

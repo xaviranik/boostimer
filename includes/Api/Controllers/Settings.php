@@ -1,6 +1,6 @@
 <?php
 
-namespace Boostimer\Api;
+namespace Boostimer\Api\Controllers;
 
 use WP_REST_Server;
 use Boostimer\Admin\Settings as AdminSettings;
@@ -10,7 +10,7 @@ use Boostimer\Admin\Settings as AdminSettings;
  *
  * @since 1.0.0
  */
-class Settings extends BaseController {
+class Settings extends Base {
 
     /**
      * Setting controller constructor.
@@ -113,7 +113,7 @@ class Settings extends BaseController {
      * @return array Endpoint arguments.
      */
     public function get_endpoint_args_for_item_schema( $method = WP_REST_Server::CREATABLE, $key = 'create_item' ) {
-        $args = BaseController::get_endpoint_args_for_item_schema( $method );
+        $args = Base::get_endpoint_args_for_item_schema( $method );
 
         if ( WP_REST_Server::EDITABLE === $method ) {
             $args = [

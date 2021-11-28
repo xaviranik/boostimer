@@ -1,17 +1,13 @@
 <?php
 
-namespace Boostimer;
-
-use Boostimer\Admin\Menu;
-use Boostimer\Admin\AdminAssets;
-use Boostimer\Admin\ProductData;
+namespace Boostimer\Admin;
 
 /**
  * Admin Manager Class.
  *
  * @since 1.0.0
  */
-class Admin {
+class Manager {
 
     /**
      * Admin manager constructor.

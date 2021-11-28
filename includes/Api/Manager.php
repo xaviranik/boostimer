@@ -1,13 +1,15 @@
 <?php
 
-namespace Boostimer;
+namespace Boostimer\Api;
+
+use Boostimer\Api\Controllers\Settings;
 
 /**
  * API Manager Class.
  *
  * @since 1.0.0
  */
-class Api {
+class Manager {
 
     /**
      * All API classes.
@@ -21,7 +23,7 @@ class Api {
      */
     public function __construct() {
         $this->classes = [
-            Api\Settings::class,
+            Settings::class,
         ];
 
         add_action( 'rest_api_init', [ $this, 'init_api' ] );
