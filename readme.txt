@@ -1,7 +1,7 @@
-=== Boostimer - Product Availability Countdown And Scheduler For Woocommerce ===
+=== Boostimer - Product Availability Countdown And Scheduler For WooCommerce ===
 Contributors: zabiranik
 Donate link: https://zabiranik.com
-Tags: WooCommerce, wooAvailability, Product availability, Product scheduler, Product restock, Countdown, free timer plugin, woocommerce product availability and scheduler, Woocommerce product and scheduler plugin
+Tags: woocommerce, product availability, scheduler, countdown, subscription, timer, woo
 Requires at least: 5.0
 Tested up to: 5.8.1
 Stable tag: 1.0.0
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
+Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
 📄 [Docs](https://boostimer.netlify.app/)
 
@@ -44,7 +44,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 = Does the timer work with every WooCommerce Product Type? =
 
-Yes, the timers works with Default WooCommerce Product Types. However, more product type will be supported in the future.
+Yes, the timers work with Default WooCommerce Product Types. However, more product type will be supported in the future.
 
 = Does this supports WooCommerce Subscriptions? =
 
@@ -56,9 +56,9 @@ Definitely yes, you can set up and manage sale and restock countdown timer toget
 
 = What happens to the Product after applying sale and restock timer together? =
 
-Initially it shows the sale timer, when sale ends and there's no product available, the restock timer appears automatically.
+Initially it shows the sale timer, when sale ends and there's no product available, the stock timer appears automatically.
 
-= I set up the timer but it's not showing on the frontend. What's the problem? =
+= I set up the timer, but it's not showing on the frontend. What's the problem? =
 
 Make sure, the global settings are turned on for each timer. For more information, [Admin Dashboard Settings](https://boostimer.netlify.app/usage/dashboard)
 
@@ -77,7 +77,7 @@ For now, you can not. The good news is, you might be able to do that in near fut
 
 == Changelog ==
 
-= v1.0.0 (26th November 2021) =
+= v1.0.0 (27th November 2021) =
 
 - Initial Release
 
