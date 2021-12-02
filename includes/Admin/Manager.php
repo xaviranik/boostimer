@@ -3,7 +3,6 @@
 namespace Boostimer\Admin;
 
 use Boostimer\Abstracts\BaseManager;
-use Boostimer\Admin\ProductData\Manager as ProductDataManager;
 
 /**
  * Admin Manager Class.
@@ -33,7 +32,7 @@ class Manager extends BaseManager {
         $this->classes = [
             'admin_asset'          => AdminAssets::class,
             'admin_menu'           => Menu::class,
-            'product_data_manager' => ProductDataManager::class,
+            'product_data_manager' => Boostimer\Admin\ProductData\Manager::class,
         ];
     }
 

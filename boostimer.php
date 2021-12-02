@@ -13,8 +13,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class_exists( '\Composer\Autoload\ClassLoader' ) || die( 'Please run composer install' );
-
 require __DIR__ . '/vendor/autoload.php';
 
 /**
