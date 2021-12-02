@@ -13,6 +13,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+class_exists( '\Composer\Autoload\ClassLoader' ) || die( 'Please run composer install' );
+
 require __DIR__ . '/vendor/autoload.php';
 
 /**
@@ -59,8 +61,8 @@ final class Boostimer {
      * @return void
      */
     public function init_hooks() {
-        register_activation_hook( __FILE__, array( $this, 'activate' ) );
-        register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
+        register_activation_hook( __FILE__, [ $this, 'activate' ] );
+        register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
 
         add_action( 'init', [ $this, 'load_text_domain' ] );
         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );

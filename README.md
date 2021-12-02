@@ -1,6 +1,7 @@
-# Boostimer - Product Availability Countdown And Scheduler For Woocommerce #
+# Boostimer - Product Availability Countdown And Scheduler For Woocommerce
+
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
-**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)
+**Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Requires at least:** 5.0  
 **Tested up to:** 5.8.1  
 **Stable tag:** 1.0.0  
@@ -8,13 +9,13 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-## Description ##
+## Description
 
-Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked ! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
+Boostimer is a product-wise availability plugin that shows a beautiful countdown and lets you know when your unavailable product will be restocked! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
 ### Documentation
 
-📄 [Boostimer Documentation](https://boostimer.netlify.app)
+📄 👉🏻 [Boostimer Documentation](https://boostimer.netlify.app) 🔥
 
 ### What does it do?
 
@@ -22,45 +23,50 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 ### Key Features
 
-- Display a countdown timer to highlight when the product will be restocked.
-- Display a countdown timer to highlight sale products purchase availability end days and time.
-- Display Restock timer automatically after Sale timer when stock goes zero.
-- Manages Restock and Sale countdown for stock quantity.
-- Display Sale timer and Restock timer countdown for Simple Product.
-- Display Restock timer countdown for Variable Product.
-- Display Sale timer countdown for External/Affiliate Product.
-- Customize Sale Timer and Restock Timer title.
-- Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
+-   Display a countdown timer to highlight when the product will be restocked.
+-   Display a countdown timer to highlight sale products purchase availability end days and time.
+-   Display Restock timer automatically after Sale timer when the stock goes zero.
+-   Manages Restock and Sale countdown for stock quantity.
+-   Display Sale timer and Restock timer countdown for Simple Product.
+-   Display Restock timer countdown for Variable Product.
+-   Display Sale timer countdown for External/Affiliate Product.
+-   Customize Sale Timer and Restock Timer title.
+-   Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
 
 ### Attractive User Interface
 
-A good UI can sometimes make a system even more attractive. Boostimer has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the frontend for the customers.
+A good UI can sometimes make a system even more attractive. Boostimer has an intuitive minimal admin panel that allows the users to navigate easily and set the sale timer and stock timer settings. A simple refined countdown timer is shown on the front end for the customers.
 
 #### Set Admin Settings
+
 [![admin-settings.png](https://i.postimg.cc/ydJctCTs/admin-dashboard.png)]()
 
 #### Set Sale countdown timer
+
 [![simple-product-sale-admin](https://i.postimg.cc/ZqQP2139/05-simple-product-sale-admin.png)]()
 
 #### View Sale timer countdown
+
 [![sale-auto](https://i.postimg.cc/0NnFS5LT/09-sale-auto.png)]()
 
 #### Set Restock countdown timer
+
 [![variable-product-restock-admin](https://i.postimg.cc/8CpLLxkK/1.png)]()
 
 #### View Restock countdown timer
+
 [![variable-product-restock-timer](https://i.postimg.cc/1zXcW9gh/02-variable-product-restock-timer.png)]()
 
 #### Support for WooCommerce Subscription Product: Simple, Variable
+
 [![subscription-product-sale-timer](https://i.postimg.cc/wMXhtMrJ/03-subscription-product-sale-timer.png)]()
 
+## Changelog
 
-## Changelog ##
+### v1.0.0 (27th November 2021)
 
-### v1.0.0 (27th November 2021) ###
+-   Initial Release
 
-- Initial Release
-
-## Upgrade Notice ##
+## Upgrade Notice
 
 Nothing here right now
