@@ -12,29 +12,6 @@ use Boostimer\Admin\Settings;
 class Helper {
 
     /**
-     * Check if restock timer is active for a product
-     *
-     * @since 1.0.0
-     *
-     * @param \WC_Product $product
-     *
-     * @return bool
-     */
-    public static function is_restock_timer_active( $product ) {
-        $settings = Settings::get( 'stock_timer' );
-
-        $enabled = isset( $settings['enabled'] ) ? $settings['enabled'] : false;
-
-        if ( ! $enabled ) {
-            return false;
-        }
-
-        $is_restock_timer_active = $product->get_meta( '_boostimer_show_stock_timer', true );
-
-        return 'yes' === $is_restock_timer_active;
-    }
-
-    /**
      * Gets sale timer title
      *
      * @since 1.0.0
@@ -44,7 +21,7 @@ class Helper {
     public static function get_sale_timer_title() {
         $settings = Settings::get( 'sale_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : boostimer()->frontend->saletimer->get_default_title();
+        return isset( $settings['title'] ) ? $settings['title'] : __( 'Sale ends in:', 'boostimer' );
     }
 
     /**
@@ -57,6 +34,6 @@ class Helper {
     public static function get_stock_timer_title() {
         $settings = Settings::get( 'stock_timer' );
 
-        return isset( $settings['title'] ) ? $settings['title'] : boostimer()->frontend->stocktimer->get_default_title();
+        return isset( $settings['title'] ) ? $settings['title'] : __( 'Expected restock in:', 'boostimer' );
     }
 }
