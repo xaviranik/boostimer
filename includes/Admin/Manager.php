@@ -32,7 +32,7 @@ class Manager extends BaseManager {
         $this->classes = [
             'admin_asset'          => AdminAssets::class,
             'admin_menu'           => Menu::class,
-            'product_data_manager' => Boostimer\Admin\ProductData\Manager::class,
+            'product_data_manager' => ProductData\Manager::class,
         ];
     }
 
