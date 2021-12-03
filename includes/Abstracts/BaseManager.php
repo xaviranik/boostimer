@@ -2,16 +2,12 @@
 
 namespace Boostimer\Abstracts;
 
-use Boostimer\Traits\Container;
-
 /**
  * BaseManager abstract class.
  *
  * @since BOOSTIMER_SINCE
  */
 abstract class BaseManager {
-
-    use Container;
 
     /**
      * @var array
@@ -38,8 +34,6 @@ abstract class BaseManager {
     private function register_classes() {
         foreach ( $this->classes as $key => $class ) {
             $object = new $class();
-
-            $this->container[ $key ] = $object;
         }
     }
 }
