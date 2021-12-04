@@ -1,6 +1,6 @@
 === Boostimer - Product Availability Countdown And Scheduler For WooCommerce ===
 Contributors: zabiranik
-Donate link: https://zabiranik.com
+Donate link: https://www.buymeacoffee.com/zabiranik
 Tags: woocommerce, product availability, scheduler, countdown, subscription, timer, woo
 Requires at least: 5.0
 Tested up to: 5.8.1
@@ -13,7 +13,8 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
-📄 [Docs](https://boostimer.netlify.app/)
+Detailed instructions are available in the documentation.
+📄 👉🏻 [Boostimer Documentation](https://boostimer.netlify.app) 🔥
 
 ### What does it do?
 
