@@ -12,25 +12,12 @@ use Boostimer\Abstracts\ProductData;
 class Sale extends ProductData {
 
     /**
-     * Sale product data constructor.
+     * Sets hook for template rendering.
      *
-     * @since 1.0.0
+     * @return void
      */
-    public function __construct() {
-        $this->set_hooks();
-
-        // Sets timer key
-        $this->key = 'sale_timer';
-    }
-
-    /**
-     * Set hooks.
-     *
-     * @since 1.0.0
-     */
-    public function set_hooks() {
+    public function set_hook_for_template_render() {
         add_action( 'woocommerce_product_options_general_product_data', [ $this, 'render_template' ], 10 );
-        add_action( 'woocommerce_process_product_meta', [ $this, 'save_meta' ], 10 );
     }
 
     /**
@@ -49,7 +36,7 @@ class Sale extends ProductData {
             return;
         }
 
-        $show_sale_timer = $product->get_meta( "_boostimer_show_{$this->key}", true );
+        $show_sale_timer = $product->get_meta( "_boostimer_show_sale_timer", true );
 
         woocommerce_wp_checkbox(
             [

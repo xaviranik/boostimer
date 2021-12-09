@@ -5,32 +5,21 @@ namespace Boostimer\Admin\ProductData;
 use Boostimer\Abstracts\ProductData;
 
 /**
- * Sale product data
+ * Sale product data.
  *
  * @since 1.0.0
+ *
+ * @since BOOSTIMER_SINCE added hook setup for template rendering.
  */
 class Stock extends ProductData {
 
     /**
-     * stock product data constructor.
+     * Sets hook for template render.
      *
-     * @since 1.0.0
+     * @return void
      */
-    public function __construct() {
-        $this->set_hooks();
-
-        // Sets timer key
-        $this->key = 'stock_timer';
-    }
-
-    /**
-     * Set hooks.
-     *
-     * @since 1.0.0
-     */
-    public function set_hooks() {
+    public function set_hook_for_template_render() {
         add_action( 'woocommerce_product_options_inventory_product_data', [ $this, 'render_template' ], 10 );
-        add_action( 'woocommerce_process_product_meta', [ $this, 'save_meta' ], 20, 1 );
     }
 
     /**
@@ -96,7 +85,7 @@ class Stock extends ProductData {
             ->setTime( 23, 59, 59 )
             ->getTimestamp();
 
-        $product->update_meta_data( "_boostimer_show_{$this->key}", $show_stock_timer );
+        $product->update_meta_data( '_boostimer_show_stock_timer', $show_stock_timer );
         $product->update_meta_data( '_boostimer_restock_date', $restock_date_timestamp );
         $product->save_meta_data();
     }
