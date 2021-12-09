@@ -31,10 +31,11 @@ final class Boostimer {
      * Boostimer Constructor.
      */
     public function __construct() {
+        // Defines constants.
         $this->define_constants();
 
-        // Loads hooks.
-        new \Boostimer\Hooks();
+        // Set up plugin.
+        new \Boostimer\Setup();
     }
 
     /**

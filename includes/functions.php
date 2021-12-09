@@ -35,7 +35,7 @@ function boostimer_get_template_part( $slug, $name = '', $args = [] ) {
      *
      * @since 1.0.0
      */
-    $template = apply_filters( 'wavbly_get_template_part', $template, $slug, $name );
+    $template = apply_filters( 'boostimer_get_template_part', $template, $slug, $name );
 
     if ( $template ) {
         include $template;
