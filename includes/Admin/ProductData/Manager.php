@@ -21,7 +21,7 @@ class Manager extends BaseManager {
     }
 
     /**
-     * Loads classmap for product data
+     * Loads classmap for product data.
      *
      * @return void
      */

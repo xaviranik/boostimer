@@ -21,6 +21,9 @@ abstract class FrontendTimer extends TimerData {
     /**
      * Set hooks.
      *
+     * Timer is hooked into 'woocommerce_before_add_to_cart_form' hook by default.
+     * Override this method to change this behavior.
+     *
      * @since 1.0.0
      *
      * @return void
@@ -106,6 +109,19 @@ abstract class FrontendTimer extends TimerData {
      */
     public function is_timer_enabled_for_product() {
         return 'yes' === $this->product->get_meta( "_boostimer_show_{$this->key}", true );
+    }
+
+    /**
+     * Gets timer title.
+     *
+     * @since BOOSTIMER_SINCE
+     *
+     * @return string
+     */
+    public function get_timer_title() {
+        $settings = Settings::get( $this->key );
+
+        return isset( $settings['title'] ) ? $settings['title'] : $this->default_title;
     }
 
     /**
