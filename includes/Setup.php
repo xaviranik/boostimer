@@ -3,54 +3,32 @@
 namespace Boostimer;
 
 /**
- * Class Hooks
+ * Class Setup
  *
  * @package Boostimer
  *
  * @since BOOSTIMER_SINCE
  */
-class Hooks {
+class Setup {
 
     /**
-     * Hooks constructor.
+     * Setup constructor.
      */
     public function __construct() {
-        register_activation_hook( __FILE__, [ $this, 'activate' ] );
-        register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
+        // Handles the activation hook
+        new Activate();
 
-        add_action( 'init', [ $this, 'load_text_domain' ] );
+        // Handles the deactivation hook
+        new Deactivate();
+
+        // Loads the plugin text domain for translation
+        new TextDomain();
+
+        // Initialize the plugin
         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
 
         // Plugin row meta docs link
         add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
-    }
-
-    /**
-     * Activate plugin.
-     *
-     * @return void
-     */
-    public function activate() {
-        $installer = new Install();
-        $installer->run();
-    }
-
-    /**
-     * Deactivate plugin.
-     *
-     * @return void
-     */
-    public function deactivate() {
-        // @todo codes to execute upon deactivation
-    }
-
-    /**
-     * Loads text domain.
-     *
-     * @return void
-     */
-    public function load_text_domain() {
-        load_plugin_textdomain( 'boostimer', false, BOOSTIMER_TEXT_DOMAIN_DIR );
     }
 
     /**
