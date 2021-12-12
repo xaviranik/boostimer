@@ -10,7 +10,7 @@ class Deactivate {
      * @since BOOSTIMER_SINCE
      */
     public function __construct() {
-        register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
+        register_deactivation_hook( BOOSTIMER_PLUGIN_FILE, [ $this, 'deactivate' ] );
     }
 
     /**

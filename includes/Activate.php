@@ -15,7 +15,7 @@ class Activate {
      * @return void
      */
     public function __construct() {
-        register_activation_hook( __FILE__, [ $this, 'activate' ] );
+        register_activation_hook( BOOSTIMER_PLUGIN_FILE, [ $this, 'activate' ] );
     }
 
     /**
