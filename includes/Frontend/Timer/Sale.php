@@ -2,7 +2,6 @@
 
 namespace Boostimer\Frontend\Timer;
 
-use Boostimer\Helper;
 use Boostimer\Abstracts\FrontendTimer;
 
 /**

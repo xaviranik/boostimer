@@ -2,8 +2,6 @@
 
 namespace Boostimer\Frontend;
 
-use Boostimer\Frontend\Timer\Sale;
-use Boostimer\Frontend\Timer\Stock;
 use Boostimer\Abstracts\BaseManager;
 
 /**
@@ -31,8 +29,8 @@ class Manager extends BaseManager {
     protected function load_classmap() {
         $this->classes = [
             'frontend_assets' => FrontendAssets::class,
-            'saletimer'       => Sale::class,
-            'stocktimer'      => Stock::class,
+            'saletimer'       => Timer\Sale::class,
+            'stocktimer'      => Timer\Stock::class,
         ];
     }
 }

@@ -2,6 +2,9 @@
 
 namespace Boostimer;
 
+/**
+ * Handles plugin deactivation.
+ */
 class Deactivate {
 
     /**
