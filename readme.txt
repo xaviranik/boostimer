@@ -14,7 +14,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Boostimer is a product wise availability plugin which shows a beautiful countdown and lets you know when your unavailable product will be restocked! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
 Detailed instructions are available in the documentation.
-📄 👉🏻 [Boostimer Documentation](https://boostimer.netlify.app) 🔥
+📄 👉🏻 [Boostimer Documentation](https://docs.boostimer.com/) 🔥
 
 ### What does it do?
 

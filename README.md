@@ -15,7 +15,7 @@ Boostimer is a product-wise availability plugin that shows a beautiful countdown
 
 ### Documentation
 
-📄 👉🏻 [Boostimer Documentation](https://boostimer.netlify.app) 🔥
+📄 👉🏻 [Boostimer Documentation](https://docs.boostimer.com/) 🔥
 
 ### What does it do?
 
