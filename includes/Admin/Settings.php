@@ -29,7 +29,7 @@ class Settings {
                 'title'   => __( 'Expected restock in:', 'boostimer' ),
                 'enabled' => true,
             ],
-            'short_sale_date' => [
+            'prompt_sale_date' => [
                 'title'   => __( 'Sale ends on:', 'boostimer' ),
                 'enabled' => true,
             ],

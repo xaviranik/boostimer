@@ -97,8 +97,8 @@ class Settings extends Base {
             $item['stock_timer'] = $request['stock_timer'];
         }
 
-        if ( isset( $request['short_sale_date'] ) ) {
-            $item['short_sale_date'] = $request['short_sale_date'];
+        if ( isset( $request['prompt_sale_date'] ) ) {
+            $item['prompt_sale_date'] = $request['prompt_sale_date'];
         }
 
         return $item;
@@ -167,7 +167,7 @@ class Settings extends Base {
                         ],
                     ],
                 ],
-                'short_sale_date' => [
+                'prompt_sale_date' => [
                     'description' => __( 'Show short sale date', 'boostimer' ),
                     'type'        => 'object',
                     'items'       => [ 'type' => 'object' ],

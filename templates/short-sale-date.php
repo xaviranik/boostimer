@@ -7,7 +7,7 @@
  * @package boostimer
  */
 
-$short_sale_date = isset( $short_sale_date ) ? $short_sale_date : '';
+$prompt_sale_date = isset( $prompt_sale_date ) ? $prompt_sale_date : '';
 ?>
 
 <div class="boostimer-short-sale-date-wrapper">
