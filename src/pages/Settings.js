@@ -26,8 +26,6 @@ const Settings = () => {
   const [iSSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
-
     GET_SETTINGS().then((response) => {
       setSettings(response);
       setIsLoading(false);
@@ -47,6 +45,10 @@ const Settings = () => {
       stock_timer: {
         title: settings.stock_timer.title,
         enabled: settings.stock_timer.enabled,
+      },
+      short_sale_date: {
+        title: settings.short_sale_date.title,
+        enabled: settings.short_sale_date.enabled,
       },
     };
 
@@ -91,7 +93,6 @@ const Settings = () => {
       }
     });
   }
-
 
   return (
     <div className="p-6 pt-0">
@@ -161,7 +162,7 @@ const Settings = () => {
 
                     <div className="mt-6">
                       <InputField
-                        id="notify_me_btn_text_tooltip"
+                        id="stock_time_title_tooltip"
                         label={__('Stock Timer Title', "boostimer")}
                         tooltip={__(
                           "This text will show on the stock timer title",
@@ -173,6 +174,45 @@ const Settings = () => {
                         )}
                         value={settings.stock_timer.title}
                         onChange={(e) => handleInputChange(e, 'stock_timer')}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <div className="uppercase tracking-widest text-gray-500 font-semibold">
+                    {__("Short Sale Date", "boostimer")}
+                  </div>
+
+                  <div className="mt-6">
+                    <div className="mt-6">
+                      <SwitchField
+                        id={"enable_short_sale_date"}
+                        switchId={"enable_short_sale_date_switch"}
+                        label={__("Show Short Sale Date", "boostimer")}
+                        tooltip={__(
+                          "Enable this to show 'sale ends on' prompt on shop page. E.g: 'Sale ends on: 12/12/2012'",
+                          "boostimer"
+                        )}
+                        checked={settings.short_sale_date.enabled}
+                        onChange={(e) => handleSwitchChange(e, 'short_sale_date')}
+                      />
+                    </div>
+
+                    <div className="mt-6">
+                      <InputField
+                        id="short_sale_date_title_tooltip"
+                        label={__('Short Sale Date Title', "boostimer")}
+                        tooltip={__(
+                          "This text will show with the sale end date on shop page",
+                          "boostimer"
+                        )}
+                        placeholder={__(
+                          "Sale ends on:",
+                          "boostimer"
+                        )}
+                        value={settings.short_sale_date.title}
+                        onChange={(e) => handleInputChange(e, 'short_sale_date')}
                       />
                     </div>
                   </div>

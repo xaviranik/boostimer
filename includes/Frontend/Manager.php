@@ -31,6 +31,7 @@ class Manager extends BaseManager {
             'frontend_assets' => FrontendAssets::class,
             'saletimer'       => Timer\Sale::class,
             'stocktimer'      => Timer\Stock::class,
+            'shortdate'       => ShortSaleDate::class,
         ];
     }
 }
