@@ -97,6 +97,10 @@ class Settings extends Base {
             $item['stock_timer'] = $request['stock_timer'];
         }
 
+        if ( isset( $request['short_sale_date'] ) ) {
+            $item['short_sale_date'] = $request['short_sale_date'];
+        }
+
         return $item;
     }
 
@@ -156,6 +160,29 @@ class Settings extends Base {
                         ],
                         'enabled' => [
                             'description'       => __( 'Is stock timer enabled..', 'boostimer' ),
+                            'type'              => 'boolean',
+                            'required'          => true,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                    ],
+                ],
+                'short_sale_date' => [
+                    'description' => __( 'Show short sale date', 'boostimer' ),
+                    'type'        => 'object',
+                    'items'       => [ 'type' => 'object' ],
+                    'required'    => true,
+                    'properties'  => [
+                        'title'   => [
+                            'description'       => __( 'Short sale date title.', 'boostimer' ),
+                            'type'              => 'string',
+                            'required'          => true,
+                            'minLength'         => 1,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                        'enabled' => [
+                            'description'       => __( 'Is short sale date enabled..', 'boostimer' ),
                             'type'              => 'boolean',
                             'required'          => true,
                             'sanitize_callback' => 'sanitize_text_field',
