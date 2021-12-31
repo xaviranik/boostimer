@@ -28,10 +28,10 @@ class Manager extends BaseManager {
      */
     protected function load_classmap() {
         $this->classes = [
-            'frontend_assets' => FrontendAssets::class,
-            'saletimer'       => Timer\Sale::class,
-            'stocktimer'      => Timer\Stock::class,
-            'shortdate'       => ShortSaleDate::class,
+            'frontend_assets'  => FrontendAssets::class,
+            'saletimer'        => Timer\Sale::class,
+            'stocktimer'       => Timer\Stock::class,
+            'prompt_sale_date' => PromptSaleDate::class,
         ];
     }
 }
