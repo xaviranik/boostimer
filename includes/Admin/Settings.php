@@ -22,7 +22,7 @@ class Settings {
     public static function all() {
         $default = apply_filters( 'boostimer_settings_default', [
             'sale_timer'  => [
-                'title'   => __( 'Sale will ends in:', 'boostimer' ),
+                'title'   => __( 'Sale ends in:', 'boostimer' ),
                 'enabled' => true,
             ],
             'stock_timer' => [
@@ -30,7 +30,11 @@ class Settings {
                 'enabled' => true,
             ],
             'prompt_sale_date' => [
-                'title'   => __( 'Sale ends on:', 'boostimer' ),
+                'title'   => __( 'Sale till:', 'boostimer' ),
+                'enabled' => true,
+            ],
+            'prompt_stock_date' => [
+                'title'   => __( 'Expected restock on:', 'boostimer' ),
                 'enabled' => true,
             ],
         ] );

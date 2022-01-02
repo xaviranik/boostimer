@@ -52,10 +52,15 @@
 }
 
 /* Prompt sale date */
-.boostimer-prompt-sale-date-wrapper {
+.boostimer-prompt-date-wrapper {
     padding: 6px;
     margin-bottom: 10px;
     border-radius: 6px;
     border: 1px solid #6d6d6d;
     color: #6d6d6d;
+
+    &:hover {
+        background: #f8fafc;
+        transition: background-color 0.3s ease-out;
+    }
 }

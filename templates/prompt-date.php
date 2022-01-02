@@ -7,9 +7,9 @@
  * @package boostimer
  */
 
-$prompt_sale_date = isset( $prompt_sale_date ) ? $prompt_sale_date : '';
+$prompt_date = isset( $prompt_date ) ? $prompt_date : '';
 ?>
 
-<div class="boostimer-prompt-sale-date-wrapper">
-    <span><?php echo esc_html( $prompt_sale_date ); ?></span>
+<div class="boostimer-prompt-date-wrapper">
+    <span><?php echo esc_html( $prompt_date ); ?></span>
 </div>

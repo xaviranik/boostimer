@@ -959,9 +959,9 @@ var Settings = function Settings() {
         title: settings.stock_timer.title,
         enabled: settings.stock_timer.enabled
       },
-      short_sale_date: {
-        title: settings.short_sale_date.title,
-        enabled: settings.short_sale_date.enabled
+      prompt_sale_date: {
+        title: settings.prompt_sale_date.title,
+        enabled: settings.prompt_sale_date.enabled
       }
     };
     react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.promise((0,_api_settings__WEBPACK_IMPORTED_MODULE_8__.UPDATE_SETTINGS)(data), {
@@ -1065,29 +1065,29 @@ var Settings = function Settings() {
     className: "mt-12"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Short Sale Date", "boostimer")), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Prompt Sale Date", "boostimer")), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-6"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-6"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    id: "enable_short_sale_date",
-    switchId: "enable_short_sale_date_switch",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Show Short Sale Date", "boostimer"),
+    id: "enable_prompt_sale_date",
+    switchId: "enable_prompt_sale_date_switch",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Show Prompt Sale Date", "boostimer"),
     tooltip: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Enable this to show 'sale ends on' prompt on shop page. E.g: 'Sale ends on: 12/12/2012'", "boostimer"),
-    checked: settings.short_sale_date.enabled,
+    checked: settings.prompt_sale_date.enabled,
     onChange: function onChange(e) {
-      return handleSwitchChange(e, 'short_sale_date');
+      return handleSwitchChange(e, 'prompt_sale_date');
     }
   })), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-6"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    id: "short_sale_date_title_tooltip",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Short Sale Date Title', "boostimer"),
+    id: "prompt_sale_date_title_tooltip",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Prompt Sale Date Title', "boostimer"),
     tooltip: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("This text will show with the sale end date on shop page", "boostimer"),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Sale ends on:", "boostimer"),
-    value: settings.short_sale_date.title,
+    value: settings.prompt_sale_date.title,
     onChange: function onChange(e) {
-      return handleInputChange(e, 'short_sale_date');
+      return handleInputChange(e, 'prompt_sale_date');
     }
   })))), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-12"
