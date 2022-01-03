@@ -76,7 +76,7 @@ class Stock extends ProductData {
         $show_stock_timer = isset( $_POST['_boostimer_show_stock_timer'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_show_stock_timer'] ) ) : 'no';
         $restock_date     = isset( $_POST['_boostimer_restock_date'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_restock_date'] ) ) : '';
 
-        if ( ! strtotime( $restock_date ) ) {
+        if ( ! strtotime( $restock_date ) || 'no' === $show_stock_timer ) {
             return;
         }
 
