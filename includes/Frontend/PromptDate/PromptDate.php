@@ -2,6 +2,8 @@
 
 namespace Boostimer\Frontend\PromptDate;
 
+use Boostimer\Admin\Settings;
+
 /**
  * Interface PromptDate
  *
@@ -10,9 +12,9 @@ namespace Boostimer\Frontend\PromptDate;
 abstract class PromptDate {
 
     /**
-     * @var \DateTimeImmutable
+     * @var string
      */
-    protected $sale_date_to;
+    protected $key;
 
     /**
      * The constructor.
@@ -24,25 +26,12 @@ abstract class PromptDate {
     }
 
     /**
-     * Render the prompt date.
+     * Gets formatted prompt date.
      *
-     * @return void
+     * @return string
+     * @throws \Exception
      */
-    public function render() {
-        if ( ! $this->can_be_rendered() ) {
-            return;
-        }
-
-        $prompt_date = $this->get_formatted_prompt_date();
-
-        boostimer_get_template_part(
-            'prompt-date',
-            '',
-            [
-                'prompt_date' => $prompt_date,
-            ]
-        );
-    }
+    abstract public function get_formatted_prompt_date();
 
     /**
      * Determine if the prompt date can be rendered.
@@ -52,9 +41,45 @@ abstract class PromptDate {
     abstract public function can_be_rendered();
 
     /**
-     * Gets the formatted prompt date.
+     * Render the prompt date.
+     *
+     * @return void
+     */
+    public function render() {
+        try {
+            $this->can_be_rendered();
+
+            $prompt_date = $this->get_formatted_prompt_date();
+
+            boostimer_get_template_part(
+                'prompt-date',
+                '',
+                [
+                    'prompt_date' => $prompt_date,
+                ]
+            );
+        } catch ( \Exception $e ) {}
+    }
+
+    /**
+     * Gets formatted date string.
+     *
+     * @param $title
+     * @param $formatted_date
      *
      * @return string
      */
-    abstract public function get_formatted_prompt_date();
+    public function get_formatted_date_string( $title, $formatted_date ) {
+        return sprintf( '%s %s', $title, $formatted_date );
+    }
+
+
+    /**
+     * Get the prompt date settings.
+     *
+     * @return array
+     */
+    protected function get_prompt_date_settings() {
+        return Settings::get( $this->key );
+    }
 }
