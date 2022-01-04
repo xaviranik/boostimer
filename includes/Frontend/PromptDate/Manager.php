@@ -19,6 +19,7 @@ class Manager extends BaseManager {
     protected function load_classmap() {
         $this->classes = [
             'sale_prompt_date'  => Sale::class,
+            'stock_prompt_date' => Stock::class,
         ];
     }
 }
