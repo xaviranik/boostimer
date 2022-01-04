@@ -18,7 +18,6 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-
       />
 
       <div className="boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12">

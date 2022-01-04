@@ -8,21 +8,13 @@ use Boostimer\Abstracts\BaseManager;
  * Frontend manager class.
  *
  * @since 1.0.0
+ *
+ * @since BOOSTIMER_SINCE classmap loader.
  */
 class Manager extends BaseManager {
 
     /**
-     * Frontend manager constructor.
-     * Handles frontend initializations.
-     *
-     * @since 1.0.0
-     */
-    public function __construct() {
-        parent::__construct();
-    }
-
-    /**
-     * Loads classmap for the manager
+     * Loads classmap for the manager.
      *
      * @return void
      */
@@ -31,6 +23,7 @@ class Manager extends BaseManager {
             'frontend_assets' => FrontendAssets::class,
             'saletimer'       => Timer\Sale::class,
             'stocktimer'      => Timer\Stock::class,
+            'prompt_date'     => PromptDate\Manager::class,
         ];
     }
 }

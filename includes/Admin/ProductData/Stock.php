@@ -76,17 +76,17 @@ class Stock extends ProductData {
         $show_stock_timer = isset( $_POST['_boostimer_show_stock_timer'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_show_stock_timer'] ) ) : 'no';
         $restock_date     = isset( $_POST['_boostimer_restock_date'] ) ? wc_clean( wp_unslash( $_POST['_boostimer_restock_date'] ) ) : '';
 
-        if ( ! strtotime( $restock_date ) ) {
-            return;
+        if ( ! strtotime( $restock_date ) || 'no' === $show_stock_timer ) {
+            $product->delete_meta_data( '_boostimer_restock_date' );
+        } else {
+            $restock_date_timestamp = boostimer_current_datetime()
+                ->modify( $restock_date )
+                ->setTime( 23, 59, 59 )
+                ->getTimestamp();
+            $product->update_meta_data( '_boostimer_restock_date', $restock_date_timestamp );
         }
 
-        $restock_date_timestamp = boostimer_current_datetime()
-            ->modify( $restock_date )
-            ->setTime( 23, 59, 59 )
-            ->getTimestamp();
-
         $product->update_meta_data( '_boostimer_show_stock_timer', $show_stock_timer );
-        $product->update_meta_data( '_boostimer_restock_date', $restock_date_timestamp );
         $product->save_meta_data();
     }
 }

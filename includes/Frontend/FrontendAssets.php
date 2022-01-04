@@ -64,9 +64,12 @@ class FrontendAssets extends Assets {
      * @return void
      */
     public function load_scripts() {
+        if ( is_product() || is_shop() ) {
+            wp_enqueue_style( 'boostimer-frontend-style' );
+        }
+
         if ( is_product() ) {
             wp_enqueue_script( 'boostimer-frontend-script' );
-            wp_enqueue_style( 'boostimer-frontend-style' );
         }
     }
 }

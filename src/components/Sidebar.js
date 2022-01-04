@@ -5,7 +5,7 @@ import Logo from "./Utils/Logo";
 
 const Sidebar = () => {
   return (
-    <div className="p-6 flex flex-col items-center bg-white rounded-md shadow">
+    <div className="p-6 flex flex-col items-center bg-white rounded-md shadow sticky top-16">
       <div className="mt-8">
         <Logo />
       </div>

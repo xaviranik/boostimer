@@ -29,6 +29,14 @@ class Settings {
                 'title'   => __( 'Expected restock in:', 'boostimer' ),
                 'enabled' => true,
             ],
+            'prompt_sale_date' => [
+                'title'   => __( 'Sale till:', 'boostimer' ),
+                'enabled' => true,
+            ],
+            'prompt_stock_date' => [
+                'title'   => __( 'Restock on:', 'boostimer' ),
+                'enabled' => true,
+            ],
         ] );
 
         $settings = get_option( self::$OPTION_KEY, [] );
