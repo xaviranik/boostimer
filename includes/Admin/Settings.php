@@ -34,7 +34,7 @@ class Settings {
                 'enabled' => true,
             ],
             'prompt_stock_date' => [
-                'title'   => __( 'Expected restock on:', 'boostimer' ),
+                'title'   => __( 'Restock on:', 'boostimer' ),
                 'enabled' => true,
             ],
         ] );

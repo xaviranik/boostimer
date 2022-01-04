@@ -37,6 +37,7 @@ abstract class PromptDate {
      * Determine if the prompt date can be rendered.
      *
      * @return bool
+     * @throws \Exception
      */
     abstract public function can_be_rendered();
 
@@ -47,6 +48,10 @@ abstract class PromptDate {
      */
     public function render() {
         try {
+            if ( ! $this->is_prompt_enabled() ) {
+                throw new \Exception( 'Prompt date is not enabled.' );
+            }
+
             $this->can_be_rendered();
 
             $prompt_date = $this->get_formatted_prompt_date();
@@ -75,11 +80,22 @@ abstract class PromptDate {
 
 
     /**
-     * Get the prompt date settings.
+     * Gets the prompt date settings.
      *
      * @return array
      */
     protected function get_prompt_date_settings() {
         return Settings::get( $this->key );
+    }
+
+    /**
+     * Checks if the prompt date is enabled.
+     *
+     * @return bool
+     */
+    protected function is_prompt_enabled() {
+        $settings = Settings::get( $this->key );
+
+        return isset( $settings['enabled'] ) ? $settings['enabled'] : false;
     }
 }
