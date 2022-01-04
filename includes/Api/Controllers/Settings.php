@@ -101,6 +101,10 @@ class Settings extends Base {
             $item['prompt_sale_date'] = $request['prompt_sale_date'];
         }
 
+        if ( isset( $request['prompt_stock_date'] ) ) {
+            $item['prompt_stock_date'] = $request['prompt_stock_date'];
+        }
+
         return $item;
     }
 
@@ -108,7 +112,6 @@ class Settings extends Base {
      * Retrieves an array of endpoint arguments from the item schema for the controller.
      *
      * @since 1.0.0
-     *
      *
      * @param string $method Optional. HTTP method of the request. The arguments for `CREATABLE` requests are
      *                       checked for required values and may fall back to a given default, this is not done
@@ -168,7 +171,7 @@ class Settings extends Base {
                     ],
                 ],
                 'prompt_sale_date' => [
-                    'description' => __( 'Show short sale date', 'boostimer' ),
+                    'description' => __( 'Show sale date prompt', 'boostimer' ),
                     'type'        => 'object',
                     'items'       => [ 'type' => 'object' ],
                     'required'    => true,
@@ -183,6 +186,29 @@ class Settings extends Base {
                         ],
                         'enabled' => [
                             'description'       => __( 'Is short sale date enabled..', 'boostimer' ),
+                            'type'              => 'boolean',
+                            'required'          => true,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                    ],
+                ],
+                'prompt_stock_date' => [
+                    'description' => __( 'Show stock date prompt', 'boostimer' ),
+                    'type'        => 'object',
+                    'items'       => [ 'type' => 'object' ],
+                    'required'    => true,
+                    'properties'  => [
+                        'title'   => [
+                            'description'       => __( 'Stock date prompt title.', 'boostimer' ),
+                            'type'              => 'string',
+                            'required'          => true,
+                            'minLength'         => 1,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                        'enabled' => [
+                            'description'       => __( 'Is stock date prompt enabled..', 'boostimer' ),
                             'type'              => 'boolean',
                             'required'          => true,
                             'sanitize_callback' => 'sanitize_text_field',

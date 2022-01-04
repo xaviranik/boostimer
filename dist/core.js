@@ -962,6 +962,10 @@ var Settings = function Settings() {
       prompt_sale_date: {
         title: settings.prompt_sale_date.title,
         enabled: settings.prompt_sale_date.enabled
+      },
+      prompt_stock_date: {
+        title: settings.prompt_stock_date.title,
+        enabled: settings.prompt_stock_date.enabled
       }
     };
     react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.promise((0,_api_settings__WEBPACK_IMPORTED_MODULE_8__.UPDATE_SETTINGS)(data), {
@@ -1065,7 +1069,7 @@ var Settings = function Settings() {
     className: "mt-12"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "uppercase tracking-widest text-gray-500 font-semibold"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Prompt Sale Date", "boostimer")), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Prompt Date", "boostimer")), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-6"
   }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-6"
@@ -1088,6 +1092,30 @@ var Settings = function Settings() {
     value: settings.prompt_sale_date.title,
     onChange: function onChange(e) {
       return handleInputChange(e, 'prompt_sale_date');
+    }
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
+    className: "mt-6"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
+    className: "mt-6"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)(_components_Utils_SwitchField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "enable_prompt_stock_date",
+    switchId: "enable_prompt_stock_date_switch",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Show Prompt Stock Date", "boostimer"),
+    tooltip: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Enable this to show 'Restock on:' prompt on shop page. E.g: 'Restock on: 12/12/2012'", "boostimer"),
+    checked: settings.prompt_stock_date.enabled,
+    onChange: function onChange(e) {
+      return handleSwitchChange(e, 'prompt_stock_date');
+    }
+  })), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
+    className: "mt-6"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)(_components_Utils_InputField__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    id: "prompt_stock_date_title_tooltip",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Prompt Stock Date Title', "boostimer"),
+    tooltip: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("This text will show with the restock date on shop page", "boostimer"),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Restock on:", "boostimer"),
+    value: settings.prompt_stock_date.title,
+    onChange: function onChange(e) {
+      return handleInputChange(e, 'prompt_stock_date');
     }
   })))), (0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
     className: "mt-12"

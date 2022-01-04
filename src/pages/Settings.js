@@ -50,6 +50,10 @@ const Settings = () => {
         title: settings.prompt_sale_date.title,
         enabled: settings.prompt_sale_date.enabled,
       },
+      prompt_stock_date: {
+        title: settings.prompt_stock_date.title,
+        enabled: settings.prompt_stock_date.enabled,
+      },
     };
 
     toast.promise(
@@ -181,7 +185,7 @@ const Settings = () => {
 
                 <div className="mt-12">
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
-                    {__("Prompt Sale Date", "boostimer")}
+                    {__("Prompt Date", "boostimer")}
                   </div>
 
                   <div className="mt-6">
@@ -213,6 +217,39 @@ const Settings = () => {
                         )}
                         value={settings.prompt_sale_date.title}
                         onChange={(e) => handleInputChange(e, 'prompt_sale_date')}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <div className="mt-6">
+                      <SwitchField
+                        id={"enable_prompt_stock_date"}
+                        switchId={"enable_prompt_stock_date_switch"}
+                        label={__("Show Prompt Stock Date", "boostimer")}
+                        tooltip={__(
+                          "Enable this to show 'Restock on:' prompt on shop page. E.g: 'Restock on: 12/12/2012'",
+                          "boostimer"
+                        )}
+                        checked={settings.prompt_stock_date.enabled}
+                        onChange={(e) => handleSwitchChange(e, 'prompt_stock_date')}
+                      />
+                    </div>
+
+                    <div className="mt-6">
+                      <InputField
+                        id="prompt_stock_date_title_tooltip"
+                        label={__('Prompt Stock Date Title', "boostimer")}
+                        tooltip={__(
+                          "This text will show with the restock date on shop page",
+                          "boostimer"
+                        )}
+                        placeholder={__(
+                          "Restock on:",
+                          "boostimer"
+                        )}
+                        value={settings.prompt_stock_date.title}
+                        onChange={(e) => handleInputChange(e, 'prompt_stock_date')}
                       />
                     </div>
                   </div>
