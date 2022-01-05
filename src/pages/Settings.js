@@ -185,7 +185,7 @@ const Settings = () => {
 
                 <div className="mt-12">
                   <div className="uppercase tracking-widest text-gray-500 font-semibold">
-                    {__("Prompt Date", "boostimer")}
+                    {__("Show Prompt Date On Product Listing", "boostimer")}
                   </div>
 
                   <div className="mt-6">
@@ -195,7 +195,7 @@ const Settings = () => {
                         switchId={"enable_prompt_sale_date_switch"}
                         label={__("Show Prompt Sale Date", "boostimer")}
                         tooltip={__(
-                          "Enable this to show 'sale ends on' prompt on shop page. E.g: 'Sale ends on: 12/12/2012'",
+                          "Enable this to show 'Sale till' prompt on product listing page / shop page. Example: 12 / 12 / 2012",
                           "boostimer"
                         )}
                         checked={settings.prompt_sale_date.enabled}
@@ -228,7 +228,7 @@ const Settings = () => {
                         switchId={"enable_prompt_stock_date_switch"}
                         label={__("Show Prompt Stock Date", "boostimer")}
                         tooltip={__(
-                          "Enable this to show 'Restock on:' prompt on shop page. E.g: 'Restock on: 12/12/2012'",
+                          "Enable this to show 'Restock on' prompt on product listing page / shop page. Example: 12 / 12 / 2012",
                           "boostimer"
                         )}
                         checked={settings.prompt_stock_date.enabled}
