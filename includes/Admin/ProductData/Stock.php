@@ -9,7 +9,7 @@ use Boostimer\Abstracts\ProductData;
  *
  * @since 1.0.0
  *
- * @since BOOSTIMER_SINCE added hook setup for template rendering.
+ * @since 1.1.0 added hook setup for template rendering.
  */
 class Stock extends ProductData {
 

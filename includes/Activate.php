@@ -5,7 +5,7 @@ namespace Boostimer;
 /**
  * Handles Activation the plugin
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 class Activate {
 

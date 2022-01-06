@@ -7,7 +7,7 @@ use Boostimer\Admin\Settings;
 /**
  * Interface PromptDate
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 abstract class PromptDate {
 
@@ -19,7 +19,7 @@ abstract class PromptDate {
     /**
      * The constructor.
      *
-     * @since BOOSTIMER_SINCE
+     * @since 1.1.0
      */
     public function __construct() {
         add_action( 'woocommerce_after_shop_loop_item_title', [ $this, 'render' ] );

@@ -7,7 +7,7 @@ use Boostimer\Admin\Settings;
 /**
  * This class handles the sale prompt date.
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 class Sale extends PromptDate {
 

@@ -10,7 +10,7 @@ class Deactivate {
     /**
      * Deactivate constructor.
      *
-     * @since BOOSTIMER_SINCE
+     * @since 1.1.0
      */
     public function __construct() {
         register_deactivation_hook( BOOSTIMER_PLUGIN_FILE, [ $this, 'deactivate' ] );
