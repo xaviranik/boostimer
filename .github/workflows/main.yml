@@ -11,15 +11,13 @@ jobs:
     - uses: actions/checkout@master
     - name: Build
       run: |
+        curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+        chmod +x wp-cli.phar
+        sudo mv wp-cli.phar /usr/local/bin/wp
+        
         yarn install --ignore-engines
         yarn build
         yarn makepot
         yarn pot2json
         yarn version-replace
         composer install --optimize-autoloader --no-dev -q
-    - name: Boostimer Deployment
-      uses: 10up/action-wordpress-plugin-deploy@stable
-      env:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SLUG: boostimer
