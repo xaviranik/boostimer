@@ -3,15 +3,15 @@
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
 **Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Requires at least:** 5.0  
-**Tested up to:** 5.8.1  
-**Stable tag:** 1.0.0  
+**Tested up to:** 5.8.2  
+**Stable tag:** 1.0.1  
 **Requires PHP:** 5.6  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
-[![banner.png](https://i.ibb.co/vw8pHb4/Banner-sm.png)]()
 
+[![banner.png](https://i.ibb.co/vw8pHb4/Banner-sm.png)]()
 
 Boostimer is a product-wise availability plugin that shows a beautiful countdown and lets you know when your unavailable product will be restocked! It also lets you sell limited-time products during a fixed time schedule countdown in your WooCommerce shop.
 
@@ -64,6 +64,11 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 [![subscription-product-sale-timer](https://i.postimg.cc/wMXhtMrJ/03-subscription-product-sale-timer.png)]()
 
 ## Changelog
+
+### v1.0.1 (6th January 2021) =
+
+-   **Feature**: Date prompt on WooCommerce product listing page / Shop Page
+-   **Enhancement**: Asset loading optimization
 
 ### v1.0.0 (27th November 2021)
 
