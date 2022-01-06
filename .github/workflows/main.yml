@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Build
       run: |
-        yarn install
+        yarn install --ignore-engines
         yarn build
         yarn makepot
         yarn pot2json
