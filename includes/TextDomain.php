@@ -5,7 +5,7 @@ namespace Boostimer;
 /**
  * Class TextDomain
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 class TextDomain {
 

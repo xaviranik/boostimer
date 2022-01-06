@@ -114,7 +114,7 @@ abstract class FrontendTimer extends TimerData {
     /**
      * Gets timer title.
      *
-     * @since BOOSTIMER_SINCE
+     * @since 1.1.0
      *
      * @return string
      */

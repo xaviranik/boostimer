@@ -2,7 +2,7 @@
 /**
  * Dependency notice
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  *
  * @package boostimer
  */
@@ -14,7 +14,7 @@ $prompt_date = isset( $prompt_date ) ? $prompt_date : '';
 
     <?php
     /**
-     * @since BOOSTIMER_SINCE
+     * @since 1.1.0
      */
     do_action( 'boostimer_before_prompt_date_label' );
     ?>
