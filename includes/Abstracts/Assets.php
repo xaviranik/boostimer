@@ -25,7 +25,7 @@ abstract class Assets {
      * @return string
      */
     protected function get_version() {
-        return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? time() : BOOSTIMER_VERSION;
+        return defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? time() : BOOSTIMER_VERSION;
     }
 
     /**
@@ -34,7 +34,7 @@ abstract class Assets {
      * @return string
      */
     protected function get_suffix() {
-        return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+        return defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? '' : '.min';
     }
 
     /**
@@ -52,7 +52,7 @@ abstract class Assets {
         foreach ( $scripts as $handle => $script ) {
             $deps      = isset( $script['deps'] ) ? $script['deps'] : false;
             $in_footer = isset( $script['in_footer'] ) ? $script['in_footer'] : false;
-            $version   = isset( $script['version'] ) ? $script['version'] : BOOSTIMER_VERSION;
+            $version   = isset( $script['version'] ) ? $script['version'] : $this->get_version();
 
             wp_register_script( $handle, $script['src'], $deps, $version, $in_footer );
         }
@@ -72,7 +72,7 @@ abstract class Assets {
 
         foreach ( $styles as $handle => $style ) {
             $deps    = isset( $style['deps'] ) ? $style['deps'] : false;
-            $version = isset( $script['version'] ) ? $script['version'] : BOOSTIMER_VERSION;
+            $version = isset( $script['version'] ) ? $script['version'] : $this->get_version();
 
             wp_register_style( $handle, $style['src'], $deps, $version );
         }

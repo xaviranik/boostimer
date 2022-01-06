@@ -1,16 +1,15 @@
 <?php
 
-namespace Boostimer\Frontend;
+namespace Boostimer\Frontend\Timer;
 
-use Boostimer\Helper;
-use Boostimer\Abstracts\Timer;
+use Boostimer\Abstracts\FrontendTimer;
 
 /**
  * SaleTimer class.
  *
  * @since 1.0.0
  */
-class SaleTimer extends Timer {
+class Sale extends FrontendTimer {
 
     /**
      * SaleTimer constructor.
@@ -55,7 +54,7 @@ class SaleTimer extends Timer {
             throw new \Exception( 'Sale timer is off' );
         }
 
-        $title = apply_filters( 'boostimer_sale_timer_title', Helper::get_sale_timer_title() );
+        $title = apply_filters( 'boostimer_sale_timer_title', $this->get_timer_title() );
 
         // Setting params for the timer
         $this->set_date_from( $sale_date_from );

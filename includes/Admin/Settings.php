@@ -2,9 +2,6 @@
 
 namespace Boostimer\Admin;
 
-use Boostimer\Frontend\SaleTimer;
-use Boostimer\Frontend\StockTimer;
-
 /**
  * Admin settings manager.
  *
@@ -25,11 +22,19 @@ class Settings {
     public static function all() {
         $default = apply_filters( 'boostimer_settings_default', [
             'sale_timer'  => [
-                'title'   => boostimer()->frontend->saletimer->get_default_title(),
+                'title'   => __( 'Sale ends in:', 'boostimer' ),
                 'enabled' => true,
             ],
             'stock_timer' => [
-                'title'   => boostimer()->frontend->stocktimer->get_default_title(),
+                'title'   => __( 'Expected restock in:', 'boostimer' ),
+                'enabled' => true,
+            ],
+            'prompt_sale_date' => [
+                'title'   => __( 'Sale till:', 'boostimer' ),
+                'enabled' => true,
+            ],
+            'prompt_stock_date' => [
+                'title'   => __( 'Restock on:', 'boostimer' ),
                 'enabled' => true,
             ],
         ] );

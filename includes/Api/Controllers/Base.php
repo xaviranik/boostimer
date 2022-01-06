@@ -1,15 +1,15 @@
 <?php
 
-namespace Boostimer\Api;
+namespace Boostimer\Api\Controllers;
 
 use WP_REST_Controller;
 
 /**
- * BaseController for Boostimer REST controllers
+ * Base for Boostimer REST controllers
  *
  * @since 1.0.0
  */
-class BaseController extends WP_REST_Controller {
+class Base extends WP_REST_Controller {
 
     /**
      * Permission check for admin

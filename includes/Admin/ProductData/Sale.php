@@ -2,30 +2,22 @@
 
 namespace Boostimer\Admin\ProductData;
 
+use Boostimer\Abstracts\ProductData;
+
 /**
  * Sale product data.
  *
  * @since 1.0.0
  */
-class Sale {
+class Sale extends ProductData {
 
     /**
-     * Sale product data constructor.
+     * Sets hook for template rendering.
      *
-     * @since 1.0.0
+     * @return void
      */
-    public function __construct() {
-        $this->set_hooks();
-    }
-
-    /**
-     * Set hooks.
-     *
-     * @since 1.0.0
-     */
-    public function set_hooks() {
-        add_action( 'woocommerce_product_options_general_product_data', [ $this, 'add_sale_timer_checkbox' ], 10 );
-        add_action( 'woocommerce_process_product_meta', [ $this, 'save_sale_timer_checkbox_meta' ] );
+    public function set_hook_for_template_render() {
+        add_action( 'woocommerce_product_options_general_product_data', [ $this, 'render_template' ], 10 );
     }
 
     /**
@@ -35,7 +27,7 @@ class Sale {
      *
      * @return void
      */
-    public function add_sale_timer_checkbox() {
+    public function render_template() {
         global $post;
 
         $product = wc_get_product( $post->ID );
@@ -44,7 +36,7 @@ class Sale {
             return;
         }
 
-        $show_sale_timer = $product->get_meta( '_boostimer_show_sale_timer', true );
+        $show_sale_timer = $product->get_meta( "_boostimer_show_sale_timer", true );
 
         woocommerce_wp_checkbox(
             [
@@ -56,6 +48,8 @@ class Sale {
                 'value'         => $show_sale_timer,
             ]
         );
+
+        wp_nonce_field( 'boostimer_sale_timer_meta_save', 'boostimer_sale_timer_nonce' );
     }
 
     /**
@@ -67,15 +61,16 @@ class Sale {
      *
      * @return void
      */
-    public function save_sale_timer_checkbox_meta( $post_id ) {
+    public function save_meta( $post_id ) {
+        if ( ! isset( $_POST['boostimer_sale_timer_nonce'] ) || ! wp_verify_nonce( $_POST['boostimer_sale_timer_nonce'], 'boostimer_sale_timer_meta_save' ) ) {
+            return;
+        }
+
         $product = wc_get_product( $post_id );
 
         if ( ! $product || $product->is_type( 'grouped' ) ) {
             return;
         }
-
-        // phpcs:disable WordPress.Security.NonceVerification.Missing
-        // phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
         $sale_price     = isset( $_POST['_sale_price'] ) ? wc_clean( wp_unslash( $_POST['_sale_price'] ) ) : '';
         $sale_date_to   = isset( $_POST['_sale_price_dates_to'] ) ? wc_clean( wp_unslash( $_POST['_sale_price_dates_to'] ) ) : '';
@@ -96,8 +91,5 @@ class Sale {
 
         $product->update_meta_data( '_boostimer_show_sale_timer', $show_sale_timer );
         $product->save_meta_data();
-
-        // phpcs:enable WordPress.Security.NonceVerification.Missing
-        // phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
     }
 }

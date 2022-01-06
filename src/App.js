@@ -1,6 +1,5 @@
 import React from "react";
-import { hot } from "react-hot-loader/root";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Settings from "./pages/Settings";
 import Sidebar from "./components/Sidebar";
@@ -19,7 +18,6 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-
       />
 
       <div className="boostimer-app text-gray-700 m-auto max-w-full xl:max-w-7xl mt-12">
@@ -28,9 +26,9 @@ const App = () => {
             <Sidebar />
           </div>
           <div className="col-span-9">
-            <Switch>
-              <Route path="/" component={Settings} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Settings/>} />
+            </Routes>
           </div>
         </div>
       </div>
@@ -38,4 +36,4 @@ const App = () => {
   );
 };
 
-export default hot(App);
+export default App;

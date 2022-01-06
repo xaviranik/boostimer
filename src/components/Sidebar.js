@@ -5,18 +5,14 @@ import Logo from "./Utils/Logo";
 
 const Sidebar = () => {
   return (
-    <div className="p-6 flex flex-col items-center bg-white rounded-md shadow">
+    <div className="p-6 flex flex-col items-center bg-white rounded-md shadow sticky top-16">
       <div className="mt-8">
         <Logo />
       </div>
       <div className="mt-10 mb-4 w-full grid grid-rows-1 gap-4">
         <NavLink
-          className="outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 flex items-center text-md uppercase tracking-wider focus:ring-0"
-          exact
+          className="outline-none text-gray-400 hover:text-gray-800 rounded-md px-6 py-3 flex items-center text-md uppercase tracking-wider focus:ring-0 text-gray-600 bg-gray-100 rounded-md shadow font-semibold"
           to={"/"}
-          activeClassName={
-            "text-gray-600 bg-gray-100 rounded-md shadow font-semibold"
-          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

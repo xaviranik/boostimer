@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <a href="<?php echo wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=all&amp;paged=1&amp;s=', 'deactivate-plugin_' . $plugin_file ); ?>" class="notice-dismiss" style="text-decoration: none;" title="<?php _e( 'Dismiss this notice', 'dokan' ); ?>"></a>
     <div class="content">
         <div class="main">
-            <h3><?php esc_html_e( 'Boostimer is inactive', 'boostimer' ); ?>   🥺</h3>
+            <h3><?php esc_html_e( 'Boostimer is inactive', 'boostimer' ); ?> 🥺</h3>
             <p>
                 <?php
                 $install_url = wp_nonce_url( add_query_arg( [

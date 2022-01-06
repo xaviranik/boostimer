@@ -52,7 +52,7 @@ class FrontendAssets extends Assets {
     protected function get_styles() {
         return [
             'boostimer-frontend-style' => [
-                'src'     => BOOSTIMER_ASSET . '/css/frontend.css',
+                'src'     => BOOSTIMER_ASSET . '/css/frontend' . $this->get_suffix() . '.css',
                 'version' => $this->get_version(),
             ],
         ];
@@ -64,9 +64,12 @@ class FrontendAssets extends Assets {
      * @return void
      */
     public function load_scripts() {
+        if ( is_product() || is_shop() ) {
+            wp_enqueue_style( 'boostimer-frontend-style' );
+        }
+
         if ( is_product() ) {
             wp_enqueue_script( 'boostimer-frontend-script' );
-            wp_enqueue_style( 'boostimer-frontend-style' );
         }
     }
 }

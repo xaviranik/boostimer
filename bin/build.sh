@@ -43,6 +43,7 @@ status "Generating build... 🔨"
 yarn build
 yarn makepot
 yarn pot2json
+yarn version-replace
 
 # Copy all files
 status "Copying files... ✌️"

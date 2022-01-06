@@ -1,6 +1,6 @@
 <?php
 
-namespace Boostimer\Api;
+namespace Boostimer\Api\Controllers;
 
 use WP_REST_Server;
 use Boostimer\Admin\Settings as AdminSettings;
@@ -10,7 +10,7 @@ use Boostimer\Admin\Settings as AdminSettings;
  *
  * @since 1.0.0
  */
-class Settings extends BaseController {
+class Settings extends Base {
 
     /**
      * Setting controller constructor.
@@ -97,6 +97,14 @@ class Settings extends BaseController {
             $item['stock_timer'] = $request['stock_timer'];
         }
 
+        if ( isset( $request['prompt_sale_date'] ) ) {
+            $item['prompt_sale_date'] = $request['prompt_sale_date'];
+        }
+
+        if ( isset( $request['prompt_stock_date'] ) ) {
+            $item['prompt_stock_date'] = $request['prompt_stock_date'];
+        }
+
         return $item;
     }
 
@@ -105,7 +113,6 @@ class Settings extends BaseController {
      *
      * @since 1.0.0
      *
-     *
      * @param string $method Optional. HTTP method of the request. The arguments for `CREATABLE` requests are
      *                       checked for required values and may fall back to a given default, this is not done
      *                       on `EDITABLE` requests. Default WP_REST_Server::CREATABLE.
@@ -113,7 +120,7 @@ class Settings extends BaseController {
      * @return array Endpoint arguments.
      */
     public function get_endpoint_args_for_item_schema( $method = WP_REST_Server::CREATABLE, $key = 'create_item' ) {
-        $args = BaseController::get_endpoint_args_for_item_schema( $method );
+        $args = Base::get_endpoint_args_for_item_schema( $method );
 
         if ( WP_REST_Server::EDITABLE === $method ) {
             $args = [
@@ -156,6 +163,52 @@ class Settings extends BaseController {
                         ],
                         'enabled' => [
                             'description'       => __( 'Is stock timer enabled..', 'boostimer' ),
+                            'type'              => 'boolean',
+                            'required'          => true,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                    ],
+                ],
+                'prompt_sale_date' => [
+                    'description' => __( 'Show sale date prompt', 'boostimer' ),
+                    'type'        => 'object',
+                    'items'       => [ 'type' => 'object' ],
+                    'required'    => true,
+                    'properties'  => [
+                        'title'   => [
+                            'description'       => __( 'Short sale date title.', 'boostimer' ),
+                            'type'              => 'string',
+                            'required'          => true,
+                            'minLength'         => 1,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                        'enabled' => [
+                            'description'       => __( 'Is short sale date enabled..', 'boostimer' ),
+                            'type'              => 'boolean',
+                            'required'          => true,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                    ],
+                ],
+                'prompt_stock_date' => [
+                    'description' => __( 'Show stock date prompt', 'boostimer' ),
+                    'type'        => 'object',
+                    'items'       => [ 'type' => 'object' ],
+                    'required'    => true,
+                    'properties'  => [
+                        'title'   => [
+                            'description'       => __( 'Stock date prompt title.', 'boostimer' ),
+                            'type'              => 'string',
+                            'required'          => true,
+                            'minLength'         => 1,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'validate_callback' => 'rest_validate_request_arg',
+                        ],
+                        'enabled' => [
+                            'description'       => __( 'Is stock date prompt enabled..', 'boostimer' ),
                             'type'              => 'boolean',
                             'required'          => true,
                             'sanitize_callback' => 'sanitize_text_field',

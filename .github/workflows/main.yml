@@ -1,0 +1,25 @@
+name: Boostimer Deployment to wp.org
+on:
+  push:
+    tags:
+    - "*"
+jobs:
+  tag:
+    name: New tag
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      run: |
+        yarn install --ignore-engines
+        yarn build
+        yarn makepot
+        yarn pot2json
+        yarn version-replace
+        composer install --optimize-autoloader --no-dev -q
+    - name: Boostimer Deployment
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: boostimer
