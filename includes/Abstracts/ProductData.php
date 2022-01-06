@@ -5,7 +5,7 @@ namespace Boostimer\Abstracts;
 /**
  * ProductData abstract class
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 abstract class ProductData {
 

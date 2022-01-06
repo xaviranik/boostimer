@@ -21,22 +21,6 @@
             null,
             ""
          ],
-         "View Boostimer documentation": [
-            null,
-            ""
-         ],
-         "Docs": [
-            null,
-            ""
-         ],
-         "Visit Boostimer forums": [
-            null,
-            ""
-         ],
-         "Community support": [
-            null,
-            ""
-         ],
          "Boostimer": [
             null,
             ""
@@ -46,6 +30,22 @@
             ""
          ],
          "Show sale countdown timer if sale price and schedules are set": [
+            null,
+            ""
+         ],
+         "Sale ends in:": [
+            null,
+            ""
+         ],
+         "Expected restock in:": [
+            null,
+            ""
+         ],
+         "Sale till:": [
+            null,
+            ""
+         ],
+         "Restock on:": [
             null,
             ""
          ],
@@ -77,11 +77,43 @@
             null,
             ""
          ],
-         "Sale ends in:": [
+         "Show sale date prompt": [
             null,
             ""
          ],
-         "Expected restock in:": [
+         "Short sale date title.": [
+            null,
+            ""
+         ],
+         "Is short sale date enabled..": [
+            null,
+            ""
+         ],
+         "Show stock date prompt": [
+            null,
+            ""
+         ],
+         "Stock date prompt title.": [
+            null,
+            ""
+         ],
+         "Is stock date prompt enabled..": [
+            null,
+            ""
+         ],
+         "View Boostimer documentation": [
+            null,
+            ""
+         ],
+         "Docs": [
+            null,
+            ""
+         ],
+         "Visit Boostimer forums": [
+            null,
+            ""
+         ],
+         "Community support": [
             null,
             ""
          ],
@@ -182,6 +214,46 @@
             ""
          ],
          "This text will show on the stock timer title": [
+            null,
+            ""
+         ],
+         "Show Prompt Date On Product Listing": [
+            null,
+            ""
+         ],
+         "Show Prompt Sale Date": [
+            null,
+            ""
+         ],
+         "Enable this to show 'Sale till' prompt on product listing page / shop page. Example: 12 / 12 / 2012": [
+            null,
+            ""
+         ],
+         "Prompt Sale Date Title": [
+            null,
+            ""
+         ],
+         "This text will show with the sale end date on shop page": [
+            null,
+            ""
+         ],
+         "Sale ends on:": [
+            null,
+            ""
+         ],
+         "Show Prompt Stock Date": [
+            null,
+            ""
+         ],
+         "Enable this to show 'Restock on' prompt on product listing page / shop page. Example: 12 / 12 / 2012": [
+            null,
+            ""
+         ],
+         "Prompt Stock Date Title": [
+            null,
+            ""
+         ],
+         "This text will show with the restock date on shop page": [
             null,
             ""
          ],

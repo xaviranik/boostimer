@@ -5,7 +5,7 @@ namespace Boostimer\Frontend\PromptDate;
 /**
  * This class handles the stock prompt date.
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 class Stock extends PromptDate {
 

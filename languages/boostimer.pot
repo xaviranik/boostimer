@@ -1,14 +1,14 @@
-# Copyright (c) 2021 Zabir Anik. All Rights Reserved.
+# Copyright (c) 2022 Zabir Anik. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Boostimer - Product Availability Countdown And Scheduler For WooCommerce 1.0.0\n"
+"Project-Id-Version: Boostimer - Product Availability Countdown And Scheduler For WooCommerce 1.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/xaviranik/boostimer/issues\n"
 "Last-Translator: zabiranik.me@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-11-27T17:33:41+00:00\n"
+"POT-Creation-Date: 2022-01-06T10:50:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: boostimer\n"
@@ -29,72 +29,107 @@ msgstr ""
 msgid "https://zabiranik.com"
 msgstr ""
 
-#: boostimer.php:172
-msgid "View Boostimer documentation"
-msgstr ""
-
-#: boostimer.php:172
-msgid "Docs"
-msgstr ""
-
-#: boostimer.php:173
-msgid "Visit Boostimer forums"
-msgstr ""
-
-#: boostimer.php:173
-msgid "Community support"
-msgstr ""
-
 #: includes/Admin/Menu.php:32
 #: includes/Admin/Menu.php:33
 msgid "Boostimer"
 msgstr ""
 
-#: includes/Admin/ProductData/Sale.php:52
+#: includes/Admin/ProductData/Sale.php:44
 msgid "Show sale timer?"
 msgstr ""
 
-#: includes/Admin/ProductData/Sale.php:55
+#: includes/Admin/ProductData/Sale.php:47
 msgid "Show sale countdown timer if sale price and schedules are set"
 msgstr ""
 
-#: includes/Api/Settings.php:77
-#: src/pages/Settings.js:63
-msgid "Settings have been updated successfully"
-msgstr ""
-
-#: includes/Api/Settings.php:121
-msgid "Sale timer."
-msgstr ""
-
-#: includes/Api/Settings.php:127
-msgid "Sale timer title."
-msgstr ""
-
-#: includes/Api/Settings.php:135
-msgid "Is sale timer enabled.."
-msgstr ""
-
-#: includes/Api/Settings.php:144
-msgid "Stock timer."
-msgstr ""
-
-#: includes/Api/Settings.php:150
-msgid "Stock timer title."
-msgstr ""
-
-#: includes/Api/Settings.php:158
-msgid "Is stock timer enabled.."
-msgstr ""
-
-#: includes/Frontend/SaleTimer.php:22
-#: src/pages/Settings.js:153
+#: includes/Admin/Settings.php:25
+#: includes/Frontend/Timer/Sale.php:21
+#: src/pages/Settings.js:158
 msgid "Sale ends in:"
 msgstr ""
 
-#: includes/Frontend/StockTimer.php:22
-#: src/pages/Settings.js:170
+#: includes/Admin/Settings.php:29
+#: includes/Frontend/Timer/Stock.php:21
+#: src/pages/Settings.js:175
 msgid "Expected restock in:"
+msgstr ""
+
+#: includes/Admin/Settings.php:33
+msgid "Sale till:"
+msgstr ""
+
+#: includes/Admin/Settings.php:37
+#: src/pages/Settings.js:247
+msgid "Restock on:"
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:77
+#: src/pages/Settings.js:69
+msgid "Settings have been updated successfully"
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:128
+msgid "Sale timer."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:134
+msgid "Sale timer title."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:142
+msgid "Is sale timer enabled.."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:151
+msgid "Stock timer."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:157
+msgid "Stock timer title."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:165
+msgid "Is stock timer enabled.."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:174
+msgid "Show sale date prompt"
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:180
+msgid "Short sale date title."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:188
+msgid "Is short sale date enabled.."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:197
+msgid "Show stock date prompt"
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:203
+msgid "Stock date prompt title."
+msgstr ""
+
+#: includes/Api/Controllers/Settings.php:211
+msgid "Is stock date prompt enabled.."
+msgstr ""
+
+#: includes/Setup.php:85
+msgid "View Boostimer documentation"
+msgstr ""
+
+#: includes/Setup.php:85
+msgid "Docs"
+msgstr ""
+
+#: includes/Setup.php:86
+msgid "Visit Boostimer forums"
+msgstr ""
+
+#: includes/Setup.php:86
+msgid "Community support"
 msgstr ""
 
 #: templates/admin/stock-product-data.php:20
@@ -143,7 +178,7 @@ msgstr ""
 msgid "%1$sLooks like, WooCommerce is deactivated.%2$s The %3$sWooCommerce plugin%4$s must be activated for Boostimer to rock. Please %5$sactivate WooCommerce%6$s"
 msgstr ""
 
-#: src/components/Sidebar.js:41
+#: src/components/Sidebar.js:37
 msgid "Settings"
 msgstr ""
 
@@ -151,54 +186,94 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: src/pages/Settings.js:58
+#: src/pages/Settings.js:64
 msgid "Saving settings"
 msgstr ""
 
-#: src/pages/Settings.js:68
+#: src/pages/Settings.js:74
 msgid "Settings could not be saved. Something went wrong"
 msgstr ""
 
-#: src/pages/Settings.js:107
+#: src/pages/Settings.js:112
 msgid "Show Countdown"
 msgstr ""
 
-#: src/pages/Settings.js:114
+#: src/pages/Settings.js:119
 msgid "Show Sale Countdown Timer"
 msgstr ""
 
-#: src/pages/Settings.js:115
+#: src/pages/Settings.js:120
 msgid "Enable this to show countdown timer for sale duration on single product"
 msgstr ""
 
-#: src/pages/Settings.js:129
+#: src/pages/Settings.js:134
 msgid "Show Stock Countdown Timer"
 msgstr ""
 
-#: src/pages/Settings.js:130
+#: src/pages/Settings.js:135
 msgid "Enable this to show countdown timer for next available stock on single product"
 msgstr ""
 
-#: src/pages/Settings.js:141
+#: src/pages/Settings.js:146
 msgid "Timer title"
 msgstr ""
 
-#: src/pages/Settings.js:148
+#: src/pages/Settings.js:153
 msgid "Sale Timer Title"
 msgstr ""
 
-#: src/pages/Settings.js:149
+#: src/pages/Settings.js:154
 msgid "This text will show on the sale timer title"
 msgstr ""
 
-#: src/pages/Settings.js:165
+#: src/pages/Settings.js:170
 msgid "Stock Timer Title"
 msgstr ""
 
-#: src/pages/Settings.js:166
+#: src/pages/Settings.js:171
 msgid "This text will show on the stock timer title"
 msgstr ""
 
-#: src/pages/Settings.js:189
+#: src/pages/Settings.js:188
+msgid "Show Prompt Date On Product Listing"
+msgstr ""
+
+#: src/pages/Settings.js:196
+msgid "Show Prompt Sale Date"
+msgstr ""
+
+#: src/pages/Settings.js:197
+msgid "Enable this to show 'Sale till' prompt on product listing page / shop page. Example: 12 / 12 / 2012"
+msgstr ""
+
+#: src/pages/Settings.js:209
+msgid "Prompt Sale Date Title"
+msgstr ""
+
+#: src/pages/Settings.js:210
+msgid "This text will show with the sale end date on shop page"
+msgstr ""
+
+#: src/pages/Settings.js:214
+msgid "Sale ends on:"
+msgstr ""
+
+#: src/pages/Settings.js:229
+msgid "Show Prompt Stock Date"
+msgstr ""
+
+#: src/pages/Settings.js:230
+msgid "Enable this to show 'Restock on' prompt on product listing page / shop page. Example: 12 / 12 / 2012"
+msgstr ""
+
+#: src/pages/Settings.js:242
+msgid "Prompt Stock Date Title"
+msgstr ""
+
+#: src/pages/Settings.js:243
+msgid "This text will show with the restock date on shop page"
+msgstr ""
+
+#: src/pages/Settings.js:266
 msgid "Save"
 msgstr ""

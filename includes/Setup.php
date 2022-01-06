@@ -7,7 +7,7 @@ namespace Boostimer;
  *
  * @package Boostimer
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 class Setup {
 

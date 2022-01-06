@@ -9,7 +9,7 @@ use Boostimer\Abstracts\BaseManager;
  *
  * @since 1.0.0
  *
- * @since BOOSTIMER_SINCE classmap loader.
+ * @since 1.1.0 classmap loader.
  */
 class Manager extends BaseManager {
 

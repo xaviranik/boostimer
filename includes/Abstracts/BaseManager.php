@@ -5,7 +5,7 @@ namespace Boostimer\Abstracts;
 /**
  * BaseManager abstract class.
  *
- * @since BOOSTIMER_SINCE
+ * @since 1.1.0
  */
 abstract class BaseManager {
 
