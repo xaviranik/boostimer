@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/zabiranik
 Tags: woocommerce, product availability, scheduler, countdown, subscription, timer, woo
 Requires at least: 5.0
 Tested up to: 5.8.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -78,7 +78,7 @@ For now, you can not. The good news is, you might be able to do that in near fut
 
 == Changelog ==
 
-= v1.0.2 (6th January 2021) =
+= v1.0.3 (6th January 2021) =
 
 - **Feature**: Date prompt on WooCommerce product listing page / Shop Page
 - **Enhancement**: Asset loading optimization
