@@ -68,6 +68,10 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 
 ## Changelog
 
+### v1.1.1 (22th January 2021) =
+
+- **Compatibility**: Compatibility for WordPress 5.9
+
 ### v1.1.0 (6th January 2021)
 
 -   **Feature**: Date prompt on WooCommerce product listing page / Shop Page

@@ -78,6 +78,10 @@ For now, you can not. The good news is, you might be able to do that in near fut
 
 == Changelog ==
 
+= v1.1.1 (22th January 2021) =
+
+- **Compatibility**: Compatibility for WordPress 5.9
+
 = v1.1.0 (6th January 2021) =
 
 - **Feature**: Date prompt on WooCommerce product listing page / Shop Page
