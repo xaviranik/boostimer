@@ -3,8 +3,8 @@
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
 **Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Requires at least:** 5.0  
-**Tested up to:** 5.8.2  
-**Stable tag:** 1.1.0  
+**Tested up to:** 5.9  
+**Stable tag:** 1.2.0  
 **Requires PHP:** 5.6  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
@@ -68,7 +68,7 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 
 ## Changelog
 
-### v1.1.1 (22th January 2021) =
+### v1.2.0 (24th January 2021) =
 
 - **Compatibility**: Compatibility for WordPress 5.9
 
