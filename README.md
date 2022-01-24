@@ -9,6 +9,9 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
+## Contributing to Boostimer
+If you want to contribute to Boostimer, please check out [Contribute to Boostimer](https://github.com/xaviranik/boostimer/blob/develop/CONTRIBUTING.md)
+
 ## Description
 
 [![banner.png](https://i.ibb.co/vw8pHb4/Banner-sm.png)]()
@@ -65,7 +68,11 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 
 ## Changelog
 
-### v1.0.3 (6th January 2021) =
+### v1.1.1 (22th January 2021) =
+
+- **Compatibility**: Compatibility for WordPress 5.9
+
+### v1.1.0 (6th January 2021)
 
 -   **Feature**: Date prompt on WooCommerce product listing page / Shop Page
 -   **Enhancement**: Asset loading optimization

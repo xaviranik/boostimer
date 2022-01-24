@@ -17,6 +17,7 @@ composer.json
 composer.lock
 package.json
 phpcs.xml
+phpunit.xml.dist
 phpcs.xml.dist
 postcss.config.js
 README.md
