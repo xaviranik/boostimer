@@ -68,7 +68,7 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 
 ## Changelog
 
-### v1.2.0 (24th January 2021)
+### v1.2.0 (24th January 2022)
 
 - **Compatibility**: Compatibility for WordPress 5.9
 
