@@ -5,7 +5,7 @@
  * URI: https://zabiranik.com
  * Author: Zabir Anik
  * Author URI: https://zabiranik.com
- * Version: 1.3.0
+ * Version: 1.4.0
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: boostimer
@@ -25,7 +25,7 @@ final class Boostimer {
      *
      * @var string
      */
-    private $version = '1.3.0';
+    private $version = '1.4.0';
 
     /**
      * Boostimer Constructor.
