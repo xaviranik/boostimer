@@ -1,16 +1,13 @@
-# Boostimer - Product Availability Countdown And Scheduler For Woocommerce
+# Boostimer - Product Availability Countdown and Scheduler for WooCommerce
 
 **Contributors:** [zabiranik](https://profiles.wordpress.org/zabiranik/)  
 **Donate link:** [zabiranik/donate](https://www.buymeacoffee.com/zabiranik)  
 **Requires at least:** 5.0  
-**Tested up to:** 5.9  
+**Tested up to:** 6.7.1  
 **Stable tag:** 1.5.0  
 **Requires PHP:** 5.6  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
-
-## Contributing to Boostimer
-If you want to contribute to Boostimer, please check out [Contribute to Boostimer](https://github.com/xaviranik/boostimer/blob/develop/CONTRIBUTING.md)
 
 ## Description
 
@@ -28,15 +25,15 @@ Using this plugin, it’s easy to know when the required product will be availab
 
 ### Key Features
 
--   Display a countdown timer to highlight when the product will be restocked.
--   Display a countdown timer to highlight sale products purchase availability end days and time.
--   Display Restock timer automatically after Sale timer when the stock goes zero.
--   Manages Restock and Sale countdown for stock quantity.
--   Display Sale timer and Restock timer countdown for Simple Product.
--   Display Restock timer countdown for Variable Product.
--   Display Sale timer countdown for External/Affiliate Product.
--   Customize Sale Timer and Restock Timer title.
--   Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
+- Display a countdown timer to highlight when the product will be restocked.
+- Display a countdown timer to highlight sale products purchase availability end days and time.
+- Display Restock timer automatically after Sale timer when the stock goes zero.
+- Manages Restock and Sale countdown for stock quantity.
+- Display Sale timer and Restock timer countdown for Simple Product.
+- Display Restock timer countdown for Variable Product.
+- Display Sale timer countdown for External/Affiliate Product.
+- Customize Sale Timer and Restock Timer title.
+- Works seamlessly with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) product - Simple, Variable.
 
 ### Attractive User Interface
 
@@ -66,24 +63,43 @@ A good UI can sometimes make a system even more attractive. Boostimer has an int
 
 [![subscription-product-sale-timer](https://i.postimg.cc/wMXhtMrJ/03-subscription-product-sale-timer.png)]()
 
+## Maintenance status
+
+Boostimer is maintained as an open-source WordPress/WooCommerce plugin. Current maintenance work is focused on keeping the plugin compatible with recent WordPress and WooCommerce releases, improving automated checks, reviewing dependencies, and keeping release metadata in sync across GitHub and WordPress.org assets.
+
+See [ROADMAP.md](ROADMAP.md) for the current maintenance roadmap.
+
+## Contributing to Boostimer
+
+If you want to contribute to Boostimer, please check out [Contribute to Boostimer](https://github.com/xaviranik/boostimer/blob/develop/CONTRIBUTING.md).
+
 ## Changelog
 
-### v1.3.0 (24th January 2022)
+### v1.5.0 (25th January 2025)
+
+- **Maintenance**: Bumped plugin metadata and package version to 1.5.0.
+- **Compatibility**: Synced WordPress compatibility metadata with the WordPress.org readme.
+
+### v1.4.0 (18th September 2022)
+
+- **Compatibility**: Compatibility for WordPress 6.7.1
+
+### v1.3.0 (18th September 2022)
 
 - **Compatibility**: Compatibility for WordPress 6.0.2
 
-### v1.2.0 (24th January 2022)
+### v1.2.0 (24th January 2021)
 
 - **Compatibility**: Compatibility for WordPress 5.9
 
 ### v1.1.0 (6th January 2021)
 
--   **Feature**: Date prompt on WooCommerce product listing page / Shop Page
--   **Enhancement**: Asset loading optimization
+- **Feature**: Date prompt on WooCommerce product listing page / Shop Page
+- **Enhancement**: Asset loading optimization
 
 ### v1.0.0 (27th November 2021)
 
--   Initial Release
+- Initial Release
 
 ## Upgrade Notice
 
