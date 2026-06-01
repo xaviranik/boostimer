@@ -28,17 +28,6 @@ This roadmap tracks maintenance work that helps keep Boostimer reliable for WooC
 - Add release notes that explain compatibility changes and any migration notes for store owners.
 - Keep contribution guidance aligned with the current build and test workflow.
 
-## Potential Codex-assisted workflows
-
-Codex can help maintainers and contributors by:
-
-- Drafting focused issues from maintenance goals.
-- Reviewing pull requests for regressions, missing tests, and documentation gaps.
-- Generating test cases around WooCommerce product-type behavior.
-- Explaining legacy code paths before refactors.
-- Producing release-note drafts from merged pull requests.
-- Helping triage compatibility issues reported by WordPress/WooCommerce users.
-
 ## Contribution areas
 
 Contributors are welcome to help with:
